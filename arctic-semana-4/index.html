@@ -156,7 +156,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </div>
 
     <article class="piece" id="p01">
-      <div class="piece-visual"><div class="phone"><img src="a/p01_paso.jpg" alt="Video: cómo funcionan los filtros, paso a paso por toda la casa"><span class="play">Video · 1 min 09 s</span></div></div>
+      <div class="piece-visual"><div class="phone"><video controls playsinline preload="none" poster="a/p01_paso.jpg" data-blob="a/p01_paso.mp4" aria-label="Video cómo funcionan los filtros, paso a paso"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P01</span><span class="fmt">Video animado · 9:16 · 1 min 09 s</span></div>
         <h3>Video “Cómo funcionan los filtros” · Paso a paso</h3>
@@ -166,7 +166,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </article>
 
     <article class="piece" id="p02">
-      <div class="piece-visual"><div class="phone"><img src="a/p02_manchas.jpg" alt="Video: regadera llena de sarro por el agua dura"><span class="play">Video · 31 s</span></div></div>
+      <div class="piece-visual"><div class="phone"><video controls playsinline preload="none" poster="a/p02_manchas.jpg" data-blob="a/p02_manchas.mp4" aria-label="Video manchas y sarro"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P02</span><span class="fmt">Video animado · 9:16 · 31 s</span></div>
         <h3>Video “Cómo funcionan los filtros” · Manchas y sarro</h3>
@@ -176,7 +176,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </article>
 
     <article class="piece" id="p03">
-      <div class="piece-visual"><div class="phone p45"><img src="a/p03_ugc.jpg" alt="Video testimonio: mujer frente al espejo con el cabello reseco"><span class="play">Video · 39 s</span></div></div>
+      <div class="piece-visual"><div class="phone p45"><video controls playsinline preload="none" poster="a/p03_ugc.jpg" data-blob="a/p03_ugc.mp4" aria-label="Video testimonio"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P03</span><span class="fmt">Video testimonio · 4:5 · 39 s</span></div>
         <h3>Video testimonio · Cabello y agua dura</h3>
@@ -274,5 +274,22 @@ footer b{color:var(--band-ink);font-weight:500}
 
 <footer><div class="wrap mono"><span><b>Gighopp</b> para Arctic 16</span><span>Semana del 26 oct – 1 nov 2026</span></div></footer>
 
+<script>
+(function(){
+  /* Load each video as a blob so phones (iOS/WhatsApp) don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
 </body>
 </html>
