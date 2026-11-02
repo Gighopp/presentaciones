@@ -125,6 +125,7 @@ footer b{color:var(--band-ink);font-weight:500}
   .film img:nth-child(n+4){display:none}
   .stat b{font-size:36px}
 }
+video{-webkit-touch-callout:none;user-select:none}
 </style>
 </head>
 <body>
@@ -156,7 +157,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </div>
 
     <article class="piece" id="p01">
-      <div class="piece-visual"><div class="phone"><video controls playsinline preload="none" poster="a/p01_paso.jpg" data-blob="a/p01_paso.mp4" aria-label="Video cómo funcionan los filtros, paso a paso"></video></div></div>
+      <div class="piece-visual"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p01_paso.jpg" data-blob="a/p01_paso.mp4" aria-label="Video cómo funcionan los filtros, paso a paso"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P01</span><span class="fmt">Video animado · 9:16 · 1 min 09 s</span></div>
         <h3>Video “Cómo funcionan los filtros” · Paso a paso</h3>
@@ -166,7 +167,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </article>
 
     <article class="piece" id="p02">
-      <div class="piece-visual"><div class="phone"><video controls playsinline preload="none" poster="a/p02_manchas.jpg" data-blob="a/p02_manchas.mp4" aria-label="Video manchas y sarro"></video></div></div>
+      <div class="piece-visual"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p02_manchas.jpg" data-blob="a/p02_manchas.mp4" aria-label="Video manchas y sarro"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P02</span><span class="fmt">Video animado · 9:16 · 31 s</span></div>
         <h3>Video “Cómo funcionan los filtros” · Manchas y sarro</h3>
@@ -176,7 +177,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </article>
 
     <article class="piece" id="p03">
-      <div class="piece-visual"><div class="phone p45"><video controls playsinline preload="none" poster="a/p03_ugc.jpg" data-blob="a/p03_ugc.mp4" aria-label="Video testimonio"></video></div></div>
+      <div class="piece-visual"><div class="phone p45"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p03_ugc.jpg" data-blob="a/p03_ugc.mp4" aria-label="Video testimonio"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P03</span><span class="fmt">Video testimonio · 4:5 · 39 s</span></div>
         <h3>Video testimonio · Cabello y agua dura</h3>
@@ -291,5 +292,6 @@ footer b{color:var(--band-ink);font-weight:500}
   vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
 })();
 </script>
+<script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
 </body>
 </html>

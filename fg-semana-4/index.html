@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}video{-webkit-touch-callout:none;user-select:none}
+</style>
 <title>FG Insulation · Creativos nuevos</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Material creado y publicado en Meta para FG Insulation TX, semana del 26 de octubre al 1 de noviembre de 2026.">
@@ -163,7 +164,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </div>
 
     <article class="piece" id="p01">
-      <div class="piece-visual"><div class="screen"><video controls playsinline preload="none" poster="a/largo.jpg" data-blob="a/largo.mp4" aria-label="Video gross, versión larga"></video></div></div>
+      <div class="piece-visual"><div class="screen"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/largo.jpg" data-blob="a/largo.mp4" aria-label="Video gross, versión larga"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P01</span><span class="fmt">Video · 4:3 · 1 min 48 s</span></div>
         <h3>Video “¿Sabes lo que vive en tu ático?” · versión larga</h3>
@@ -174,7 +175,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </article>
 
     <article class="piece" id="p02">
-      <div class="piece-visual"><div class="screen"><video controls playsinline preload="none" poster="a/corto.jpg" data-blob="a/corto.mp4" aria-label="Video gross, versión corta"></video></div></div>
+      <div class="piece-visual"><div class="screen"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/corto.jpg" data-blob="a/corto.mp4" aria-label="Video gross, versión corta"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P02</span><span class="fmt">Video · 4:3 · 45 s</span></div>
         <h3>Video “¿Sabes lo que vive en tu ático?” · versión corta</h3>
@@ -185,7 +186,7 @@ footer b{color:var(--band-ink);font-weight:500}
     </article>
 
     <article class="piece" id="p03">
-      <div class="piece-visual"><div class="phone"><video controls playsinline preload="none" poster="a/trucos.jpg" data-blob="a/trucos.mp4" aria-label="Video Trucos sucios del negocio del aislamiento, parte 1"></video></div></div>
+      <div class="piece-visual"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/trucos.jpg" data-blob="a/trucos.mp4" aria-label="Video Trucos sucios del negocio del aislamiento, parte 1"></video></div></div>
       <div class="piece-info">
         <div class="piece-head"><span class="code">P03</span><span class="fmt">Video · 9:16 · 58 s · Reels y Stories</span></div>
         <h3>Video “Trucos sucios del negocio del aislamiento” · Parte 1</h3>
@@ -281,5 +282,6 @@ footer b{color:var(--band-ink);font-weight:500}
   vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
 })();
 </script>
+<script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
 </body>
 </html>
