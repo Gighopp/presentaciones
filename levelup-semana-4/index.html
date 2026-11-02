@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Level Up Roofing · Creativos</title>
+<meta name="description" content="Reporte de creativos de Level Up Roofing: lo publicado en Meta y las 4 piezas aprobadas que salen esta semana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a contractor's job sheet. Full-bleed bands, a strict 12-col grid inside, spec labels in mono like a work order. */
+:root{
+  --bg:#eef0ee;          /* concrete */
+  --paper:#f8f9f7;
+  --ink:#151a17;         /* tar-paper black */
+  --muted:#5b665f;
+  --rule:#cfd5d0;
+  --green:#1d4f9c;       /* Level Up blue */
+  --signal:#a3cf1d;      /* Level Up lime */
+  --band:#151a17;        /* dark band */
+  --band-ink:#eef0ee;
+  --band-muted:#9aa69f;
+  --chip:#e1e7e2;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101412;--paper:#161b18;--ink:#e8ece9;--muted:#98a49d;--rule:#2a332e;--green:#8fb6ff;--signal:#a3cf1d;
+  --band:#0a0d0b;--band-ink:#e8ece9;--band-muted:#8d9992;--chip:#1f2722;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101412;--paper:#161b18;--ink:#e8ece9;--muted:#98a49d;--rule:#2a332e;--green:#8fb6ff;--signal:#a3cf1d;
+  --band:#0a0d0b;--band-ink:#e8ece9;--band-muted:#8d9992;--chip:#1f2722;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--band);color:var(--band-ink);padding-block:28px 0;overflow:hidden}
+.hero-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--band-muted)}
+.hero-bar b{color:var(--band-ink);font-weight:500}
+.hero h1{font-variation-settings:"wdth" 125;font-weight:850;font-size:clamp(46px,9.5vw,132px);line-height:.88;letter-spacing:-.02em;margin-top:44px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero-lede{max-width:56ch;color:var(--band-muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--band-ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#2a332e;border-block:1px solid #2a332e;margin-top:40px}
+.stat{background:var(--band);padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:44px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted)}
+.film{display:flex;gap:8px;margin-top:32px;transform:translateX(-4%);width:108%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:6px 6px 0 0;filter:saturate(.9)}
+
+/* ---------- Section heads ---------- */
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:36px}
+.sec-head .mono{color:var(--green)}
+.sec-head h2{font-variation-settings:"wdth" 118;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:.95;letter-spacing:-.01em;margin-top:10px}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+
+/* ---------- Ventanas grid ---------- */
+.setbar{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:28px;color:var(--muted)}
+.setbar span b{color:var(--ink)}
+.hooks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 16px}
+.hook{margin:0}
+.phone{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink);max-width:100%}
+.phone video,.phone img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:8px;top:8px;font:500 10px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 7px;border-radius:3px}
+.tag-a{background:var(--signal);color:#08130c}
+.tag-b{background:#f2f4f2;color:#151a17}
+.hook figcaption{display:grid;gap:3px;margin-top:16px}
+.hook .num{font:500 11px var(--f-mono);color:var(--green);letter-spacing:.06em}
+.hook strong{font-weight:600;font-size:15px;line-height:1.3}
+.hook .angle{font-size:13px;color:var(--muted)}
+.how{margin-top:28px;color:var(--muted);font-size:14px}
+
+/* ---------- Techos pieces ---------- */
+.techos{background:var(--paper);border-block:1px solid var(--rule)}
+.piece{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;padding-block:44px;border-bottom:1px solid var(--rule)}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline}
+.code{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;font-size:56px;line-height:.8;color:var(--signal)}
+.fmt{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.piece h3{font-variation-settings:"wdth" 100;font-weight:700;font-size:28px;line-height:1.1;margin:18px 0 12px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 12px var(--f-mono);letter-spacing:.04em;background:var(--chip);padding:5px 10px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:7px;vertical-align:1px}
+.copy,.hl{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px}
+.copy h4,.hl h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.hl ol{margin:0;padding-left:20px;font-size:15px}
+.hl li{margin:2px 0}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.track img{flex:0 0 78%;max-width:78%;aspect-ratio:1;object-fit:cover;scroll-snap-align:start;border-radius:6px;border:1px solid var(--rule)}
+.track-hint{font:500 11px var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.flat{border-radius:6px;border:1px solid var(--rule);max-width:560px;width:100%}
+.phone-lg{width:min(320px,100%);margin:6px auto}
+.board{width:min(320px,100%);margin:6px auto;aspect-ratio:9/16;background:var(--band);color:var(--band-ink);border-radius:14px;box-shadow:0 0 0 6px var(--ink);padding:18px;display:flex;flex-direction:column;overflow:hidden}
+.board-top{display:flex;justify-content:space-between;font:500 11px var(--f-mono);color:var(--band-muted);letter-spacing:.08em}
+.board-title{font-family:var(--f-display);font-variation-settings:"wdth" 115;font-weight:800;font-size:26px;line-height:1;margin:14px 0 12px;color:var(--signal)}
+.board ol{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:13px;line-height:1.3}
+.board li{display:grid;grid-template-columns:24px 1fr;gap:6px}
+.board li span{font:500 10px var(--f-mono);color:var(--band-muted);padding-top:2px}
+.board-foot{margin-top:auto;font:500 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--band-muted);border-top:1px solid #2a332e;padding-top:10px}
+
+/* ---------- Setup ---------- */
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.spec{background:var(--bg);padding:22px 20px}
+.spec .mono{color:var(--green)}
+.spec p{margin:8px 0 0;font-size:15px}
+.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
+.city{border:2px solid var(--ink);border-radius:8px;padding:22px}
+.city h3{font-variation-settings:"wdth" 120;font-weight:800;font-size:30px}
+.city .set{color:var(--muted);margin:4px 0 16px}
+.city ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.city li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--rule);padding-top:8px}
+.city li b{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;color:var(--green)}
+footer{background:var(--band);color:var(--band-muted);padding-block:36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--band-ink);font-weight:500}
+
+@media (max-width:980px){
+  .hooks{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .hooks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .map,.specs{grid-template-columns:1fr}
+  .film img:nth-child(n+5){display:none}
+  .stat b{font-size:36px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+<style>
+.track img.r45{aspect-ratio:4/5}
+.status{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:3px;margin-left:auto;white-space:nowrap}
+.st-on{background:var(--signal);color:#121a03}.st-off{background:var(--chip);color:var(--muted)}.st-new{background:var(--green);color:#fff}
+.piece-head{flex-wrap:wrap}
+.pending{width:min(320px,100%);margin:6px auto;aspect-ratio:9/16;border-radius:14px;box-shadow:0 0 0 6px var(--ink);background:var(--band);color:var(--band-muted);display:grid;place-items:center;text-align:center;padding:24px;font:500 12px/1.5 var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+.pending.r45{aspect-ratio:4/5}
+.scene{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px;font-size:14px;color:var(--muted)}
+.scene h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
+.scene ol{margin:0;padding-left:20px}
+.week{background:var(--band);color:var(--band-ink)}
+.week .sec-head{border-color:var(--band-ink)}.week .sec-head .mono{color:var(--signal)}.week .sec-head p{color:var(--band-muted)}.week .sec-head p strong{color:var(--band-ink)}
+.week .piece{border-color:#2a332e}.week .copy,.week .hl,.week .scene{border-color:#2a332e}.week .copy h4,.week .hl h4,.week .fmt,.week .scene{color:var(--band-muted)}
+.week .chip{background:#1f2722;color:var(--band-ink)}.week .phone{box-shadow:0 0 0 6px #2a332e}.week .flat{border-color:#2a332e}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar mono"><span><b>Gighopp</b> · Reporte de creativos</span><span>15 oct – 8 nov 2026</span></div>
+    <h1>Level Up<br><em>Roofing</em></h1>
+    <p class="hero-lede">Todo el material de la campaña de <strong>techo nuevo + 2 extractores solares gratis</strong> en Houston: lo que ya está publicado en Meta, lo que grabamos y editamos, lo que hicimos 100% en Gighopp y las <strong>4 piezas aprobadas que salen esta semana</strong>.</p>
+    <div class="stats">
+      <div class="stat"><b>14</b><span class="mono">anuncios publicados</span></div>
+      <div class="stat"><b>8</b><span class="mono">grabados y editados</span></div>
+      <div class="stat"><b>6</b><span class="mono">hechos 100% por Gighopp</span></div>
+      <div class="stat"><b>4</b><span class="mono">salen esta semana</span></div>
+    </div>
+    <div class="film" aria-hidden="true"><img src="a/v1.jpg" alt=""><img src="a/vid3d.jpg" alt=""><img src="a/img_recordatorio.jpg" alt=""><img src="a/vid99.jpg" alt=""><img src="a/c1_3.jpg" alt=""><img src="a/vox.jpg" alt=""><img src="a/vid5999.jpg" alt=""><img src="a/v4.jpg" alt=""></div>
+  </div>
+</header>
+<main>
+<section class="week" id="semana"><div class="wrap">
+    <div class="sec-head"><div><span class="mono">Aprobados · salen esta semana</span><h2>4 piezas nuevas</h2></div><p>Aprobadas y listas para subir esta semana al mismo conjunto de Houston. Todas llevan la oferta del mes: <strong>techo nuevo + 2 extractores solares gratis ($1,500)</strong>, 0% de interés y primer pago en 2 años.</p></div>
+    <article class="piece" id="p04">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/p04.jpg" data-blob="a/p04.mp4" aria-label="Inspección gratis · ¿Todavía recogiendo goteras en una cubeta?"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P04</span><span class="fmt">Video animado · 9:16 · 47 s</span><span class="status st-new">Aprobado · sale esta semana</span></div>
+    <h3>Inspección gratis · ¿Todavía recogiendo goteras en una cubeta?</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Still catching drips in a bucket? 🪣</p><p>That stain on your ceiling is your roof asking for help.<br>And every storm makes it worse.</p><p>Level Up Roofing starts with a FREE roof inspection in Houston:</p><p>✅ Every shingle checked for cracks and damage<br>✅ Seals around vents and pipes<br>✅ Gutters and attic, where leaks and moisture hide</p><p>You get a clear report.<br>No cost. No obligation.</p><p>👇 Click below and fill out the form. Our team will call you to schedule your free inspection.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Free Roof Inspection in Houston</li><li>Stop Catching Drips in a Bucket</li><li>New Roof: 1st Payment in 2 Years*</li><li>2 Free Solar Attic Fans This Month</li><li>Free Inspection. No Obligation.</li></ol></div>
+  </div>
+</article><article class="piece" id="p05">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/p05.jpg" data-blob="a/p05.mp4" aria-label="That ceiling stain started on your roof"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P05</span><span class="fmt">Video 3D · 9:16</span><span class="status st-new">Aprobado · sale esta semana</span></div>
+    <h3>That ceiling stain started on your roof</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>That small stain on your ceiling? It didn&#x27;t start there. 👀</p><p>It started on your roof.</p><p>Houston storms crack and lift your shingles.<br>Rain gets underneath.<br>The wood rots, and your attic traps heat and moisture.</p><p>By the time you see the leak, the damage is done.</p><p>🏠 Level Up Roofing replaces your roof<br>🎁 + 2 FREE solar attic fans this month ($1,500 value)<br>💳 0% interest*, first payment in 2 years*</p><p>👇 Click and fill out the form for your FREE roof inspection.</p></div><div class="hl"><h4>Títulos</h4><ol><li>That ceiling stain started on your roof</li><li>New roof + 2 FREE solar attic fans</li><li>0% interest*, 1st payment in 2 years*</li><li>FREE roof inspection in Houston</li><li>$1,500 in solar fans, this month only</li></ol></div>
+  </div>
+</article><article class="piece" id="p06">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/p06.jpg" data-blob="a/p06.mp4" aria-label="Sports bar · “Ya llené el formulario”"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P06</span><span class="fmt">Video cómic · 9:16</span><span class="status st-new">Aprobado · sale esta semana</span></div>
+    <h3>Sports bar · “Ya llené el formulario”</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>“There&#x27;s water coming through the living room ceiling and you&#x27;re at the bar watching the game!” 😤</p><p>He was already handling it.<br>He filled out the form with Level Up Roofing.</p><p>🏠 New roof<br>🎁 2 FREE solar attic fans this month ($1,500 value)<br>💳 0% interest*, first payment in 2 years*</p><p>👇 Click and fill out the form for your FREE roof inspection.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Roof leaking after the storm?</li><li>New roof + 2 FREE solar attic fans</li><li>0% interest*, 1st payment in 2 years*</li><li>He already filled out the form</li><li>FREE roof inspection in Houston</li></ol></div>
+  </div>
+</article><article class="piece" id="p07">
+  <div class="piece-visual"><img class="flat" src="a/p07.jpg" alt="We Apologize · carta de disculpa" loading="lazy"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P07</span><span class="fmt">Imagen · 4:5</span><span class="status st-new">Aprobado · sale esta semana</span></div>
+    <h3>We Apologize · carta de disculpa</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>We owe some roofing companies an apology. 😬</p><p>We started including 2 solar attic fans FREE with every qualifying roof replacement.</p><p>That&#x27;s a new roof + better attic ventilation + $1,500 in added value… without paying extra.</p><p>And qualified Houston homeowners can get 0% interest financing, with the first payment in 2 years.</p><p>👇 Click and fill out the form to get your free roof inspection.</p></div><div class="hl"><h4>Títulos</h4><ol><li>We Apologize (Not Really)</li><li>2 Free Solar Attic Fans</li><li>New Roof, First Payment in 2 Years</li><li>$1,500 Added Value, $0 Extra</li><li>Get Your Free Roof Inspection</li></ol></div>
+  </div>
+</article>
+  </div></section>
+<section class="techos" id="camara"><div class="wrap">
+    <div class="sec-head"><div><span class="mono">Publicados · grabados en cámara</span><h2>Grabados y editados</h2></div><p>Videos grabados en cámara, por el cliente o por nuestro equipo, que <strong>editamos y montamos</strong> en Meta con 5 textos, 5 títulos y 5 descripciones cada uno.</p></div>
+    <article class="piece" id="g01">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/v1.jpg" data-blob="a/v1.mp4" aria-label="V1 · Still Putting It Off"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">G01</span><span class="fmt">Video · 9:16 · 41 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>V1 · Still Putting It Off</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Still putting off that roof? 🏠</p><p>This month only, Level Up Roofing installs 2 FREE solar attic fans ($1,500 value) with your new roof.</p><p>✅ 0% interest*<br>✅ First payment AFTER 2 years*<br>✅ FREE roof inspection</p><p>👇 Tap below and fill out the form to claim yours.</p></div><div class="hl"><h4>Títulos</h4><ol><li>2 FREE Solar Attic Fans With Your New Roof</li></ol></div>
+  </div>
+</article><article class="piece" id="g02">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/v2.jpg" data-blob="a/v2.mp4" aria-label="V2 · This and This"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">G02</span><span class="fmt">Video · 9:16 · 38 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>V2 · This and This</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Still putting off that roof? 🏠</p><p>This month only, Level Up Roofing installs 2 FREE solar attic fans ($1,500 value) with your new roof.</p><p>✅ 0% interest*<br>✅ First payment AFTER 2 years*<br>✅ FREE roof inspection</p><p>👇 Tap below and fill out the form to claim yours.</p></div><div class="hl"><h4>Títulos</h4><ol><li>2 FREE Solar Attic Fans With Your New Roof</li></ol></div>
+  </div>
+</article><article class="piece" id="g03">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/v3.jpg" data-blob="a/v3.mp4" aria-label="V3 · Short"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">G03</span><span class="fmt">Video · 9:16 · 13 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>V3 · Short</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Still putting off that roof? 🏠</p><p>This month only, Level Up Roofing installs 2 FREE solar attic fans ($1,500 value) with your new roof.</p><p>✅ 0% interest*<br>✅ First payment AFTER 2 years*<br>✅ FREE roof inspection</p><p>👇 Tap below and fill out the form to claim yours.</p></div><div class="hl"><h4>Títulos</h4><ol><li>2 FREE Solar Attic Fans With Your New Roof</li></ol></div>
+  </div>
+</article><article class="piece" id="g04">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/v4.jpg" data-blob="a/v4.mp4" aria-label="V4 · Presentador joven"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">G04</span><span class="fmt">Video · 9:16 · 15 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>V4 · Presentador joven</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Still putting off that roof? 🏠</p><p>This month only, Level Up Roofing installs 2 FREE solar attic fans ($1,500 value) with your new roof.</p><p>✅ 0% interest*<br>✅ First payment AFTER 2 years*<br>✅ FREE roof inspection</p><p>👇 Tap below and fill out the form to claim yours.</p></div><div class="hl"><h4>Títulos</h4><ol><li>2 FREE Solar Attic Fans With Your New Roof</li></ol></div>
+  </div>
+</article><article class="piece" id="g05">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/chica.jpg" data-blob="a/chica.mp4" aria-label="Vocera con la promoción"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">G05</span><span class="fmt">Video · 9:16 · vocera</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>Vocera con la promoción</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Here&#x27;s how easy it works 👇</p><p>1️⃣ Get your FREE estimate<br>2️⃣ Hire Level Up Roofing for your new roof<br>3️⃣ Get 2 solar attic fans installed at no extra cost</p><p>This month only in Houston.</p><p>👇 Click below and fill out the form.</p></div><div class="hl"><h4>Títulos</h4><ol><li>New Roof Now, First Payment in 2 Years*</li><li>$1,500 in FREE Fans – This Month Only</li><li>FREE Roof Estimate in Houston</li><li>Hire Us &amp; Get 2 Solar Fans FREE</li><li>2 FREE Solar Attic Fans With Your New Roof</li></ol></div>
+  </div>
+</article><article class="piece" id="g06">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/crew.jpg" data-blob="a/crew.mp4" aria-label="Crew propio · $5,999 + 2 Free Fans"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">G06</span><span class="fmt">Video · 9:16 · grabado por el equipo</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>Crew propio · $5,999 + 2 Free Fans</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Ready for a roof that&#x27;s built to protect your home for decades? 🏠</p><p>At Level Up Roofing, new roof replacements in Houston start at just $5,999.</p><p>And right now, every new roof comes with 2 solar attic fans FREE ($1,500 value).</p><p>✅ New roofs starting at $5,999<br>✅ 2 solar attic fans FREE ($750 each)<br>✅ FREE roof inspection &amp; no-obligation estimate<br>✅ Our own crews, start to finish</p><p>👇 Tap below and fill out the form to get your FREE estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>New Roofs from $5,999</li><li>New Roof + 2 FREE Solar Attic Fans</li><li>Our Own Crews. Fair Prices.</li><li>FREE Roof Estimate in Houston</li><li>Save $1,500 on Your New Roof</li></ol></div>
+  </div>
+</article><article class="piece" id="g07">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/cuadrillas.jpg" data-blob="a/cuadrillas.mp4" aria-label="Cuadrillas propias · techo completo desde $5,999"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">G07</span><span class="fmt">Video · 9:16 · 34 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>Cuadrillas propias · techo completo desde $5,999</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>Don&#x27;t let it turn into a bigger repair bill.</p><p>✅ Full roof replacement from $5,999<br>✅ 2 solar attic fans FREE ($1,500 value)<br>✅ FREE estimate</p><p>Done by our own crew, start to finish. No subcontractors.</p><p>👇 Tap below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Full Roof Replacement From $5,999</li><li>No Subcontractors. Same Crew Start to Finish.</li><li>New Roof + 2 FREE Solar Attic Fans</li><li>Houston: Get Your Free Roof Estimate</li><li>Better Pricing. No Bloated Operation.</li></ol></div>
+  </div>
+</article><article class="piece" id="g08">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/mala.jpg" data-blob="a/mala.mp4" aria-label="Una mala instalación te cuesta miles"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">G08</span><span class="fmt">Video · 9:16 · presentador</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>Una mala instalación te cuesta miles</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>A roof can look fine from the street and still be failing underneath, around the chimney and in the attic.</p><p>✅ Professional installation<br>✅ 2 solar attic fans FREE with your new roof ($1,500 value)<br>✅ First payment in 2 years</p><p>Get it checked before the next big storm finds the problem for you.</p><p>👇 Tap below and fill out the form.</p></div><div class="hl"><h4>Títulos</h4><ol><li>New Roof Now, First Payment in 2 Years</li><li>2 Solar Attic Fans Included</li><li>Don&#x27;t Gamble on Your Roof</li><li>Houston Roofs Done Right</li><li>Get Your Free Estimate</li></ol></div>
+  </div>
+</article>
+  </div></section>
+<section class="" id="gighopp"><div class="wrap">
+    <div class="sec-head"><div><span class="mono">Publicados · 100% Gighopp</span><h2>Hechos por nosotros</h2></div><p>Piezas hechas de principio a fin en Gighopp: guion, <strong>animación 3D y VOX, voces, B-roll, diseño</strong> y montaje.</p></div>
+    <article class="piece" id="h01">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/vox.jpg" data-blob="a/vox.mp4" aria-label="VOX · ¿Qué pasa en tu ático?"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">H01</span><span class="fmt">Video animado · 9:16 · 66 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>VOX · ¿Qué pasa en tu ático?</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Thinking about replacing your roof? 🏠</p><p>Before you sign anything, ask about the one part most roofers never mention: your attic.</p><p>In Texas, it traps heat and moisture all year long… and that wears your roof out from underneath.</p><p>This month, Level Up Roofing installs 2 solar attic fans FREE with your new roof ($1,500 value).</p><p>👇 Click below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>New Roof + 2 FREE Solar Attic Fans</li><li>Save $1,500 on Your New Roof</li><li>FREE Roof Estimate in Houston</li><li>2 Solar Attic Fans ($750 Each) FREE</li><li>New Roof Now, First Payment in 2 Years*</li></ol></div>
+  </div>
+</article><article class="piece" id="h02">
+  <div class="piece-visual"><img class="flat" src="a/img_recordatorio.jpg" alt="Recordatorio “Your roof can&#x27;t wait” · $0 down" loading="lazy"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">H02</span><span class="fmt">Imagen · 4:5</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>Recordatorio “Your roof can&#x27;t wait” · $0 down</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>🔔 Reminder: your roof can&#x27;t wait.</p><p>This month at Level Up Roofing:</p><p>✅ $0 down<br>✅ Start paying in 2 years*<br>🎁 $1,500 in FREE gifts: 2 solar attic fans, installation included</p><p>👇 Click below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Your Roof Can&#x27;t Wait – $0 Down</li></ol></div>
+  </div>
+</article><article class="piece" id="h03">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/vid5999.jpg" data-blob="a/vid5999.mp4" aria-label="Roof $5,999 + 2 Free Fans"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">H03</span><span class="fmt">Video · 9:16 · 22 s · B-roll + voz IA</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>Roof $5,999 + 2 Free Fans</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>🚨 A brand-new roof in Houston starting at $5,999?*</p><p>Most homeowners don&#x27;t believe it until they see the quote.</p><p>And right now, every new roof with Level Up comes with:<br>✅ 2 solar attic fans — FREE<br>✅ That&#x27;s a $1,500 value ($750 each)<br>✅ Free roof inspection &amp; estimate</p><p>👇 Tap below and fill out the form to see if your home qualifies.</p></div><div class="hl"><h4>Títulos</h4><ol><li>⚠️ New Roof Starting at $5,999</li></ol></div>
+  </div>
+</article><article class="piece" id="h04">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/vid99.jpg" data-blob="a/vid99.mp4" aria-label="$99 al mes · $5,999 + 2 Free Fans"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">H04</span><span class="fmt">Video · 9:16 · 32 s · drone + B-roll + voz IA</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>$99 al mes · $5,999 + 2 Free Fans</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>🏡 Houston Homeowners! 🏡</p><p>Did you know you could get a full roof replacement from just $99/month?</p><p>Level Up Roofing is here with our Level Up Your Roof offer, and you could save 💰THOUSANDS💰 on a brand-new roof:</p><p>✅ Payments starting at just $99/mo<br>✅ Roofs fully installed from $5,999<br>✅ 2 solar attic fans FREE ($1,500 value)</p><p>👇 Tap below and fill out the form to get your FREE estimate!</p></div><div class="hl"><h4>Títulos</h4><ol><li>New Roof As Low As $99/mo</li></ol></div>
+  </div>
+</article><article class="piece" id="h05">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/vid3d.jpg" data-blob="a/vid3d.mp4" aria-label="Así se construye tu techo (3D)"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">H05</span><span class="fmt">Video 3D · 9:16 · 91 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>Así se construye tu techo (3D)</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>A roof is more than shingles. Underlayment, drip edge, flashing and ventilation all have to be done right, or water finds a way in.</p><p>✅ New roofs from $5,999, fully installed<br>✅ 2 solar attic fans FREE ($1,500 value)<br>✅ FREE estimate</p><p>You get a real number before you decide. No pressure.</p><p>👇 Tap below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>New Roofs From $5,999</li></ol></div>
+  </div>
+</article><article class="piece" id="h06">
+  <div class="piece-visual"><div class="track" tabindex="0" aria-label="Carrusel · 2 Free Solar Vents"><img class="r45" src="a/c1_1.jpg" alt="Carrusel · 2 Free Solar Vents — lámina 1 de 5" loading="lazy"><img class="r45" src="a/c1_2.jpg" alt="Carrusel · 2 Free Solar Vents — lámina 2 de 5" loading="lazy"><img class="r45" src="a/c1_3.jpg" alt="Carrusel · 2 Free Solar Vents — lámina 3 de 5" loading="lazy"><img class="r45" src="a/c1_4.jpg" alt="Carrusel · 2 Free Solar Vents — lámina 4 de 5" loading="lazy"><img class="r45" src="a/c1_5.jpg" alt="Carrusel · 2 Free Solar Vents — lámina 5 de 5" loading="lazy"></div><div class="track-hint">Desliza · 5 láminas</div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">H06</span><span class="fmt">Carrusel · 5 láminas · 4:5</span><span class="status st-off">Pausado</span></div>
+    <h3>Carrusel · 2 Free Solar Vents</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span></div>
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Still putting off that roof? 🏠</p><p>This month only, Level Up Roofing installs 2 FREE solar attic fans ($1,500 value) with your new roof.</p><p>✅ 0% interest*<br>✅ First payment AFTER 2 years*<br>✅ FREE roof inspection</p><p>👇 Tap below and fill out the form to claim yours.</p></div><div class="hl"><h4>Títulos</h4><ol><li>2 FREE Solar Attic Fans With Your New Roof</li></ol></div>
+  </div>
+</article>
+  </div></section>
+<section class="techos" id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Dónde corre todo</span><h2>Montaje en Meta</h2></div>
+      <p>Todas las piezas corren en un solo conjunto, <strong>Houston Metro EN · Residents</strong>, para que Meta reparta el presupuesto hacia los creativos que traen citas.</p>
+    </div>
+    <div class="specs">
+      <div class="spec"><span class="mono">Destino</span><p>Formulario instantáneo “2 Free Solar Fans”. Botón al formulario, nunca al teléfono.</p></div>
+      <div class="spec"><span class="mono">Optimización</span><p>Calidad del lead: Meta aprende de las citas que se agendan en Gighopp System.</p></div>
+      <div class="spec"><span class="mono">Textos</span><p>5 textos, 5 títulos y 5 descripciones por anuncio, con ángulos distintos.</p></div>
+      <div class="spec"><span class="mono">Formato</span><p>Formato original, sin recortes automáticos ni mejoras de Meta.</p></div>
+      <div class="spec"><span class="mono">Público</span><p>Dueños de casa en Houston y alrededores, en inglés.</p></div>
+      <div class="spec"><span class="mono">Oferta</span><p>Lo que se vende es el techo. Los 2 extractores solares son el regalo del mes.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap mono"><span><b>Gighopp</b> para Level Up Roofing &amp; Construction</span><span>15 oct – 8 nov 2026</span></div></footer>
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones (iOS/WhatsApp) don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+
+</body>
+</html>
