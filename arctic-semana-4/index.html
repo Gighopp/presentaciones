@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Arctic 16 · Creativos nuevos</title>
+<meta name="description" content="Material creado y publicado en Meta para Arctic 16, semana del 26 de octubre al 1 de noviembre de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Same job-sheet layout as the RJ and FG pages, recolored to Arctic's water blue (from the logo and creatives). */
+:root{
+  --bg:#eef2f5;
+  --paper:#f7f9fb;
+  --ink:#121820;
+  --muted:#56616d;
+  --rule:#cfd8e0;
+  --accent:#0a6fb0;      /* text-safe blue */
+  --signal:#2aa8f2;      /* Arctic water blue */
+  --band:#0f1620;
+  --band-ink:#eef2f5;
+  --band-muted:#94a1ae;
+  --chip:#dde6ee;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1319;--paper:#141b23;--ink:#e6ecf1;--muted:#9aa7b4;--rule:#26313c;--accent:#62c1ff;--signal:#2aa8f2;
+  --band:#080c11;--band-ink:#e6ecf1;--band-muted:#8a97a4;--chip:#1c2630;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1319;--paper:#141b23;--ink:#e6ecf1;--muted:#9aa7b4;--rule:#26313c;--accent:#62c1ff;--signal:#2aa8f2;
+  --band:#080c11;--band-ink:#e6ecf1;--band-muted:#8a97a4;--chip:#1c2630;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+.hero{background:var(--band);color:var(--band-ink);padding-block:28px 0;overflow:hidden}
+.hero-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--band-muted)}
+.hero-bar b{color:var(--band-ink);font-weight:500}
+.hero h1{font-variation-settings:"wdth" 125;font-weight:850;font-size:clamp(44px,9vw,124px);line-height:.88;letter-spacing:-.02em;margin-top:44px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero-lede{max-width:58ch;color:var(--band-muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--band-ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#26313c;border-block:1px solid #26313c;margin-top:40px}
+.stat{background:var(--band);padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:44px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted)}
+.film{display:flex;gap:8px;margin-top:32px;transform:translateX(-3%);width:106%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:6px 6px 0 0}
+
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:36px}
+.sec-head .mono{color:var(--accent)}
+.sec-head h2{font-variation-settings:"wdth" 118;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:.95;letter-spacing:-.01em;margin-top:10px}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+
+.pieces{background:var(--paper);border-block:1px solid var(--rule)}
+.piece{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:40px;padding-block:44px;border-bottom:1px solid var(--rule);align-items:center}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.code{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;font-size:56px;line-height:.8;color:var(--signal)}
+.fmt{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.piece h3{font-variation-settings:"wdth" 100;font-weight:700;font-size:28px;line-height:1.1;margin:18px 0 12px}
+.why{color:var(--muted);margin:0 0 16px;font-size:15px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.chip{font:500 12px var(--f-mono);letter-spacing:.04em;background:var(--chip);padding:5px 10px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#25d366;margin-right:7px;vertical-align:1px}
+
+.phone{position:relative;width:min(300px,100%);aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink)}
+.phone.p45{aspect-ratio:4/5;width:min(360px,100%)}
+.phone img,.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.play{position:absolute;left:12px;bottom:12px;display:flex;align-items:center;gap:8px;background:rgba(10,15,22,.78);color:#fff;font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
+.play::before{content:"";width:0;height:0;border-left:9px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent}
+
+/* texts */
+.texts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.tx{border:1px solid var(--rule);border-radius:8px;background:var(--bg);padding:20px}
+.tx .mono{color:var(--accent)}
+.tx h3{font-variation-settings:"wdth" 105;font-weight:700;font-size:20px;line-height:1.15;margin:8px 0 12px}
+.tx p{margin:0 0 9px;font-size:15px;line-height:1.5}
+.tx p:last-child{margin-bottom:0}
+.lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
+.list{border-top:2px solid var(--ink);padding-top:14px}
+.list .mono{color:var(--accent)}
+.list ol{margin:10px 0 0;padding-left:22px;font-size:15px}
+.list li{margin:4px 0}
+
+/* setup */
+.camp{border:2px solid var(--ink);border-radius:8px;padding:22px}
+.camp h3{font-variation-settings:"wdth" 120;font-weight:800;font-size:30px;line-height:1}
+.camp .set{color:var(--muted);margin:6px 0 16px}
+.camp ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 24px}
+.camp li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--rule);padding-top:8px}
+.camp li b{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;color:var(--accent)}
+.cities{margin-top:24px;border:1px solid var(--rule);border-radius:8px;padding:22px;background:var(--paper)}
+.cities .mono{color:var(--accent)}
+.cities p{margin:10px 0 0;font-size:16px;line-height:1.7}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:40px}
+.spec{background:var(--bg);padding:22px 20px}
+.spec .mono{color:var(--accent)}
+.spec p{margin:8px 0 0;font-size:15px}
+footer{background:var(--band);color:var(--band-muted);padding-block:36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--band-ink);font-weight:500}
+
+@media (max-width:980px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .specs,.texts,.lists{grid-template-columns:1fr}
+  .film img:nth-child(n+4){display:none}
+  .stat b{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar mono"><span><b>Gighopp</b> · Presentación de material</span><span>Semana del 26 oct – 1 nov 2026</span></div>
+    <h1>Arctic 16<br><em>Creativos nuevos</em></h1>
+    <p class="hero-lede">Cinco piezas nuevas para la <strong>prueba de agua gratis en casa</strong> y el <strong>sistema de filtración para toda la casa</strong>, creadas por Gighopp y publicadas en Meta esta semana en un conjunto nuevo de WhatsApp para Houston y Katy.</p>
+    <div class="stats">
+      <div class="stat"><b>5</b><span class="mono">piezas nuevas</span></div>
+      <div class="stat"><b>3</b><span class="mono">videos</span></div>
+      <div class="stat"><b>2</b><span class="mono">imágenes</span></div>
+      <div class="stat"><b>$20</b><span class="mono">al día · conjunto nuevo</span></div>
+    </div>
+    <div class="film" aria-hidden="true">
+      <img src="a/p04_llave.jpg" alt=""><img src="a/p02_manchas.jpg" alt=""><img src="a/p03_ugc.jpg" alt=""><img src="a/p01_paso.jpg" alt=""><img src="a/p05_aguadura.jpg" alt="">
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="pieces" id="piezas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Material nuevo</span><h2>No es tu champú. Es el agua.</h2></div>
+      <p>Todas las piezas giran alrededor de una idea: <strong>el agua dura de Houston se nota en la regadera, en la piel y en el cabello</strong>. Cada anuncio lleva <strong>5 textos, 5 títulos y 5 descripciones</strong>, y el botón abre directo el WhatsApp de Arctic 16.</p>
+    </div>
+
+    <article class="piece" id="p01">
+      <div class="piece-visual"><div class="phone"><img src="a/p01_paso.jpg" alt="Video: cómo funcionan los filtros, paso a paso por toda la casa"><span class="play">Video · 1 min 09 s</span></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P01</span><span class="fmt">Video animado · 9:16 · 1 min 09 s</span></div>
+        <h3>Video “Cómo funcionan los filtros” · Paso a paso</h3>
+        <p class="why">El recorrido del agua desde la calle hasta cada llave de la casa: dónde entra el sistema, qué limpia y cómo llega el agua filtrada a la cocina, el baño y la lavadora.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p02">
+      <div class="piece-visual"><div class="phone"><img src="a/p02_manchas.jpg" alt="Video: regadera llena de sarro por el agua dura"><span class="play">Video · 31 s</span></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P02</span><span class="fmt">Video animado · 9:16 · 31 s</span></div>
+        <h3>Video “Cómo funcionan los filtros” · Manchas y sarro</h3>
+        <p class="why">Arranca con el problema que todos reconocen: la regadera tapada de sarro. Versión corta y directa para Reels y Stories.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p03">
+      <div class="piece-visual"><div class="phone p45"><img src="a/p03_ugc.jpg" alt="Video testimonio: mujer frente al espejo con el cabello reseco"><span class="play">Video · 39 s</span></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P03</span><span class="fmt">Video testimonio · 4:5 · 39 s</span></div>
+        <h3>Video testimonio · Cabello y agua dura</h3>
+        <p class="why">Formato testimonio grabado con el celular en el baño de casa, hablando del cabello reseco que deja el agua dura. Se siente real y cercano, como un video de una amiga.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p04">
+      <div class="piece-visual"><div class="phone p45"><img src="a/p04_llave.jpg" alt="Imagen: Tú solo abres la llave, del agua pura nos encargamos nosotros"></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P04</span><span class="fmt">Imagen · 4:5</span></div>
+        <h3>Imagen “Tú solo abres la llave”</h3>
+        <p class="why">El sistema Arctic 16 ya instalado, con una clienta satisfecha. El mensaje: del agua pura nos encargamos nosotros.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p05">
+      <div class="piece-visual"><div class="phone p45"><img src="a/p05_aguadura.jpg" alt="Imagen: El agua dura se queda afuera"></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P05</span><span class="fmt">Imagen · 4:5</span></div>
+        <h3>Imagen “El agua dura se queda afuera”</h3>
+        <p class="why">Para quien sigue cargando garrafones: agua pura directo de la llave, con el equipo de filtración al frente.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="textos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Lo que lee la gente</span><h2>Cinco ángulos de texto</h2></div>
+      <p>Cada pieza lleva los mismos <strong>5 textos principales</strong> y Meta muestra a cada persona el que mejor le funciona. Todos cierran igual: <strong>escríbenos por WhatsApp y agenda tu prueba de agua gratis</strong>.</p>
+    </div>
+    <div class="texts">
+      <div class="tx"><span class="mono">Texto 1 · El problema</span><h3>“No es tu champú. Es el agua.”</h3>
+        <p>¿Manchas blancas en la regadera, cabello reseco y piel que pica después de bañarte? 🚿</p>
+        <p>No es tu champú. Es el agua.</p>
+        <p>El agua de Houston es dura y ese mismo sarro se queda en tu piel, tu pelo y tus tuberías.</p>
+        <p>✅ Sistema de filtración para toda la casa<br>✅ Elimina cloro, metales pesados y agua dura<br>✅ Garantía de por vida</p>
+        <p>👇 Escríbenos por WhatsApp y agenda tu prueba de agua gratis.</p></div>
+      <div class="tx"><span class="mono">Texto 2 · La verdad del sector</span><h3>“Lo que muchas compañías de filtros no te dicen”</h3>
+        <p>Lo que muchas compañías de filtros no te dicen 🧐</p>
+        <p>Los sistemas “sin sal” no quitan la dureza del agua. Solo la “condicionan”… y el sarro sigue ahí.</p>
+        <p>Nosotros primero revisamos TU agua y después te decimos qué necesitas. No lo que más nos conviene vender.</p>
+        <p>✅ Prueba de agua gratis en tu casa<br>✅ Garantía de por vida</p>
+        <p>👇 Escríbenos por WhatsApp para agendarla.</p></div>
+      <div class="tx"><span class="mono">Texto 3 · Lo que no se ve</span><h3>“El sarro no solo mancha la regadera”</h3>
+        <p>El sarro no solo mancha la regadera. 😬</p>
+        <p>Se acumula dentro de tu calentador, tu lavadora y tus tuberías, y lo pagas después en reparaciones.</p>
+        <p>Un sistema de filtración para toda la casa lo detiene desde la entrada del agua:<br>✅ Protege tus electrodomésticos<br>✅ Elimina cloro y metales pesados<br>✅ Garantía de por vida</p>
+        <p>👇 Escríbenos por WhatsApp y revisa tu agua gratis.</p></div>
+      <div class="tx"><span class="mono">Texto 4 · Así de fácil</span><h3>“¿Quieres saber qué tiene el agua de tu casa?”</h3>
+        <p>¿Quieres saber qué tiene el agua de tu casa? 💧</p>
+        <p>Es más fácil de lo que crees:<br>1️⃣ Nos escribes por WhatsApp<br>2️⃣ Vamos a tu casa y hacemos la prueba gratis<br>3️⃣ Te decimos qué sistema necesitas, si es que lo necesitas</p>
+        <p>Atendemos Houston, Katy y alrededores.</p>
+        <p>👇 Escríbenos y agenda tu prueba de agua gratis.</p></div>
+      <div class="tx"><span class="mono">Texto 5 · La familia</span><h3>“Tu familia se baña, cocina y bebe esta agua”</h3>
+        <p>Tu familia se baña, cocina y bebe esta agua todos los días. 🏡</p>
+        <p>¿Sabes realmente qué trae?</p>
+        <p>Con un sistema de filtración para toda la casa:<br>✅ Agua sin cloro ni sarro en cada llave<br>✅ Piel y cabello más suaves<br>✅ Garantía de por vida</p>
+        <p>Primero lo comprobamos con una prueba gratis en tu hogar.</p>
+        <p>👇 Escríbenos por WhatsApp para agendarla.</p></div>
+    </div>
+    <div class="lists">
+      <div class="list"><span class="mono">Los 5 títulos</span><ol><li>Prueba de agua gratis en tu casa</li><li>Garantía de por vida en tu sistema</li><li>Adiós al sarro y al cloro en Houston</li><li>Agua limpia en todas tus llaves</li><li>Escríbenos y agenda tu prueba gratis</li></ol></div>
+      <div class="list"><span class="mono">Las 5 descripciones</span><ol><li>Sistema de filtración para toda la casa en Houston.</li><li>Elimina cloro, metales pesados y agua dura.</li><li>Prueba de agua gratis en tu hogar.</li><li>Garantía de por vida en el sistema de filtración.</li><li>Escríbenos por WhatsApp y agenda tu prueba gratis.</li></ol></div>
+    </div>
+  </div>
+</section>
+
+<section class="pieces" id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Dónde corre cada pieza</span><h2>Montaje en Meta</h2></div>
+      <p>Las cinco piezas entraron en un <strong>conjunto nuevo de WhatsApp</strong>, con su propio presupuesto, para medir el material nuevo sin tocar los conjuntos que ya están funcionando.</p>
+    </div>
+    <div class="camp"><h3>WhatsApp · Piezas nuevas</h3><p class="set mono">Campaña de clientes potenciales · $20 al día · activo desde el 1 nov</p><ul>
+      <li><b>P01</b>Video · Paso a paso</li><li><b>P02</b>Video · Manchas y sarro</li><li><b>P03</b>Video testimonio</li><li><b>P04</b>Imagen “Tú solo abres la llave”</li><li><b>P05</b>Imagen “El agua dura se queda afuera”</li></ul></div>
+    <div class="cities"><span class="mono">Zona del conjunto</span>
+      <p>Houston (18 millas a la redonda) · Katy, Brookshire y Cypress (10 millas alrededor de cada punto) · Personas de 25 a 65 años</p></div>
+    <div class="specs">
+      <div class="spec"><span class="mono">Destino</span><p>El botón abre el WhatsApp de Arctic 16 (+1 832-674-6918). Cada conversación entra al CRM.</p></div>
+      <div class="spec"><span class="mono">Zona fija</span><p>Mismo público y misma zona que el conjunto de WhatsApp actual. Meta no puede ampliar la ubicación.</p></div>
+      <div class="spec"><span class="mono">Presupuesto</span><p>$20 al día, separado del resto, para ver qué pieza trae conversaciones más baratas.</p></div>
+      <div class="spec"><span class="mono">Textos</span><p>5 textos, 5 títulos y 5 descripciones por anuncio.</p></div>
+      <div class="spec"><span class="mono">Ubicaciones</span><p>Facebook, Instagram y Estados de WhatsApp. Sin Threads ni Audience Network.</p></div>
+      <div class="spec"><span class="mono">Medición</span><p>Píxel conectado a cada anuncio. El CRM le avisa a Meta cuando un contacto entra, agenda cita o compra.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap mono"><span><b>Gighopp</b> para Arctic 16</span><span>Semana del 26 oct – 1 nov 2026</span></div></footer>
+
+</body>
+</html>
