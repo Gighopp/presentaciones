@@ -125,7 +125,17 @@ footer b{color:var(--band-ink);font-weight:500}
   .film img:nth-child(n+4){display:none}
   .stat b{font-size:36px}
 }
-video{-webkit-touch-callout:none;user-select:none}
+video,.vp{-webkit-touch-callout:none;user-select:none}
+
+.vp{position:relative;width:100%;height:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid #111;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:#fff}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.55);color:#fff;font:600 11px system-ui;cursor:pointer}
 </style>
 </head>
 <body>
@@ -293,5 +303,23 @@ video{-webkit-touch-callout:none;user-select:none}
 })();
 </script>
 <script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
+<script>
+(function(){
+  document.querySelectorAll('video[data-blob]').forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
 </body>
 </html>
