@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>RJ Brothers · Semana 4 · Gighopp</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Material publicado en Meta para RJ Brothers, semana del 26 de octubre al 1 de noviembre de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Gighopp · Dirección de marca 04: negro, fucsia, titulares en mayúsculas pesadas, acentos cian y amarillo. */
+:root{
+  --bg:#111111; --paper:#171717; --card:#1c1c1c; --ink:#ffffff; --muted:#a3a3a3; --rule:#2c2c2c;
+  --fucsia:#EC0E7B; --cian:#35BED0; --amarillo:#FFE033;
+  --f-display:"Poppins",Arial,sans-serif; --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono,.kicker{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cian);outline-offset:3px}
+.wordmark{font-family:var(--f-display);font-weight:800;letter-spacing:-.035em;line-height:1;text-transform:none}
+.accent{display:flex;align-items:center;gap:14px;margin-top:22px}
+.accent i{display:block;height:7px;width:120px;background:var(--cian)}
+.accent i+i{width:12px;height:12px;background:var(--amarillo)}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--bg);padding-block:28px 0;overflow:hidden;border-bottom:1px solid var(--rule)}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.hero-top .wordmark{font-size:clamp(34px,5vw,56px)}
+.hero-top .kicker{color:var(--ink);display:flex;align-items:center;gap:16px}
+.hero-top .kicker::before{content:"";display:block;width:clamp(40px,14vw,220px);height:2px;background:var(--ink)}
+.hero h1{font-weight:900;text-transform:uppercase;font-size:clamp(44px,9vw,124px);line-height:.92;letter-spacing:-.025em;margin-top:44px}
+.hero h1 em{font-style:normal;color:var(--fucsia)}
+.tagline{font-family:var(--f-display);font-weight:700;font-size:clamp(18px,2.2vw,26px);margin:14px 0 0}
+.hero-lede{max-width:56ch;color:var(--muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--ink);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
+.stat{border:1.5px solid #3a3a3a;border-radius:14px;padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-size:48px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.stat:first-child b{color:var(--fucsia)}
+.stat span{color:var(--muted)}
+.film{display:flex;gap:10px;margin-top:36px;transform:translateX(-4%);width:108%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:10px 10px 0 0;filter:grayscale(1) contrast(1.05)}
+.film img:nth-child(3){filter:none}
+
+/* ---------- Section heads ---------- */
+section{padding-block:76px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;padding-bottom:24px;margin-bottom:40px;border-bottom:1px solid var(--rule)}
+.sec-head .mono{color:var(--cian)}
+.sec-head h2{font-weight:900;text-transform:uppercase;font-size:clamp(32px,5vw,60px);line-height:.95;letter-spacing:-.02em;margin-top:12px}
+.sec-head h2::after{content:"";display:block;width:90px;height:5px;background:var(--fucsia);margin-top:18px}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+
+/* ---------- Pieces ---------- */
+.techos{background:var(--bg)}
+.piece{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;padding:40px;margin-bottom:24px;border:1.5px solid #3a3a3a;border-radius:18px;background:var(--paper)}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.code{font-family:var(--f-display);font-weight:900;font-size:56px;line-height:.8;color:var(--fucsia)}
+.fmt{font:600 11px var(--f-display);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.piece h3{font-weight:800;text-transform:uppercase;font-size:26px;line-height:1.08;letter-spacing:-.01em;margin:18px 0 12px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:600 11px var(--f-display);letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--cian);color:var(--cian);padding:5px 12px;border-radius:999px}
+.copy,.hl{border-left:3px solid var(--fucsia);padding-left:16px;margin-top:18px}
+.hl{border-left-color:var(--cian)}
+.copy h4,.hl h4{font:600 11px var(--f-display);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.hl ol{margin:0;padding-left:20px;font-size:15px}
+.hl li{margin:2px 0}
+.hl li::marker{color:var(--amarillo);font-weight:700}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:var(--fucsia) transparent}
+.track img{flex:0 0 78%;max-width:78%;aspect-ratio:1;object-fit:cover;scroll-snap-align:start;border-radius:12px}
+.track-hint{font:600 11px var(--f-display);color:var(--muted);letter-spacing:.18em;text-transform:uppercase;margin-top:8px}
+.flat{border-radius:12px;max-width:560px;width:100%}
+.phone{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 0 0 6px #000,0 0 0 8px #3a3a3a;max-width:100%}
+.phone video,.phone img{width:100%;height:100%;object-fit:cover;display:block}
+.phone-lg{width:min(320px,100%);margin:10px auto}
+
+/* ---------- Montaje ---------- */
+.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.city{border-radius:18px;padding:26px;background:var(--fucsia);color:#fff}
+.city+.city{background:#000;border:1.5px solid #3a3a3a}
+.city h3{font-weight:900;text-transform:uppercase;font-size:34px;letter-spacing:-.02em}
+.city .set{opacity:.85;margin:6px 0 18px}
+.city ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.city li{display:grid;grid-template-columns:48px 1fr;gap:10px;align-items:baseline;border-top:1px solid rgba(255,255,255,.28);padding-top:8px}
+.city li b{font-family:var(--f-display);font-weight:900}
+.city+.city li b{color:var(--fucsia)}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.spec{border:1.5px solid #3a3a3a;border-radius:14px;padding:22px 20px}
+.spec .mono{color:var(--amarillo)}
+.spec p{margin:8px 0 0;font-size:15px}
+footer{background:#000;color:var(--muted);padding-block:40px;border-top:1px solid var(--rule)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .wordmark{font-size:30px;color:#fff}
+footer .tag{font-family:var(--f-display);font-weight:700;color:#fff}
+footer .tag span{color:var(--fucsia)}
+
+@media (max-width:980px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.specs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px;padding:22px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .map,.specs{grid-template-columns:1fr}
+  .film img:nth-child(n+5){display:none}
+  .stat b{font-size:38px}
+}
+</style>
+
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top"><span class="wordmark">Gighopp</span><span class="kicker">Presentación de material / Semana 4</span></div>
+    <h1>RJ Brothers.<br><em>Semana 4.</em></h1>
+    <p class="tagline">Creatividad. Meta Ads. Sistemas.</p>
+    <div class="accent" aria-hidden="true"><i></i><i></i></div>
+    <p class="hero-lede">Seis piezas creadas por Gighopp para la oferta de <strong>techo nuevo con mantenimiento incluido</strong>, escritas, diseñadas y publicadas en Meta del 26 de octubre al 1 de noviembre de 2026 para Houston y Dallas.</p>
+    <div class="stats">
+      <div class="stat"><b>6</b><span class="mono">piezas originales</span></div>
+      <div class="stat"><b>10</b><span class="mono">anuncios publicados</span></div>
+      <div class="stat"><b>2</b><span class="mono">conjuntos</span></div>
+      <div class="stat"><b>2</b><span class="mono">ciudades</span></div>
+    </div>
+    <div class="film" aria-hidden="true">
+      <img src="../a/P05_rj_carrusel_1.jpg" alt=""><img src="../a/P01_rj_faq_1.jpg" alt=""><img src="../a/P04_image.jpg" alt=""><img src="../a/P02_image.jpg" alt=""><img src="../a/P05_rj_carrusel_4.jpg" alt=""><img src="../a/P01_rj_faq_4.jpg" alt=""><img src="../a/P05_rj_carrusel_5.jpg" alt="">
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="techos" id="techos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Techos · material nuevo</span><h2>Techo nuevo con mantenimiento incluido</h2></div>
+      <p>Seis piezas para la oferta de <strong>techo nuevo desde $5,500</strong> con <strong>mantenimiento cada 3 años durante 20 años</strong>, 30 años de garantía en materiales y 20 en mano de obra. Cada una con 5 textos, 5 títulos y 5 descripciones.</p>
+    </div>
+    <article class="piece" id="p01">
+  <div class="piece-visual"><div class="track" tabindex="0" aria-label="Carrusel de comentarios, 7 láminas"><img src="../a/P01_rj_faq_1.jpg" alt="Carrusel de comentarios — lámina 1 de 7"><img src="../a/P01_rj_faq_2.jpg" alt="Carrusel de comentarios — lámina 2 de 7"><img src="../a/P01_rj_faq_3.jpg" alt="Carrusel de comentarios — lámina 3 de 7"><img src="../a/P01_rj_faq_4.jpg" alt="Carrusel de comentarios — lámina 4 de 7"><img src="../a/P01_rj_faq_5.jpg" alt="Carrusel de comentarios — lámina 5 de 7"><img src="../a/P01_rj_faq_6.jpg" alt="Carrusel de comentarios — lámina 6 de 7"><img src="../a/P01_rj_faq_7.jpg" alt="Carrusel de comentarios — lámina 7 de 7"></div><div class="track-hint">Desliza · 7 láminas</div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P01</span><span class="fmt">Carrusel · 7 láminas · 1:1</span></div>
+    <h3>Carrusel “¿Ustedes también desaparecen?”</h3>
+    <div class="where"><span class="chip">Houston</span></div>
+    
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>¿Te instalaron el techo… y después nadie te contestó el teléfono?</p><p>Le pasa a muchísima gente en Houston.</p><p>Con RJ Brothers no desaparecemos. Volvemos por contrato:</p><p>✅ Techo nuevo desde $5,500<br>✅ Mantenimiento cada 3 años, durante 20 años (7 visitas)<br>✅ 30 años de garantía en materiales + 20 años en mano de obra</p><p>Desliza y mira lo que nos preguntan siempre 👉</p><p>👇 Haz clic y llena el formulario para recibir tu cotización.</p></div>
+    
+  </div>
+</article><article class="piece" id="p02">
+  <div class="piece-visual"><div class="phone phone-lg"><img src="../a/P02_image.jpg" alt="Historia de Instagram desde el techo en obra"></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P02</span><span class="fmt">Imagen · 9:16 · Stories y Reels</span></div>
+    <h3>Historia “Así va el techo de hoy”</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">Dallas</span></div>
+    
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Así va el techo de hoy en Houston 🔨</p><p>Y este no es el último día que nos ves en esta casa.</p><p>Cada 3 años volvemos a darle mantenimiento, durante 20 años. Por contrato.</p><p>✅ Techo nuevo desde $5,500<br>✅ 30 años en materiales + 20 años en mano de obra</p><p>👇 Haz clic y llena el formulario.</p></div>
+    <div class="hl"><h4>Títulos</h4><ol><li>Techo nuevo desde $5,500</li><li>Volvemos cada 3 años, por 20 años</li><li>30 años materiales + 20 mano de obra</li><li>Techos nuevos en Houston</li><li>Pide tu cotización aquí</li></ol></div>
+  </div>
+</article><article class="piece" id="p03">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="../a/p3.jpg" data-blob="../a/p3.mp4" aria-label="Video 3D ¿Tu techo está fallando?"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P03</span><span class="fmt">Video animado · 9:16 · 55 s</span></div>
+    <h3>Video 3D “¿Tu techo está fallando?”</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">Dallas</span></div>
+    
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>¿Tu techo está fallando?</p><p>Una mancha en el techo de la cocina casi siempre empieza arriba, donde no la ves.</p><p>Nosotros lo revisamos en 4 pasos:<br>1️⃣ Tejas<br>2️⃣ Flashing<br>3️⃣ Canaletas<br>4️⃣ Ático</p><p>Y te decimos la verdad: si se repara o si ya toca cambiarlo.</p><p>👇 Haz clic y llena el formulario.</p></div>
+    <div class="hl"><h4>Títulos</h4><ol><li>Empieza a pagar en 2 años</li><li>¿Tu techo está fallando?</li><li>Inspección de techo en 4 pasos</li><li>Techo nuevo desde $5,500</li><li>Mantenimiento incluido por 20 años</li></ol></div>
+  </div>
+</article><article class="piece" id="p04">
+  <div class="piece-visual"><img class="flat" src="../a/P04_image.jpg" alt="Tabla comparativa: muchas compañías contra RJ Brothers"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P04</span><span class="fmt">Imagen · 1:1</span></div>
+    <h3>Comparación “Muchas compañías vs RJ Brothers”</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">Dallas</span></div>
+    
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>Antes de cambiar tu techo, compara esto 👇</p><p>Muchas compañías:<br>❌ Solo lo instalan<br>❌ El mantenimiento te lo cobran aparte<br>❌ Si algo pasa, te toca perseguirlos</p><p>RJ Brothers:<br>✅ Lo instalamos y volvemos cada 3 años, durante 20 años<br>✅ Mantenimiento incluido<br>✅ Nosotros te visitamos</p><p>Techo nuevo desde $5,500.</p><p>👇 Haz clic y llena el formulario.</p></div>
+    <div class="hl"><h4>Títulos</h4><ol><li>Compara antes de cambiar tu techo</li><li>Techo nuevo desde $5,500</li><li>Mantenimiento incluido por 20 años</li><li>Nosotros sí regresamos</li><li>Techos nuevos en Houston</li></ol></div>
+  </div>
+</article><article class="piece" id="p05">
+  <div class="piece-visual"><div class="track" tabindex="0" aria-label="Carrusel la historia de tu techo nuevo, 6 láminas"><img src="../a/P05_rj_carrusel_1.jpg" alt="Carrusel la historia de tu techo nuevo — lámina 1 de 6"><img src="../a/P05_rj_carrusel_2.jpg" alt="Carrusel la historia de tu techo nuevo — lámina 2 de 6"><img src="../a/P05_rj_carrusel_3.jpg" alt="Carrusel la historia de tu techo nuevo — lámina 3 de 6"><img src="../a/P05_rj_carrusel_4.jpg" alt="Carrusel la historia de tu techo nuevo — lámina 4 de 6"><img src="../a/P05_rj_carrusel_5.jpg" alt="Carrusel la historia de tu techo nuevo — lámina 5 de 6"><img src="../a/P05_rj_carrusel_6.jpg" alt="Carrusel la historia de tu techo nuevo — lámina 6 de 6"></div><div class="track-hint">Desliza · 6 láminas</div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P05</span><span class="fmt">Carrusel · 6 láminas · 1:1</span></div>
+    <h3>Carrusel “La historia de tu techo nuevo”</h3>
+    <div class="where"><span class="chip">Houston</span></div>
+    
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>La historia de tu techo nuevo, en 4 pasos 👉</p><p>1️⃣ Instalamos tu techo nuevo en Houston y alrededores<br>2️⃣ Con 30 años de garantía en materiales + 20 en mano de obra<br>3️⃣ Volvemos cada 3 años, durante 20 años<br>4️⃣ En cada visita sellamos el flashing y pintamos los accesorios</p><p>Todo desde $5,500.</p><p>👇 Haz clic y llena el formulario.</p></div>
+    
+  </div>
+</article><article class="piece" id="p06">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="../a/p6.jpg" data-blob="../a/p6.mp4" aria-label="Video ¿Por qué tan caro?"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P06</span><span class="fmt">Video · 9:16 · 35 s</span></div>
+    <h3>Video “¿Por qué tan caro?”</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">Dallas</span></div>
+    
+    <div class="copy"><h4>Texto principal 1 de 5</h4><p>¿Por qué un techo en Estados Unidos cuesta tanto?</p><p>Te cuento lo que nadie te dice: en muchas cotizaciones estás pagando las oficinas, los comerciales y la comisión del vendedor.</p><p>En RJ Brothers somos una compañía pequeña de Texas. Sin gastos de más.</p><p>Por eso tu techo nuevo empieza desde $5,000.</p><p>👇 Haz clic y llena el formulario para tu cotización.</p></div>
+    <div class="hl"><h4>Títulos</h4><ol><li>¿Por qué tan caro tu techo?</li><li>Techo nuevo desde $5,000</li><li>Sin comisiones infladas</li><li>Techos nuevos en Dallas</li><li>Pide tu cotización aquí</li></ol></div>
+  </div>
+</article>
+  </div>
+</section>
+
+<section id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Dónde corre cada pieza</span><h2>Montaje en Meta</h2></div>
+      <p>Las piezas entraron en los conjuntos que ya tienen historial con la oferta de $5,500, para que Meta no empiece de cero.</p>
+    </div>
+    <div class="map">
+      <div class="city"><h3>Houston</h3><p class="set mono">“$5500 calidad”</p><ul>
+        <li><b>P01</b>Carrusel comentarios</li><li><b>P02</b>Historia IG</li><li><b>P03</b>Video 3D</li>
+        <li><b>P04</b>Comparación</li><li><b>P05</b>Carrusel 6 láminas</li><li><b>P06</b>¿Por qué tan caro?</li></ul></div>
+      <div class="city"><h3>Dallas</h3><p class="set mono">“Dallas Form (ESP)”</p><ul>
+        <li><b>P02</b>Historia IG</li><li><b>P03</b>Video 3D</li><li><b>P04</b>Comparación</li><li><b>P06</b>¿Por qué tan caro?</li></ul></div>
+    </div>
+    <div class="specs" style="margin-top:40px">
+      <div class="spec"><span class="mono">Destino</span><p>Formulario instantáneo. Botón al formulario, nunca al teléfono.</p></div>
+      <div class="spec"><span class="mono">Optimización</span><p>Calidad del lead: Meta aprende de las citas que se agendan en el CRM.</p></div>
+      <div class="spec"><span class="mono">Textos</span><p>5 textos, 5 títulos y 5 descripciones por anuncio, con ángulos distintos.</p></div>
+      <div class="spec"><span class="mono">Formato</span><p>Formato original, sin recortes automáticos ni mejoras de Meta.</p></div>
+      <div class="spec"><span class="mono">Ubicaciones</span><p>Facebook e Instagram. Sin Threads ni Audience Network.</p></div>
+      <div class="spec"><span class="mono">Mensajes</span><p>Sin chats de WhatsApp, Messenger ni Instagram: todo entra por el formulario.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span class="wordmark">Gighopp</span><span class="tag">Que tu publicidad <span>trabaje.</span></span><span class="mono">Para RJ Brothers Contractors &amp; Roof · Semana 4</span></div></footer>
+
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones (iOS/WhatsApp) don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+
+</body>
+</html>
