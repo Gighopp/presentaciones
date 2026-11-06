@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}video,.vp{-webkit-touch-callout:none;user-select:none}
+
+.vp{position:relative;width:100%;height:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid #111;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:#fff}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.55);color:#fff;font:600 11px system-ui;cursor:pointer}
+</style>
+<title>RJ Brothers · Semana 5</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Material publicado en Meta para RJ Brothers, semana del 2 al 8 de noviembre de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a contractor's job sheet. Full-bleed bands, a strict 12-col grid inside, spec labels in mono like a work order. */
+:root{
+  --bg:#eef0ee;          /* concrete */
+  --paper:#f8f9f7;
+  --ink:#151a17;         /* tar-paper black */
+  --muted:#5b665f;
+  --rule:#cfd5d0;
+  --green:#1f6b3f;       /* shingle green */
+  --signal:#2dc75c;      /* RJ green, from the creatives */
+  --band:#151a17;        /* dark band */
+  --band-ink:#eef0ee;
+  --band-muted:#9aa69f;
+  --chip:#e1e7e2;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101412;--paper:#161b18;--ink:#e8ece9;--muted:#98a49d;--rule:#2a332e;--green:#5fd38a;--signal:#2dc75c;
+  --band:#0a0d0b;--band-ink:#e8ece9;--band-muted:#8d9992;--chip:#1f2722;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101412;--paper:#161b18;--ink:#e8ece9;--muted:#98a49d;--rule:#2a332e;--green:#5fd38a;--signal:#2dc75c;
+  --band:#0a0d0b;--band-ink:#e8ece9;--band-muted:#8d9992;--chip:#1f2722;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--band);color:var(--band-ink);padding-block:28px 0;overflow:hidden}
+.hero-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--band-muted)}
+.hero-bar b{color:var(--band-ink);font-weight:500}
+.hero h1{font-variation-settings:"wdth" 125;font-weight:850;font-size:clamp(46px,9.5vw,132px);line-height:.88;letter-spacing:-.02em;margin-top:44px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero-lede{max-width:56ch;color:var(--band-muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--band-ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#2a332e;border-block:1px solid #2a332e;margin-top:40px}
+.stat{background:var(--band);padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:44px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted)}
+.film{display:flex;gap:8px;margin-top:32px;transform:translateX(-4%);width:108%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:6px 6px 0 0;filter:saturate(.9)}
+
+/* ---------- Section heads ---------- */
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:36px}
+.sec-head .mono{color:var(--green)}
+.sec-head h2{font-variation-settings:"wdth" 118;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:.95;letter-spacing:-.01em;margin-top:10px}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+
+/* ---------- Ventanas grid ---------- */
+.setbar{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:28px;color:var(--muted)}
+.setbar span b{color:var(--ink)}
+.hooks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 16px}
+.hook{margin:0}
+.phone{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink);max-width:100%}
+.phone video,.phone img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:8px;top:8px;font:500 10px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 7px;border-radius:3px}
+.tag-a{background:var(--signal);color:#08130c}
+.tag-b{background:#f2f4f2;color:#151a17}
+.hook figcaption{display:grid;gap:3px;margin-top:16px}
+.hook .num{font:500 11px var(--f-mono);color:var(--green);letter-spacing:.06em}
+.hook strong{font-weight:600;font-size:15px;line-height:1.3}
+.hook .angle{font-size:13px;color:var(--muted)}
+.how{margin-top:28px;color:var(--muted);font-size:14px}
+
+/* ---------- Techos pieces ---------- */
+.techos{background:var(--paper);border-block:1px solid var(--rule)}
+.piece{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;padding-block:44px;border-bottom:1px solid var(--rule)}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline}
+.code{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;font-size:56px;line-height:.8;color:var(--signal)}
+.fmt{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.piece h3{font-variation-settings:"wdth" 100;font-weight:700;font-size:28px;line-height:1.1;margin:18px 0 12px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 12px var(--f-mono);letter-spacing:.04em;background:var(--chip);padding:5px 10px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:7px;vertical-align:1px}
+.copy,.hl{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px}
+.copy h4,.hl h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.hl ol{margin:0;padding-left:20px;font-size:15px}
+.hl li{margin:2px 0}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.track img{flex:0 0 78%;max-width:78%;aspect-ratio:1;object-fit:cover;scroll-snap-align:start;border-radius:6px;border:1px solid var(--rule)}
+.track-hint{font:500 11px var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.flat{border-radius:6px;border:1px solid var(--rule);max-width:560px;width:100%}
+.phone-lg{width:min(320px,100%);margin:6px auto}
+.board{width:min(320px,100%);margin:6px auto;aspect-ratio:9/16;background:var(--band);color:var(--band-ink);border-radius:14px;box-shadow:0 0 0 6px var(--ink);padding:18px;display:flex;flex-direction:column;overflow:hidden}
+.board-top{display:flex;justify-content:space-between;font:500 11px var(--f-mono);color:var(--band-muted);letter-spacing:.08em}
+.board-title{font-family:var(--f-display);font-variation-settings:"wdth" 115;font-weight:800;font-size:26px;line-height:1;margin:14px 0 12px;color:var(--signal)}
+.board ol{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:13px;line-height:1.3}
+.board li{display:grid;grid-template-columns:24px 1fr;gap:6px}
+.board li span{font:500 10px var(--f-mono);color:var(--band-muted);padding-top:2px}
+.board-foot{margin-top:auto;font:500 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--band-muted);border-top:1px solid #2a332e;padding-top:10px}
+
+/* ---------- Setup ---------- */
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.spec{background:var(--bg);padding:22px 20px}
+.spec .mono{color:var(--green)}
+.spec p{margin:8px 0 0;font-size:15px}
+.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
+.city{border:2px solid var(--ink);border-radius:8px;padding:22px}
+.city h3{font-variation-settings:"wdth" 120;font-weight:800;font-size:30px}
+.city .set{color:var(--muted);margin:4px 0 16px}
+.city ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.city li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--rule);padding-top:8px}
+.city li b{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;color:var(--green)}
+footer{background:var(--band);color:var(--band-muted);padding-block:36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--band-ink);font-weight:500}
+
+@media (max-width:980px){
+  .hooks{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .hooks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .map,.specs{grid-template-columns:1fr}
+  .film img:nth-child(n+5){display:none}
+  .stat b{font-size:36px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<style>
+.copyset{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px}
+.copyset .copy{margin-top:0}
+.reel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px}
+.reel .hook strong{font-size:17px}
+.rot{width:100%;border-collapse:collapse;font-size:15px}
+.rot th{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink)}
+.rot td{padding:12px;border-bottom:1px solid var(--rule);vertical-align:top}
+.rot td:first-child{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;color:var(--green);white-space:nowrap}
+.in{color:var(--green);font-weight:600}.out{color:var(--muted)}
+@media (max-width:980px){.reel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.copyset{grid-template-columns:1fr}.rot{font-size:14px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar mono"><span><b>Gighopp</b> · Presentación de material</span><span>Semana 5 · 2 – 8 nov 2026</span></div>
+    <h1>RJ Brothers<br><em>Semana 5</em></h1>
+    <p class="hero-lede">Siete videos nuevos para la oferta de <strong>techo nuevo desde $5,500 con mantenimiento 1 vez al año, de por vida</strong>, publicados en Meta para Houston y Dallas en conjuntos nuevos que optimizan por citas de techo.</p>
+    <div class="stats">
+      <div class="stat"><b>7</b><span class="mono">videos nuevos</span></div>
+      <div class="stat"><b>14</b><span class="mono">anuncios publicados</span></div>
+      <div class="stat"><b>2</b><span class="mono">conjuntos nuevos</span></div>
+      <div class="stat"><b>4</b><span class="mono">hooks de ventanas rotados</span></div>
+    </div>
+    <div class="film" aria-hidden="true"><img src="a/t3.jpg" alt=""><img src="a/t5.jpg" alt=""><img src="a/t1.jpg" alt=""><img src="a/t6.jpg" alt=""><img src="a/t4.jpg" alt=""><img src="a/t2.jpg" alt=""><img src="a/t7.jpg" alt=""></div>
+  </div>
+</header>
+<main>
+<section class="techos" id="techos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Techos · material nuevo</span><h2>Techo nuevo + mantenimiento de por vida</h2></div>
+      <p>Siete videos verticales (9:16) para la nueva oferta: <strong>techo nuevo desde $5,500</strong> con <strong>mantenimiento 1 vez al año, de por vida, sin costo extra</strong>, 30 años de garantía en materiales y 20 en mano de obra. Dale play a cada uno.</p>
+    </div>
+    <div class="reel"><figure class="hook"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/t1.jpg" data-blob="a/t1.mp4" aria-label="Video Historia de la vecina"></video><span class="tag tag-a">T1</span></div><figcaption><span class="num">T1 · Cómic animado · 44 s</span><strong>Historia de la vecina</strong><span class="angle">La historia de una vecina y su techo, contada en cómic.</span></figcaption></figure><figure class="hook"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/t2.jpg" data-blob="a/t2.mp4" aria-label="Video ¿Por qué cambiar tu techo?"></video><span class="tag tag-a">T2</span></div><figcaption><span class="num">T2 · Video animado · 32 s</span><strong>¿Por qué cambiar tu techo?</strong><span class="angle">Las razones para no esperar a que el techo falle.</span></figcaption></figure><figure class="hook"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/t3.jpg" data-blob="a/t3.mp4" aria-label="Video Techo + mantenimiento 3D"></video><span class="tag tag-a">T3</span></div><figcaption><span class="num">T3 · Animación 3D · 57 s</span><strong>Techo + mantenimiento 3D</strong><span class="angle">Del día 1 al año 4: lo que le pasa a un techo sin mantenimiento, y cómo RJ lo evita.</span></figcaption></figure><figure class="hook"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/t4.jpg" data-blob="a/t4.mp4" aria-label="Video ¿Mito o verdad?"></video><span class="tag tag-a">T4</span></div><figcaption><span class="num">T4 · Video animado · 42 s</span><strong>¿Mito o verdad?</strong><span class="angle">Desmiente las creencias más comunes sobre cambiar el techo.</span></figcaption></figure><figure class="hook"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/t5.jpg" data-blob="a/t5.mp4" aria-label="Video Dos vecinos"></video><span class="tag tag-a">T5</span></div><figcaption><span class="num">T5 · Animación 3D · 44 s</span><strong>Dos vecinos</strong><span class="angle">Misma calle, mismo techo: a ella la cuida RJ, a él nadie.</span></figcaption></figure><figure class="hook"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/t6.jpg" data-blob="a/t6.mp4" aria-label="Video Techo sin mantenimiento"></video><span class="tag tag-a">T6</span></div><figcaption><span class="num">T6 · Animación 2D · 39 s</span><strong>Techo sin mantenimiento</strong><span class="angle">La “salud de tu techo” baja año tras año… hasta la gotera.</span></figcaption></figure><figure class="hook"><div class="phone"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/t7.jpg" data-blob="a/t7.mp4" aria-label="Video ¿Cómo se cambia un techo?"></video><span class="tag tag-a">T7</span></div><figcaption><span class="num">T7 · Animación 2D · 40 s</span><strong>¿Cómo se cambia un techo?</strong><span class="angle">El proceso de cambio de techo, paso a paso.</span></figcaption></figure></div>
+  </div>
+</section>
+<section id="textos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Copys · 5 + 5 + 5</span><h2>Los textos de los anuncios</h2></div>
+      <p>Los siete anuncios llevan el mismo set de <strong>5 textos principales, 5 títulos y 5 descripciones</strong>, con ángulos distintos para que Meta pruebe cuál mueve a cada persona. En Dallas cambia solo la ciudad.</p>
+    </div>
+    <div class="copyset">
+      <div class="copy"><h4>Texto principal 1 de 5</h4><p>Antes de cambiar tu techo, pregúntale esto a la compañía: 👇</p><p>“¿Y quién lo va a revisar después?”</p><p>Si no tienen respuesta, ya sabes cómo termina.</p><p>Con RJ Brothers tu techo nuevo incluye:<br>✅ Mantenimiento 1 vez al año, de por vida<br>✅ Sin pagar nada extra<br>✅ 30 años de garantía en materiales + 20 en mano de obra</p><p>Techo nuevo desde $5,500 en Houston y alrededores.</p><p>👇 Haz clic y llena el formulario para tu cotización.</p>
+        <h4 style="margin-top:22px">Los otros 4 textos abren con</h4><p>“Un techo no se daña de un día para otro…”<br>“Techo nuevo desde $5,500 en Houston. 🏠”<br>“Dos vecinos. Misma calle…”<br>“¿Tu techo ya te está mandando señales? 👀”</p></div>
+      <div>
+        <div class="hl" style="margin-top:0"><h4>Títulos</h4><ol><li>Techo nuevo desde $5,500</li><li>Mantenimiento anual de por vida</li><li>Sin pagar nada extra</li><li>Techos nuevos en Houston</li><li>Pide tu cotización aquí</li></ol></div>
+        <div class="hl"><h4>Descripciones</h4><ol><li>Techo nuevo + mantenimiento 1 vez al año de por vida.</li><li>30 años en materiales + 20 años en mano de obra.</li><li>Revisamos tejas, flashings y canaletas cada año.</li><li>Houston y alrededores. Llena el formulario.</li><li>Sin costo extra: el mantenimiento ya va incluido.</li></ol></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="techos" id="ventanas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Ventanas · rotación de hooks</span><h2>Rotación del 3 de noviembre</h2></div>
+      <p>En los conjuntos de <strong>Hooks de ventanas</strong> entraron cuatro hooks nuevos y salieron los que menos leads traían, para seguir probando ganchos sin cansar al público.</p>
+    </div>
+    <table class="rot">
+      <thead><tr><th>Hook</th><th>Gancho</th><th>Movimiento</th></tr></thead>
+      <tbody>
+        <tr><td>V04</td><td>“Espérate…” con Olan</td><td class="in">Entra</td></tr>
+        <tr><td>V16</td><td>“¿A poco no sabías?”</td><td class="in">Entra</td></tr>
+        <tr><td>V18</td><td>“Si tus ventanas se ven así…”</td><td class="in">Entra</td></tr>
+        <tr><td>V19</td><td>“Familias en Texas…”</td><td class="in">Entra</td></tr>
+        <tr><td>V06 · V21 · V25 · V26</td><td>Hooks con menos resultado de la ronda anterior</td><td class="out">Pausados</td></tr>
+        <tr><td>B</td><td>Video “Programa”</td><td class="out">Pausado</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Dónde corre cada pieza</span><h2>Montaje en Meta</h2></div>
+      <p>Para la oferta de mantenimiento de por vida se armaron <strong>dos conjuntos nuevos desde cero</strong>, uno por ciudad, con los siete videos cada uno.</p>
+    </div>
+    <div class="map">
+      <div class="city"><h3>Houston</h3><p class="set mono">“Houston - Techos + Mantenimiento por vida (Nov)” · $40/día</p><ul>
+        <li><b>T1</b>Historia de la vecina</li><li><b>T2</b>¿Por qué cambiar tu techo?</li><li><b>T3</b>Techo + mantenimiento 3D</li><li><b>T4</b>¿Mito o verdad?</li><li><b>T5</b>Dos vecinos</li><li><b>T6</b>Techo sin mantenimiento</li><li><b>T7</b>¿Cómo se cambia un techo?</li></ul></div>
+      <div class="city"><h3>Dallas</h3><p class="set mono">“Dallas - Techos + Mantenimiento por vida (Nov)” · $40/día</p><ul>
+        <li><b>T1</b>Historia de la vecina</li><li><b>T2</b>¿Por qué cambiar tu techo?</li><li><b>T3</b>Techo + mantenimiento 3D</li><li><b>T4</b>¿Mito o verdad?</li><li><b>T5</b>Dos vecinos</li><li><b>T6</b>Techo sin mantenimiento</li><li><b>T7</b>¿Cómo se cambia un techo?</li></ul></div>
+    </div>
+    <div class="specs" style="margin-top:40px">
+      <div class="spec"><span class="mono">Destino</span><p>Formulario instantáneo de cada ciudad. Botón al formulario, nunca al teléfono.</p></div>
+      <div class="spec"><span class="mono">Optimización</span><p>Calidad del lead con el evento “Cita Techos”: Meta aprende de las citas de techo agendadas en el CRM.</p></div>
+      <div class="spec"><span class="mono">Seguimiento</span><p>Seguimiento de eventos del CRM activado en cada uno de los 14 anuncios.</p></div>
+      <div class="spec"><span class="mono">Textos</span><p>5 textos, 5 títulos y 5 descripciones por anuncio, con ángulos distintos.</p></div>
+      <div class="spec"><span class="mono">Formato</span><p>Formato original, sin recortes automáticos ni mejoras de Meta.</p></div>
+      <div class="spec"><span class="mono">Ubicaciones</span><p>Solo Facebook e Instagram. Sin Threads, Audience Network ni anuncios multi-anunciante.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap mono"><span><b>Gighopp</b> para RJ Brothers Contractors &amp; Roof</span><span>Semana 5 · 2 – 8 nov 2026</span></div></footer>
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones (iOS/WhatsApp) don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+
+<script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
+<script>
+(function(){
+  document.querySelectorAll('video[data-blob]').forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
