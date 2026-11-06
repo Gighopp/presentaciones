@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Automatiza tu WhatsApp con un CRM | Luis Ostos</title>
+<meta name="description" content="Paso a paso para automatizar tu WhatsApp: mensajes masivos, recordatorios y seguimiento infinito. 14 días de prueba gratis del CRM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FBF8F1;--ink:#141414;--y:#F2D43A;--wa:#25D366;--bg:#E9E4D8;--mute:#55524b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+.hl{background:var(--y);padding:0 .25em}
+header{padding:44px 0 18px;text-align:center}
+.strip{display:inline-block;background:var(--paper);padding:10px 22px;font-weight:700;font-size:15px;letter-spacing:.06em;transform:rotate(-1.5deg);box-shadow:4px 5px 0 rgba(0,0,0,.18)}
+h1{font-size:clamp(32px,6vw,54px);line-height:1.08;letter-spacing:-.02em;margin:22px 0 14px}
+.sub{font-size:clamp(17px,2.4vw,20px);color:var(--mute);max-width:640px;margin:0 auto}
+.video{margin:30px auto 0;background:var(--ink);border:5px solid var(--ink);box-shadow:10px 10px 0 rgba(0,0,0,.25);aspect-ratio:16/9;position:relative;overflow:hidden}
+.video video{width:100%;height:100%;display:block;background:#000}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;gap:10px;padding:20px}
+.ph b{font-size:clamp(20px,3vw,28px)}
+.ph span{opacity:.7}
+.cta{display:block;width:100%;max-width:640px;margin:28px auto 8px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:clamp(19px,2.6vw,24px);text-align:center;padding:22px 20px;border:4px solid var(--ink);box-shadow:8px 8px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.cta:hover{transform:translate(3px,3px);box-shadow:5px 5px 0 var(--ink)}
+.cta small{display:block;font-weight:500;font-size:15px;opacity:.95;margin-top:4px}
+.note{text-align:center;color:var(--mute);font-size:15px;margin:6px 0 0}
+section{padding:46px 0 0}
+h2{font-size:clamp(25px,4vw,34px);letter-spacing:-.01em;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--paper);border:4px solid var(--ink);box-shadow:7px 7px 0 rgba(0,0,0,.2);padding:22px}
+.card .e{font-size:34px}
+.card h3{margin:8px 0 6px;font-size:20px}
+.card p{margin:0;color:var(--mute)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;background:var(--paper);border:3px solid var(--ink);padding:14px 18px 14px 64px;position:relative;font-weight:500}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--y);display:flex;align-items:center;justify-content:center;font-weight:700}
+.bonus{background:var(--y);border:4px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:26px}
+.bonus h2{margin-bottom:10px}
+.bonus ul{margin:0;padding-left:22px;font-size:18px}
+.bonus li{margin:6px 0}
+.who{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.who img{width:150px;height:auto;filter:drop-shadow(6px 8px 0 rgba(0,0,0,.2))}
+.who div{flex:1;min-width:240px}
+.hand{font-family:Caveat,cursive;font-size:30px;transform:rotate(-2deg);display:inline-block}
+details{background:var(--paper);border:3px solid var(--ink);padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--mute)}
+footer{padding:50px 0 40px;text-align:center;color:var(--mute);font-size:14px}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}video,.vp{-webkit-touch-callout:none;user-select:none}
+
+.vp{position:relative;width:100%;height:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid #111;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:#fff}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.55);color:#fff;font:600 11px system-ui;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="strip">GUÍA GRATIS · PASO A PASO</div>
+  <h1>Pon tu WhatsApp a <span class="hl">vender solo</span></h1>
+  <p class="sub">Mensajes masivos, recordatorios de citas y seguimiento infinito a cada cliente, sin tocar el teléfono. Te enseño clic por clic cómo lo hacemos en mi agencia.</p>
+
+  <div class="video" id="video">
+    <video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/poster.jpg" data-blob="a/tutorial.mp4" aria-label="Video tutorial: pon tu WhatsApp a vender solo"></video>
+  </div>
+
+  <a class="cta" href="https://link.gighopp.com/widget/form/06U3OIoBKZ3YUmPCX9gC" target="_blank" rel="noopener">Obtener 14 días de prueba gratis del CRM<small>Regístrate con mi link y recibe mi guía + apoyo</small></a>
+  <p class="note">La guía y la llamada de apoyo son solo para quienes se registran con este botón.</p>
+</header>
+
+<section>
+  <h2>Lo que vas a poder hacer</h2>
+  <div class="grid">
+    <div class="card"><div class="e">📢</div><h3>Mensajes masivos</h3><p>Con WhatsApp oficial, sin riesgo de que te bloqueen el número.</p></div>
+    <div class="card"><div class="e">⏰</div><h3>Recordatorios automáticos</h3><p>Tus clientes reciben su recordatorio un día antes y una hora antes.</p></div>
+    <div class="card"><div class="e">🔁</div><h3>Seguimiento infinito</h3><p>El sistema le escribe a cada cliente y se detiene solo cuando te responde.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>El paso a paso del video</h2>
+  <ol class="steps">
+    <li>Crear tu cuenta del CRM (14 días gratis con mi link)</li>
+    <li>Configurar los datos de tu negocio</li>
+    <li>Conectar tu WhatsApp oficial</li>
+    <li>Crear y aprobar tu primera plantilla</li>
+    <li>Subir tus clientes</li>
+    <li>Enviar tu primer mensaje masivo</li>
+    <li>Activar recordatorios de citas automáticos</li>
+    <li>Montar tu seguimiento infinito</li>
+  </ol>
+</section>
+
+<section>
+  <div class="bonus">
+    <h2>Si te registras con mi link, te llevas:</h2>
+    <ul>
+      <li><b>14 días gratis</b> para probar el CRM completo.</li>
+      <li><b>Mi guía paso a paso</b> para configurarlo todo en esos 14 días.</li>
+      <li><b>Una llamada conmigo</b> si decides quedarte después de la prueba: revisamos lo que hiciste, lo dejamos funcionando y planeamos cómo seguir.</li>
+    </ul>
+  </div>
+  <a class="cta" href="https://link.gighopp.com/widget/form/06U3OIoBKZ3YUmPCX9gC" target="_blank" rel="noopener">Obtener 14 días de prueba gratis del CRM<small>Clic aquí para empezar</small></a>
+</section>
+
+<section>
+  <div class="who">
+    <img src="luis.png" alt="Luis Ostos">
+    <div>
+      <span class="hand">¡Hola! Soy Luis 👋</span>
+      <p>En mi agencia, Gighopp, montamos CRMs y automatizaciones para negocios todos los días. De todo lo que hemos probado, este es el CRM que usamos y recomendamos. Te enseño a usarlo para que tu WhatsApp trabaje por ti.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Cuánto cuesta el CRM?</summary><p>Tienes 14 días gratis para probarlo. Después, el plan Starter cuesta 97 dólares al mes y lo pagas directamente al CRM. Puedes cancelar antes de que termine la prueba.</p></details>
+  <details><summary>¿Cómo recibo la guía y el apoyo?</summary><p>Regístrate con el botón de esta página. Así sabemos que entraste con mi link y te hacemos llegar la guía paso a paso.</p></details>
+  <details><summary>¿Necesito saber de tecnología?</summary><p>No. El video te muestra cada clic, y si te trabas, para eso está la guía.</p></details>
+  <details><summary>¿Puedo usar el WhatsApp que ya tengo?</summary><p>Sí. Puedes conectar el WhatsApp Business que ya usas y seguir respondiendo desde tu celular. También puedes usar un número nuevo. En el video te muestro cómo.</p></details>
+</section>
+
+<footer>© Gighopp · @luisostos88</footer>
+</div>
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones (iOS/WhatsApp) don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+
+<script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
+<script>
+(function(){
+  document.querySelectorAll('video[data-blob]').forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
