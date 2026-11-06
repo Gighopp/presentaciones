@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Consultoría Estratégica · Luis Ostos</title>
+<meta name="description" content="Mira cómo trabajamos en Gighopp y agenda 15 minutos con Luis Ostos.">
+<meta property="og:title" content="¿Pagas publicidad y los clientes no llegan?">
+<meta property="og:description" content="Mira el video y agenda 15 minutos conmigo.">
+<meta property="og:image" content="https://presentaciones.gighoppmarketing.com/consultoria/a/vsl.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECE5D6;--sheet:#FBF8F1;--ink:#1B1A17;--muted:#5E5850;--marker:#D7261E;--hl:#FFE14D;
+  --tape:rgba(232,220,178,.88);
+  --display:"Anton","Impact","Arial Narrow Bold",sans-serif;
+  --body:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --hand:"Caveat","Bradley Hand","Comic Sans MS",cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+html{overflow-x:hidden}
+body{
+  background:var(--paper);
+  background-image:radial-gradient(rgba(27,26,23,.05) 1px,transparent 1.2px),radial-gradient(rgba(27,26,23,.035) 1px,transparent 1.2px);
+  background-size:7px 7px,11px 11px;background-position:0 0,3px 5px;
+  color:var(--ink);font:400 17px/1.55 var(--body);
+  padding-block:clamp(28px,5vw,56px);
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  overflow-x:hidden;
+}
+.page{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,6vw,72px)}
+
+/* hero */
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px}
+.kicker{font:700 30px/1 var(--hand);color:var(--marker);transform:rotate(-2deg);margin:0}
+.strips{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0}
+.strip{
+  display:inline-block;background:var(--sheet);color:var(--ink);
+  font:400 clamp(38px,7vw,82px)/.95 var(--display);text-transform:uppercase;
+  padding:.12em .34em .1em;box-shadow:0 10px 18px -10px rgba(0,0,0,.35);
+  clip-path:polygon(0 6%,3% 0,9% 5%,16% 1%,24% 6%,33% 0,41% 4%,52% 0,61% 5%,70% 1%,79% 6%,88% 0,95% 4%,100% 1%,99% 52%,100% 96%,93% 100%,85% 95%,76% 100%,66% 96%,57% 100%,47% 95%,38% 100%,28% 96%,19% 100%,10% 95%,3% 100%,0 94%,1% 50%);
+}
+.strip:nth-child(1){transform:rotate(-1.4deg)}
+.strip:nth-child(2){transform:rotate(1deg)}
+.strip.dark{background:var(--ink);color:var(--sheet)}
+.strip mark{background:none;color:var(--marker)}
+.lede{max-width:52ch;margin:0;font-size:18.5px}
+.hl{background:linear-gradient(transparent 52%,var(--hl) 52%,var(--hl) 90%,transparent 90%);padding:0 .1em;font-weight:700}
+
+/* recortes con cinta */
+.cutout{position:relative;background:var(--sheet);border:12px solid var(--sheet);outline:1px solid rgba(0,0,0,.06);box-shadow:0 24px 44px -24px rgba(0,0,0,.55)}
+.cutout::before,.cutout::after{content:"";position:absolute;width:118px;height:30px;background:var(--tape);box-shadow:0 1px 2px rgba(0,0,0,.08);z-index:2;pointer-events:none}
+.cutout::before{top:-24px;left:-26px;transform:rotate(-24deg)}
+.cutout::after{top:-24px;right:-26px;transform:rotate(22deg)}
+.hand-note{font:700 28px/1.05 var(--hand);color:var(--marker);margin:0;display:flex;align-items:center;gap:10px}
+.hand-note svg{width:48px;height:32px;flex:none}
+
+/* VSL */
+.video-block{display:flex;flex-direction:column;gap:16px;align-items:center}
+.video-block .hand-note{transform:rotate(-2deg)}
+.video-block .cutout{width:100%;max-width:960px;transform:rotate(-.5deg)}
+.vsl video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.go{display:inline-block;margin-top:6px;background:var(--hl);color:var(--ink);border:4px solid var(--ink);box-shadow:7px 7px 0 var(--ink);padding:14px 26px;font:400 26px/1 var(--display);text-transform:uppercase;text-decoration:none;letter-spacing:.02em;transition:transform .12s,box-shadow .12s}
+.go:hover{transform:translate(3px,3px);box-shadow:4px 4px 0 var(--ink)}
+
+/* trabajos */
+.work{display:flex;flex-direction:column;gap:26px}
+.work-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px}
+.work-lede{margin:0;max-width:44ch;color:var(--muted)}
+.book-title{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.book-title .strip{font-size:clamp(32px,4.6vw,52px)}
+.reels{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:34px 28px;padding:22px 6px 10px}
+.reel{--h:330px;flex:none;width:calc(var(--h) * (var(--ar)));max-width:100%;margin:0;display:flex;flex-direction:column;gap:12px}
+.reel .cutout{border-width:8px}
+.reel:nth-child(odd) .cutout{transform:rotate(-1.3deg)}
+.reel:nth-child(even) .cutout{transform:rotate(1.1deg)}
+.reel .cutout::before,.reel .cutout::after{width:70px;height:22px;top:-16px}
+.reel .cutout::before{left:-14px}.reel .cutout::after{right:-14px}
+.reel video,.reel img{display:block;width:100%;aspect-ratio:var(--ar);object-fit:cover;background:#000}
+.reel figcaption{font:700 24px/1 var(--hand);color:var(--marker);padding-left:4px}
+.reel figcaption span{display:block;font:500 12px/1.4 var(--body);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+@media (max-width:700px){
+  .reels{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin-inline:-16px;padding-inline:22px}
+  .reel{--h:300px;scroll-snap-align:center;max-width:none}
+}
+.work-cta{align-self:center;transform:rotate(-1.5deg)}
+.work-cta a{color:inherit;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+
+/* reserva */
+.book{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(28px,5vw,56px);align-items:start;scroll-margin-top:20px}
+@media (max-width:860px){.book{grid-template-columns:minmax(0,1fr)}}
+.book-side{display:flex;flex-direction:column;gap:26px;padding-top:6px}
+.note{position:relative;background:var(--sheet);padding:22px 22px 18px;box-shadow:0 12px 22px -14px rgba(0,0,0,.45);transform:rotate(-.8deg)}
+.note::before{content:"";position:absolute;top:-12px;left:38%;width:96px;height:26px;background:var(--tape);transform:rotate(-4deg)}
+.note h3{margin:0 0 10px;font:400 21px/1.1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.note ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.note li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;font-size:16px}
+.note li::before{content:"✓";font:700 22px/1 var(--hand);color:var(--marker)}
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:baseline;font-size:15.5px;line-height:1.4}
+.steps li::before{content:counter(s);font:700 32px/1 var(--hand);color:var(--marker)}
+.motto{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;margin:0}
+.motto span{font:400 26px/1 var(--display);text-transform:uppercase}
+.motto span:nth-child(2){color:var(--marker)}
+.sig{font:700 28px/1 var(--hand);color:var(--marker);transform:rotate(-2deg);margin:0}
+.sig small{display:block;font:500 13px/1.4 var(--body);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.cal .hand-note{margin:0 0 30px 56px;transform:rotate(-2deg);transform-origin:left}
+.cal .cutout{padding:12px 12px 6px;border-width:8px;transform:rotate(.5deg)}
+.cal-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:2px 4px 12px;border-bottom:2px dashed rgba(27,26,23,.18);margin-bottom:8px}
+.cal-head b{font:400 22px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.cal-head span{font:500 13px/1.3 var(--body);color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.cal iframe{display:block;width:100%;min-height:780px;border:0;overflow:hidden;background:var(--sheet)}
+
+footer{max-width:1080px;margin:40px auto 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* reproductor sin descarga */
+video,.vp{-webkit-touch-callout:none;user-select:none}
+.vp{position:relative;width:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid #111;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:#fff}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.55);color:#fff;font:600 11px system-ui;cursor:pointer}
+
+@media (prefers-reduced-motion:no-preference){
+  .strip,.cutout,.note{animation:drop .6s cubic-bezier(.2,.9,.3,1.2) both}
+  @keyframes drop{from{translate:0 -10px;opacity:.6}to{translate:0 0;opacity:1}}
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="hero">
+    <p class="kicker">Consultoría estratégica · 15 minutos</p>
+    <h1 class="strips">
+      <span class="strip">¿Pagas publicidad</span>
+      <span class="strip dark">y los clientes <mark>no llegan?</mark></span>
+    </h1>
+    <p class="lede">Mira el video y después agenda 15 minutos conmigo. Revisamos <span class="hl">dónde se te están yendo los clientes</span> y qué cambiar primero: tu oferta, tus anuncios o el sistema que convierte interesados en citas.</p>
+  </header>
+
+  <section class="video-block" aria-label="Video">
+    <p class="hand-note">Dale play primero (2:43)
+      <svg viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4c14 2 26 8 34 22"/><path d="M27 22l11 4 2-11"/></svg>
+    </p>
+    <div class="cutout vsl">
+      <video playsinline preload="none" poster="a/vsl.jpg" data-blob="a/vsl.mp4" aria-label="Video: cómo trabajamos en Gighopp"></video>
+    </div>
+    <a class="go" href="#agenda">Agenda tu llamada ↓</a>
+  </section>
+
+  <section class="work" aria-label="Trabajos reales">
+    <div class="work-head">
+      <h2 class="book-title"><span class="strip">Trabajos</span><span class="strip dark"><mark>reales</mark></span></h2>
+      <p class="work-lede">Anuncios que hicimos para negocios como el tuyo: ventanas, techos, aislamiento y filtros de agua.</p>
+    </div>
+    <div class="reels">
+      <figure class="reel" style="--ar:16/9"><div class="cutout"><video playsinline preload="none" poster="../windows-semana-4/a/p14.jpg" data-blob="../windows-semana-4/a/p14.mp4"></video></div><figcaption>Windows Pros<span>noticiero · ventanas</span></figcaption></figure>
+      <figure class="reel" style="--ar:4/5"><div class="cutout"><img src="../windows-semana-4/a/p03.jpg" alt="Anuncio de Windows Pros con portada de revista"></div><figcaption>Windows Pros<span>portada de revista · ventanas</span></figcaption></figure>
+      <figure class="reel" style="--ar:16/9"><div class="cutout"><video playsinline preload="none" poster="../windows-semana-4/a/p15.jpg" data-blob="../windows-semana-4/a/p15.mp4"></video></div><figcaption>Windows Pros<span>noticiero · versión 2</span></figcaption></figure>
+      <figure class="reel" style="--ar:9/16"><div class="cutout"><video playsinline preload="none" poster="../rj-semana-4/a/p3.jpg" data-blob="../rj-semana-4/a/p3.mp4"></video></div><figcaption>RJ Brothers<span>video 3D · techos</span></figcaption></figure>
+      <figure class="reel" style="--ar:4/3"><div class="cutout"><video playsinline preload="none" poster="../fg-semana-4/a/corto.jpg" data-blob="../fg-semana-4/a/corto.mp4"></video></div><figcaption>FG Insulation<span>documental · aislamiento</span></figcaption></figure>
+      <figure class="reel" style="--ar:9/16"><div class="cutout"><video playsinline preload="none" poster="../fg-semana-4/a/trucos.jpg" data-blob="../fg-semana-4/a/trucos.mp4"></video></div><figcaption>FG Insulation<span>serie · aislamiento</span></figcaption></figure>
+      <figure class="reel" style="--ar:9/16"><div class="cutout"><video playsinline preload="none" poster="../arctic-semana-4/a/p02_manchas.jpg" data-blob="../arctic-semana-4/a/p02_manchas.mp4"></video></div><figcaption>Arctic 16<span>animado · filtros de agua</span></figcaption></figure>
+    </div>
+    <p class="hand-note work-cta"><a href="#agenda">Quiero algo así para mi negocio</a>
+      <svg viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4c14 2 26 8 34 22"/><path d="M27 22l11 4 2-11"/></svg>
+    </p>
+  </section>
+
+  <section class="book" id="agenda" aria-label="Agenda tu consultoría">
+    <div class="book-side">
+      <h2 class="book-title">
+        <span class="strip">Agenda tus</span>
+        <span class="strip dark"><mark>15 minutos</mark></span>
+      </h2>
+      <div class="note">
+        <h3>Sales de la llamada con</h3>
+        <ul>
+          <li><span>Un diagnóstico de dónde se te están yendo los clientes.</span></li>
+          <li><span>La oferta y el ángulo de anuncio que probaría primero en tu negocio.</span></li>
+          <li><span>Los siguientes 3 pasos, en orden, para conseguir más citas.</span></li>
+        </ul>
+      </div>
+      <ol class="steps">
+        <li>Elige el día y la hora que te queden mejor.</li>
+        <li>Deja tu nombre, teléfono, correo y tu tipo de negocio.</li>
+        <li>Te llega la confirmación por SMS y correo, y un recordatorio antes de la llamada.</li>
+      </ol>
+      <p class="motto"><span>Imagina.</span><span>Construye.</span><span>Comunícalo.</span></p>
+      <p class="sig">— Luis Ostos<small>Gighopp · Katy, Texas</small></p>
+    </div>
+
+    <div class="cal">
+      <p class="hand-note">Elige tu hora aquí
+        <svg viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4c14 2 26 8 34 22"/><path d="M27 22l11 4 2-11"/></svg>
+      </p>
+      <div class="cutout">
+        <div class="cal-head"><b>Agenda tu llamada</b><span>Hora de Houston (CST)</span></div>
+        <iframe src="https://api.leadconnectorhq.com/widget/bookings/gigconsultoria" scrolling="no" id="gigconsultoria_booking" title="Calendario de Consultoría Estratégica"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><span>© Gighopp</span><span>Al agendar aceptas recibir mensajes sobre tu cita.</span></footer>
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+<script>
+(function(){
+  /* Load each video as a blob so it plays everywhere and isn't offered for download. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'600px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+  vids.forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{load(v);v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video,.reel img'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
