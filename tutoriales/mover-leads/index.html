@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo mover tus leads · Tutoriales Gighopp</title>
+<meta name="description" content="Agenda la inspección, mueve a Descalificado con su motivo y haz que tus anuncios de Meta traigan mejores clientes.">
+<meta property="og:title" content="Cómo mover tus leads para que tus anuncios traigan mejores clientes">
+<meta property="og:description" content="Tutorial de 2 minutos en el Gighopp System.">
+<meta property="og:image" content="https://presentaciones.gighoppmarketing.com/tutoriales/mover-leads/a/poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><b>Gighopp</b><a href="../">Todos los tutoriales</a></div>
+  <h1>Cómo mover tus leads para que tus anuncios traigan <mark>mejores clientes</mark></h1>
+  <p class="lede">Cada vez que mueves un cliente en tu CRM, le enseñas a Facebook a quién buscar. Aquí te explico los dos movimientos que más importan.</p>
+  <div class="player"><video data-blob="a/tutorial.mp4" poster="a/poster.jpg" playsinline preload="none" aria-label="Tutorial: cómo mover tus leads"></video></div>
+  <div class="meta"><span class="tag">Pipeline y leads</span><span>1:44 min · con voz</span></div>
+</div></header>
+
+<main class="wrap">
+  <section>
+    <h2>Paso a paso</h2>
+    <div class="steps">
+      <article class="step">
+        <div>
+          <div class="n">1</div>
+          <h3>Abre la ficha del cliente</h3>
+          <p>Entra a <b>Opportunities</b>. Ahí ves todos tus leads organizados por etapas. Haz clic en la tarjeta del cliente para abrir su ficha.</p>
+        </div>
+        <img class="shot" src="a/01_board.jpg" alt="Pipeline de oportunidades por etapas" loading="lazy">
+      </article>
+
+      <article class="step">
+        <div>
+          <div class="n">2</div>
+          <h3>Agenda la inspección</h3>
+          <ol>
+            <li>Entra a <b>Book or update appointment</b> → <b>New appointment</b>.</li>
+            <li>En <b>Calendar</b>, elige el calendario de <b>Inspección</b>.</li>
+            <li>Escoge fecha y hora, y dale a <b>Book appointment</b>.</li>
+            <li>Vuelve a <b>Opportunity details</b>, cambia la etapa a <b>Inspección agendada</b> y dale a <b>Update</b>.</li>
+          </ol>
+          <div class="why"><b>¿Por qué?</b> Cuando la oportunidad entra en Inspección agendada, Meta recibe la señal de <b>cita agendada</b> y aprende a traerte gente que de verdad agenda.</div>
+        </div>
+        <img class="shot" src="a/09_calendar_dd.jpg" alt="Elegir el calendario de Inspección" loading="lazy">
+      </article>
+
+      <article class="step">
+        <div>
+          <div class="n">3</div>
+          <h3>Si no califica: Descalificado + motivo</h3>
+          <ol>
+            <li>En <b>Opportunity details</b>, cambia la etapa a <b>Descalificado</b>.</li>
+            <li>Abajo, en <b>Motivo de descalificación</b>, elige la razón (por ejemplo: fuera de área, renta).</li>
+            <li>Dale a <b>Update</b>.</li>
+          </ol>
+          <div class="why"><b>¿Por qué?</b> Meta sabe a quién <b>no</b> buscar y esa persona deja de recibir tu publicidad. No gastas plata en quien nunca te va a comprar.</div>
+        </div>
+        <img class="shot" src="a/13_motivo_dd.jpg" alt="Elegir el motivo de descalificación" loading="lazy">
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="note">
+      <div class="ico">!</div>
+      <div>
+        <h3>¿No tienes la etapa Descalificado?</h3>
+        <p style="margin:8px 0 0">Lo más seguro es que la tuya se llame <mark><b>Abandonado</b></mark>. Muévelo ahí. Y si tienes dudas, escríbele a Luis y lo revisan juntos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Recuerda</h2>
+    <div class="recap">
+      <div><b>El que agenda</b>→ Inspección agendada</div>
+      <div><b>El que no califica</b>→ Descalificado, con su motivo</div>
+    </div>
+  </section>
+
+  <section id="mas">
+    <h2>Más tutoriales</h2>
+    <div class="grid" id="otros"></div>
+    <p style="margin-top:18px"><a href="../"><b>Ver todos los tutoriales →</b></a></p>
+  </section>
+</main>
+<footer><div class="wrap"><span><b>Gighopp</b> · Centro de tutoriales</span><span>¿Dudas? Escríbele a Luis</span></div></footer>
+<script src="../player.js"></script>
+<script src="../tutoriales.js"></script>
+<script>
+(function(){
+  var me='mover-leads', o=(window.TUTORIALES||[]).filter(function(x){return x.slug!==me});
+  var g=document.getElementById('otros');
+  if(!o.length){ g.outerHTML='<p>Pronto vamos a agregar más tutoriales aquí.</p>'; return; }
+  g.innerHTML=o.map(function(x){return '<a class="card" href="../'+x.slug+'/"><div class="th"><img src="../'+x.img+'" alt="" loading="lazy"><span>'+x.duracion+'</span></div><div class="bd"><small>'+x.tema+'</small><h3>'+x.titulo+'</h3><p>'+x.corto+'</p></div></a>'}).join('');
+})();
+</script>
+</body>
+</html>
