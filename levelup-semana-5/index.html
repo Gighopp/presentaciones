@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Level Up Roofing · Semana 5</title>
+<meta name="description" content="Los 6 anuncios nuevos de Level Up Roofing que salieron esta semana en Meta, con su texto y cómo están montados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a contractor's job sheet. Full-bleed bands, a strict 12-col grid inside, spec labels in mono like a work order. */
+:root{
+  --bg:#eef0ee;          /* concrete */
+  --paper:#f8f9f7;
+  --ink:#151a17;         /* tar-paper black */
+  --muted:#5b665f;
+  --rule:#cfd5d0;
+  --green:#1d4f9c;       /* Level Up blue */
+  --signal:#a3cf1d;      /* Level Up lime */
+  --band:#151a17;        /* dark band */
+  --band-ink:#eef0ee;
+  --band-muted:#9aa69f;
+  --chip:#e1e7e2;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101412;--paper:#161b18;--ink:#e8ece9;--muted:#98a49d;--rule:#2a332e;--green:#8fb6ff;--signal:#a3cf1d;
+  --band:#0a0d0b;--band-ink:#e8ece9;--band-muted:#8d9992;--chip:#1f2722;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101412;--paper:#161b18;--ink:#e8ece9;--muted:#98a49d;--rule:#2a332e;--green:#8fb6ff;--signal:#a3cf1d;
+  --band:#0a0d0b;--band-ink:#e8ece9;--band-muted:#8d9992;--chip:#1f2722;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--band);color:var(--band-ink);padding-block:28px 0;overflow:hidden}
+.hero-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--band-muted)}
+.hero-bar b{color:var(--band-ink);font-weight:500}
+.hero h1{font-variation-settings:"wdth" 125;font-weight:850;font-size:clamp(46px,9.5vw,132px);line-height:.88;letter-spacing:-.02em;margin-top:44px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero-lede{max-width:56ch;color:var(--band-muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--band-ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#2a332e;border-block:1px solid #2a332e;margin-top:40px}
+.stat{background:var(--band);padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:44px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted)}
+.film{display:flex;gap:8px;margin-top:32px;transform:translateX(-4%);width:108%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:6px 6px 0 0;filter:saturate(.9)}
+
+/* ---------- Section heads ---------- */
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:36px}
+.sec-head .mono{color:var(--green)}
+.sec-head h2{font-variation-settings:"wdth" 118;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:.95;letter-spacing:-.01em;margin-top:10px}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+
+/* ---------- Ventanas grid ---------- */
+.setbar{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:28px;color:var(--muted)}
+.setbar span b{color:var(--ink)}
+.hooks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 16px}
+.hook{margin:0}
+.phone{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink);max-width:100%}
+.phone video,.phone img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:8px;top:8px;font:500 10px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 7px;border-radius:3px}
+.tag-a{background:var(--signal);color:#08130c}
+.tag-b{background:#f2f4f2;color:#151a17}
+.hook figcaption{display:grid;gap:3px;margin-top:16px}
+.hook .num{font:500 11px var(--f-mono);color:var(--green);letter-spacing:.06em}
+.hook strong{font-weight:600;font-size:15px;line-height:1.3}
+.hook .angle{font-size:13px;color:var(--muted)}
+.how{margin-top:28px;color:var(--muted);font-size:14px}
+
+/* ---------- Techos pieces ---------- */
+.techos{background:var(--paper);border-block:1px solid var(--rule)}
+.piece{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;padding-block:44px;border-bottom:1px solid var(--rule)}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline}
+.code{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;font-size:56px;line-height:.8;color:var(--signal)}
+.fmt{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.piece h3{font-variation-settings:"wdth" 100;font-weight:700;font-size:28px;line-height:1.1;margin:18px 0 12px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 12px var(--f-mono);letter-spacing:.04em;background:var(--chip);padding:5px 10px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:7px;vertical-align:1px}
+.copy,.hl{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px}
+.copy h4,.hl h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.hl ol{margin:0;padding-left:20px;font-size:15px}
+.hl li{margin:2px 0}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.track img{flex:0 0 78%;max-width:78%;aspect-ratio:1;object-fit:cover;scroll-snap-align:start;border-radius:6px;border:1px solid var(--rule)}
+.track-hint{font:500 11px var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.flat{border-radius:6px;border:1px solid var(--rule);max-width:560px;width:100%}
+.phone-lg{width:min(320px,100%);margin:6px auto}
+.board{width:min(320px,100%);margin:6px auto;aspect-ratio:9/16;background:var(--band);color:var(--band-ink);border-radius:14px;box-shadow:0 0 0 6px var(--ink);padding:18px;display:flex;flex-direction:column;overflow:hidden}
+.board-top{display:flex;justify-content:space-between;font:500 11px var(--f-mono);color:var(--band-muted);letter-spacing:.08em}
+.board-title{font-family:var(--f-display);font-variation-settings:"wdth" 115;font-weight:800;font-size:26px;line-height:1;margin:14px 0 12px;color:var(--signal)}
+.board ol{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:13px;line-height:1.3}
+.board li{display:grid;grid-template-columns:24px 1fr;gap:6px}
+.board li span{font:500 10px var(--f-mono);color:var(--band-muted);padding-top:2px}
+.board-foot{margin-top:auto;font:500 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--band-muted);border-top:1px solid #2a332e;padding-top:10px}
+
+/* ---------- Setup ---------- */
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.spec{background:var(--bg);padding:22px 20px}
+.spec .mono{color:var(--green)}
+.spec p{margin:8px 0 0;font-size:15px}
+.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
+.city{border:2px solid var(--ink);border-radius:8px;padding:22px}
+.city h3{font-variation-settings:"wdth" 120;font-weight:800;font-size:30px}
+.city .set{color:var(--muted);margin:4px 0 16px}
+.city ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.city li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--rule);padding-top:8px}
+.city li b{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;color:var(--green)}
+footer{background:var(--band);color:var(--band-muted);padding-block:36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--band-ink);font-weight:500}
+
+@media (max-width:980px){
+  .hooks{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .hooks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .map,.specs{grid-template-columns:1fr}
+  .film img:nth-child(n+5){display:none}
+  .stat b{font-size:36px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+<style>
+.track img.r45{aspect-ratio:4/5}
+.status{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:3px;margin-left:auto;white-space:nowrap}
+.st-on{background:var(--signal);color:#121a03}.st-off{background:var(--chip);color:var(--muted)}.st-new{background:var(--green);color:#fff}
+.piece-head{flex-wrap:wrap}
+.pending{width:min(320px,100%);margin:6px auto;aspect-ratio:9/16;border-radius:14px;box-shadow:0 0 0 6px var(--ink);background:var(--band);color:var(--band-muted);display:grid;place-items:center;text-align:center;padding:24px;font:500 12px/1.5 var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+.pending.r45{aspect-ratio:4/5}
+.scene{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px;font-size:14px;color:var(--muted)}
+.scene h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
+.scene ol{margin:0;padding-left:20px}
+.week{background:var(--band);color:var(--band-ink)}
+.week .sec-head{border-color:var(--band-ink)}.week .sec-head .mono{color:var(--signal)}.week .sec-head p{color:var(--band-muted)}.week .sec-head p strong{color:var(--band-ink)}
+.week .piece{border-color:#2a332e}.week .copy,.week .hl,.week .scene{border-color:#2a332e}.week .copy h4,.week .hl h4,.week .fmt,.week .scene{color:var(--band-muted)}
+.week .chip{background:#1f2722;color:var(--band-ink)}.week .phone{box-shadow:0 0 0 6px #2a332e}.week .flat{border-color:#2a332e}
+</style>
+<style>.track img.r11{aspect-ratio:1/1}</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar mono"><span><b>Gighopp</b> · Lo que salió esta semana</span><span>2 – 8 nov 2026</span></div>
+    <h1>Level Up<br><em>Roofing</em></h1>
+    <p class="hero-lede">Esta semana salieron <strong>6 anuncios nuevos</strong> en Meta para la oferta de <strong>techo nuevo + 2 extractores solares gratis</strong> en Houston. Corren en un <strong>conjunto nuevo de prueba</strong>, separado del que ya está funcionando, para medir cuáles traen más clientes sin tocar lo que ya da resultados.</p>
+    <div class="stats">
+      <div class="stat"><b>6</b><span class="mono">anuncios nuevos</span></div>
+      <div class="stat"><b>3</b><span class="mono">videos</span></div>
+      <div class="stat"><b>3</b><span class="mono">imágenes y carrusel</span></div>
+      <div class="stat"><b>$25</b><span class="mono">al día · conjunto de prueba</span></div>
+    </div>
+    <div class="film" aria-hidden="true"><img src="a/newroof.jpg" alt=""><img src="a/ugc.jpg" alt=""><img src="a/inside.jpg" alt=""><img src="a/storm3d.jpg" alt=""><img src="a/c2_1.jpg" alt=""><img src="a/vox.jpg" alt=""><img src="a/c2_4.jpg" alt=""></div>
+  </div>
+</header>
+<main>
+<section class="week" id="semana"><div class="wrap">
+    <div class="sec-head"><div><span class="mono">Publicados · 2 – 8 nov</span><h2>6 anuncios nuevos</h2></div><p>Todos llevan la oferta del mes: <strong>techo nuevo + 2 extractores solares gratis ($1,500)</strong>. El texto principal es el que mejores resultados ha dado en la campaña; cada anuncio lleva además su propio título y descripción.</p></div>
+    <article class="piece" id="n01">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/ugc.jpg" data-blob="a/ugc.mp4" aria-label="UGC Houston · “This roof deal is kind of ridiculous”"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">N01</span><span class="fmt">Video UGC · 9:16 · 35 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>UGC Houston · “This roof deal is kind of ridiculous”</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span><span class="chip">Nuevo conjunto</span></div>
+    <div class="copy"><h4>Qué es</h4><p>Un vecino de Houston, desde su carro, cuenta la oferta como se la contaría a un amigo: techo nuevo y 2 extractores solares de regalo. Formato nativo de redes, que no parece anuncio.</p></div><div class="copy"><h4>Texto principal</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>A roof is more than shingles. Underlayment, drip edge, flashing and ventilation all have to be done right, or water finds a way in.</p><p>✅ 2 solar attic fans FREE ($1,500 value)<br>✅ FREE estimate</p><p>You get a real number before you decide. No pressure.</p><p>👇 Tap below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Tap to Get Your Free Roof Estimate</li></ol></div>
+  </div>
+</article><article class="piece" id="n02">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/storm3d.jpg" data-blob="a/storm3d.mp4" aria-label="3D · Ready for anything"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">N02</span><span class="fmt">Video 3D · 9:16 · 44 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>3D · Ready for anything</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span><span class="chip">Nuevo conjunto</span></div>
+    <div class="copy"><h4>Qué es</h4><p>Animación 3D del techo aguantando granizo, viento, lluvia y el calor de Houston. Muestra por qué un techo bien hecho importa y cierra con la oferta del mes.</p></div><div class="copy"><h4>Texto principal</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>A roof is more than shingles. Underlayment, drip edge, flashing and ventilation all have to be done right, or water finds a way in.</p><p>✅ 2 solar attic fans FREE ($1,500 value)<br>✅ FREE estimate</p><p>You get a real number before you decide. No pressure.</p><p>👇 Tap below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Tap to Get Your Free Roof Estimate</li></ol></div>
+  </div>
+</article><article class="piece" id="n03">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/vox.jpg" data-blob="a/vox.mp4" aria-label="VOX · What&#x27;s under your shingles"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">N03</span><span class="fmt">Video 3D explicativo · 9:16 · 44 s</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>VOX · What&#x27;s under your shingles</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span><span class="chip">Nuevo conjunto</span></div>
+    <div class="copy"><h4>Qué es</h4><p>Explicación en 3D, estilo documental, de las capas de un techo: un techo es un sistema, no solo tejas. Termina con los extractores solares y el llamado al formulario.</p></div><div class="copy"><h4>Texto principal</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>A roof is more than shingles. Underlayment, drip edge, flashing and ventilation all have to be done right, or water finds a way in.</p><p>✅ 2 solar attic fans FREE ($1,500 value)<br>✅ FREE estimate</p><p>You get a real number before you decide. No pressure.</p><p>👇 Tap below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Tap to Get Your Free Roof Estimate</li></ol></div>
+  </div>
+</article><article class="piece" id="n04">
+  <div class="piece-visual"><img class="flat" src="a/inside.jpg" alt="What&#x27;s inside a new roof" loading="lazy"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">N04</span><span class="fmt">Imagen · 4:5</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>What&#x27;s inside a new roof</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span><span class="chip">Nuevo conjunto</span></div>
+    <div class="copy"><h4>Qué es</h4><p>Las 5 capas del techo, separadas una por una: base de madera, drip edge, barrera de agua, tejas y el extractor solar. Fácil de entender de un vistazo.</p></div><div class="copy"><h4>Texto principal</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>A roof is more than shingles. Underlayment, drip edge, flashing and ventilation all have to be done right, or water finds a way in.</p><p>✅ 2 solar attic fans FREE ($1,500 value)<br>✅ FREE estimate</p><p>You get a real number before you decide. No pressure.</p><p>👇 Tap below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Tap to Get Your Free Roof Estimate</li></ol></div>
+  </div>
+</article><article class="piece" id="n05">
+  <div class="piece-visual"><img class="flat" src="a/newroof.jpg" alt="New roof + 2 free fans · Houston" loading="lazy"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">N05</span><span class="fmt">Imagen · 4:5</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>New roof + 2 free fans · Houston</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span><span class="chip">Nuevo conjunto</span></div>
+    <div class="copy"><h4>Qué es</h4><p>Imagen directa con la oferta completa: techo nuevo + 2 extractores solares gratis ($1,500), 0% de interés* y primer pago en 2 años*.</p></div><div class="copy"><h4>Texto principal</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>A roof is more than shingles. Underlayment, drip edge, flashing and ventilation all have to be done right, or water finds a way in.</p><p>✅ 2 solar attic fans FREE ($1,500 value)<br>✅ FREE estimate</p><p>You get a real number before you decide. No pressure.</p><p>👇 Tap below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>Tap to Get Your Free Roof Estimate</li></ol></div>
+  </div>
+</article><article class="piece" id="n06">
+  <div class="piece-visual"><div class="track" tabindex="0" aria-label="Carrusel · New roof, layer by layer"><img class="r11" src="a/c2_1.jpg" alt="Carrusel · New roof, layer by layer — lámina 1 de 7" loading="lazy"><img class="r11" src="a/c2_2.jpg" alt="Carrusel · New roof, layer by layer — lámina 2 de 7" loading="lazy"><img class="r11" src="a/c2_3.jpg" alt="Carrusel · New roof, layer by layer — lámina 3 de 7" loading="lazy"><img class="r11" src="a/c2_4.jpg" alt="Carrusel · New roof, layer by layer — lámina 4 de 7" loading="lazy"><img class="r11" src="a/c2_5.jpg" alt="Carrusel · New roof, layer by layer — lámina 5 de 7" loading="lazy"><img class="r11" src="a/c2_6.jpg" alt="Carrusel · New roof, layer by layer — lámina 6 de 7" loading="lazy"><img class="r11" src="a/c2_7.jpg" alt="Carrusel · New roof, layer by layer — lámina 7 de 7" loading="lazy"></div><div class="track-hint">Desliza · 7 láminas</div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">N06</span><span class="fmt">Carrusel · 7 láminas · 1:1</span><span class="status st-on">Activo en Meta</span></div>
+    <h3>Carrusel · New roof, layer by layer</h3>
+    <div class="where"><span class="chip">Houston Metro</span><span class="chip">Inglés</span><span class="chip">Nuevo conjunto</span></div>
+    <div class="copy"><h4>Qué es</h4><p>Los 5 pasos para construir un techo bien hecho, lámina por lámina, y cierre con la oferta de los extractores.</p></div><div class="copy"><h4>Texto principal</h4><p>Leaks? Missing shingles? Storm damage? ⛈️</p><p>A roof is more than shingles. Underlayment, drip edge, flashing and ventilation all have to be done right, or water finds a way in.</p><p>✅ 2 solar attic fans FREE ($1,500 value)<br>✅ FREE estimate</p><p>You get a real number before you decide. No pressure.</p><p>👇 Tap below and fill out the form for your free estimate.</p></div><div class="hl"><h4>Títulos</h4><ol><li>New Roof + 2 FREE Solar Attic Fans</li><li>Tap to Get Your Free Roof Estimate</li><li>Save $1,500 on Your New Roof</li><li>New Roof: 0% Interest, Pay After 2 Years*</li><li>2 Solar Attic Fans FREE ($1,500)</li></ol></div>
+  </div>
+</article>
+  </div></section>
+<section id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Cómo corre</span><h2>Montaje en Meta</h2></div>
+      <p>Los 6 anuncios corren en un conjunto nuevo, <strong>Houston EN V2 · Testeo creativos noviembre</strong>, al lado del conjunto principal, que sigue corriendo igual.</p>
+    </div>
+    <div class="specs">
+      <div class="spec"><span class="mono">Presupuesto</span><p>$25 al día, solo para este conjunto de prueba.</p></div>
+      <div class="spec"><span class="mono">Objetivo</span><p>Máxima cantidad de leads, igual que el conjunto principal, para comparar creativos en igualdad de condiciones.</p></div>
+      <div class="spec"><span class="mono">Destino</span><p>Formulario instantáneo “2 Free Solar Fans”. El botón lleva al formulario, nunca al teléfono.</p></div>
+      <div class="spec"><span class="mono">Público</span><p>Dueños de casa de 25 a 65 años en Houston, Katy, League City, Pearland, Spring, Sugar Land y The Woodlands, en inglés.</p></div>
+      <div class="spec"><span class="mono">Dónde sale</span><p>Solo Facebook e Instagram. Sin Audience Network ni Threads.</p></div>
+      <div class="spec"><span class="mono">Medición</span><p>Cada lead y cada cita agendada en Gighopp System se reporta a Meta, para saber qué anuncio trae clientes de verdad.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap mono"><span><b>Gighopp</b> para Level Up Roofing &amp; Construction</span><span>2 – 8 nov 2026</span></div></footer>
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones (iOS/WhatsApp) don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+
+<script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
+<script>
+(function(){
+  document.querySelectorAll('video[data-blob]').forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
