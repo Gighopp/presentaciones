@@ -8,5 +8,14 @@ window.TUTORIALES = [
     duracion: '1:44',
     img: 'mover-leads/a/poster.jpg',
     claves: 'opportunities pipeline etapa cita inspeccion agendar calendario descalificado abandonado motivo meta facebook anuncios campañas'
+  },
+  {
+    slug: 'conectar-google-drive',
+    titulo: 'Cómo conectar tu Google Drive al Gighopp System',
+    corto: 'Settings → Integrations → Google → Connect. Listo en menos de un minuto.',
+    tema: 'Integraciones',
+    duracion: '0:52',
+    img: 'conectar-google-drive/a/poster.jpg',
+    claves: 'google drive integraciones integrations settings conectar archivos media storage gmail cuenta'
   }
 ];

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conectar Google Drive · Tutoriales Gighopp</title>
+<meta name="description" content="Conecta tu Google Drive al Gighopp System en menos de un minuto.">
+<meta property="og:title" content="Cómo conectar tu Google Drive al Gighopp System">
+<meta property="og:description" content="Tutorial de menos de 1 minuto.">
+<meta property="og:image" content="https://presentaciones.gighoppmarketing.com/tutoriales/conectar-google-drive/a/poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><b>Gighopp</b><a href="../">Todos los tutoriales</a></div>
+  <h1>Cómo conectar tu <mark>Google Drive</mark> al Gighopp System</h1>
+  <p class="lede">Conecta tu Drive una vez y tendrás tus archivos a la mano dentro de tu CRM. Toma menos de un minuto.</p>
+  <div class="player"><video data-blob="a/tutorial.mp4" poster="a/poster.jpg" playsinline preload="none" aria-label="Tutorial: conectar Google Drive"></video></div>
+  <div class="meta"><span class="tag">Integraciones</span><span>0:52 min · con voz</span></div>
+</div></header>
+
+<main class="wrap">
+  <section>
+    <div class="note">
+      <div class="ico">!</div>
+      <div>
+        <h3>Antes de empezar</h3>
+        <p style="margin:8px 0 0">Abre tu <b>Google Drive</b> en el mismo navegador donde usas el Gighopp System y asegúrate de que tu cuenta de Google esté <mark><b>iniciada</b></mark>. Si no estás logueado, el sistema no la va a encontrar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Paso a paso</h2>
+    <div class="steps">
+      <article class="step">
+        <div>
+          <div class="n">1</div>
+          <h3>Entra a Settings e Integrations</h3>
+          <p>Abajo a la izquierda, haz clic en <b>Settings</b>. En el menú, baja y entra en <b>Integrations</b>.</p>
+        </div>
+        <img class="shot" src="a/d7_media.jpg" alt="Menú del Gighopp System con Settings abajo a la izquierda" loading="lazy">
+      </article>
+      <article class="step">
+        <div>
+          <div class="n">2</div>
+          <h3>Google → Connect</h3>
+          <p>Busca la tarjeta de <b>Google</b> y haz clic en <b>Connect</b>. Se abre una ventana de Google: elige la cuenta con la que iniciaste sesión, la de tu Drive.</p>
+        </div>
+        <img class="shot" src="a/d3_connect.jpg" alt="Tarjeta de Google con el botón Connect" loading="lazy">
+      </article>
+      <article class="step">
+        <div>
+          <div class="n">3</div>
+          <h3>Acepta y continúa</h3>
+          <p>Acepta los permisos, incluido <b>Google Drive</b>, y haz clic en <b>Continuar</b>.</p>
+          <div class="why"><b>Ojo:</b> si Google te pide una llave de acceso o un código QR, toca <b>“Probar otra forma”</b> y entra con tu contraseña o con el código que te llega al celular.</div>
+        </div>
+        <img class="shot" src="a/g2.jpg" alt="Permisos de Google con el botón Continuar" loading="lazy">
+      </article>
+      <article class="step">
+        <div>
+          <div class="n">4</div>
+          <h3>Comprueba que quedó conectado</h3>
+          <p>La tarjeta de Google ya aparece <b>conectada</b>. Para confirmarlo, entra a <b>Media Storage</b>: arriba verás el ícono de Google Drive con tu espacio disponible.</p>
+        </div>
+        <img class="shot" src="a/d6_connected.jpg" alt="Tarjeta de Google conectada" loading="lazy">
+      </article>
+    </div>
+  </section>
+
+  <section id="mas">
+    <h2>Más tutoriales</h2>
+    <div class="grid" id="otros"></div>
+    <p style="margin-top:18px"><a href="../"><b>Ver todos los tutoriales →</b></a></p>
+  </section>
+</main>
+<footer><div class="wrap"><span><b>Gighopp</b> · Centro de tutoriales</span><span>¿Dudas? Escríbele a Luis</span></div></footer>
+<script src="../player.js"></script>
+<script src="../tutoriales.js"></script>
+<script>
+(function(){
+  var me='conectar-google-drive', o=(window.TUTORIALES||[]).filter(function(x){return x.slug!==me});
+  var g=document.getElementById('otros');
+  if(!o.length){ g.outerHTML='<p>Pronto vamos a agregar más tutoriales aquí.</p>'; return; }
+  g.innerHTML=o.map(function(x){return '<a class="card" href="../'+x.slug+'/"><div class="th"><img src="../'+x.img+'" alt="" loading="lazy"><span>'+x.duracion+'</span></div><div class="bd"><small>'+x.tema+'</small><h3>'+x.titulo+'</h3><p>'+x.corto+'</p></div></a>'}).join('');
+})();
+</script>
+</body>
+</html>
