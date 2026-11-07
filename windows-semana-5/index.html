@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}video,.vp{-webkit-touch-callout:none;user-select:none}
+
+.vp{position:relative;width:100%;height:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid #111;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:#fff}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.55);color:#fff;font:600 11px system-ui;cursor:pointer}
+</style>
+<title>Windows Pros · Semana 5</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Material publicado en Meta para Windows Pros, semana del 2 al 8 de noviembre de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a window installer's job sheet. Full-bleed bands, a strict 12-col grid inside, spec labels in mono like a work order. */
+:root{
+  --bg:#eef0ee;          /* concrete */
+  --paper:#f8f9f7;
+  --ink:#151a17;         /* tar-paper black */
+  --muted:#5b665f;
+  --rule:#cfd5d0;
+  --green:#1b5d9c;       /* frame blue */
+  --signal:#3fa9f5;      /* glass blue */
+  --band:#151a17;        /* dark band */
+  --band-ink:#eef0ee;
+  --band-muted:#9aa69f;
+  --chip:#e1e7e2;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101412;--paper:#161b18;--ink:#e8ece9;--muted:#98a49d;--rule:#2a332e;--green:#7cc3ff;--signal:#3fa9f5;
+  --band:#0a0d0b;--band-ink:#e8ece9;--band-muted:#8d9992;--chip:#1f2722;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101412;--paper:#161b18;--ink:#e8ece9;--muted:#98a49d;--rule:#2a332e;--green:#7cc3ff;--signal:#3fa9f5;
+  --band:#0a0d0b;--band-ink:#e8ece9;--band-muted:#8d9992;--chip:#1f2722;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--band);color:var(--band-ink);padding-block:28px 0;overflow:hidden}
+.hero-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--band-muted)}
+.hero-bar b{color:var(--band-ink);font-weight:500}
+.hero h1{font-variation-settings:"wdth" 125;font-weight:850;font-size:clamp(46px,9.5vw,132px);line-height:.88;letter-spacing:-.02em;margin-top:44px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero-lede{max-width:56ch;color:var(--band-muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--band-ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#2a332e;border-block:1px solid #2a332e;margin-top:40px}
+.stat{background:var(--band);padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:44px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted)}
+.film{display:flex;gap:8px;margin-top:32px;transform:translateX(-4%);width:108%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:6px 6px 0 0;filter:saturate(.9)}
+
+/* ---------- Section heads ---------- */
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:36px}
+.sec-head .mono{color:var(--green)}
+.sec-head h2{font-variation-settings:"wdth" 118;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:.95;letter-spacing:-.01em;margin-top:10px}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+
+/* ---------- Ventanas grid ---------- */
+.setbar{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:28px;color:var(--muted)}
+.setbar span b{color:var(--ink)}
+.hooks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 16px}
+.hook{margin:0}
+.phone{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink);max-width:100%}
+.phone video,.phone img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:8px;top:8px;font:500 10px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 7px;border-radius:3px}
+.tag-a{background:var(--signal);color:#06121d}
+.tag-b{background:#f2f4f2;color:#151a17}
+.hook figcaption{display:grid;gap:3px;margin-top:16px}
+.hook .num{font:500 11px var(--f-mono);color:var(--green);letter-spacing:.06em}
+.hook strong{font-weight:600;font-size:15px;line-height:1.3}
+.hook .angle{font-size:13px;color:var(--muted)}
+.how{margin-top:28px;color:var(--muted);font-size:14px}
+
+/* ---------- Techos pieces ---------- */
+.techos{background:var(--paper);border-block:1px solid var(--rule)}
+.piece{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;padding-block:44px;border-bottom:1px solid var(--rule)}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline}
+.code{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;font-size:56px;line-height:.8;color:var(--signal)}
+.fmt{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.piece h3{font-variation-settings:"wdth" 100;font-weight:700;font-size:28px;line-height:1.1;margin:18px 0 12px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 12px var(--f-mono);letter-spacing:.04em;background:var(--chip);padding:5px 10px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:7px;vertical-align:1px}
+.copy,.hl{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px}
+.copy h4,.hl h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.hl ol{margin:0;padding-left:20px;font-size:15px}
+.hl li{margin:2px 0}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.track img{flex:0 0 78%;max-width:78%;aspect-ratio:1;object-fit:cover;scroll-snap-align:start;border-radius:6px;border:1px solid var(--rule)}
+.track-hint{font:500 11px var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.flat{border-radius:6px;border:1px solid var(--rule);max-width:560px;width:100%}
+.phone-lg{width:min(320px,100%);margin:6px auto}
+.board{width:min(320px,100%);margin:6px auto;aspect-ratio:9/16;background:var(--band);color:var(--band-ink);border-radius:14px;box-shadow:0 0 0 6px var(--ink);padding:18px;display:flex;flex-direction:column;overflow:hidden}
+.board-top{display:flex;justify-content:space-between;font:500 11px var(--f-mono);color:var(--band-muted);letter-spacing:.08em}
+.board-title{font-family:var(--f-display);font-variation-settings:"wdth" 115;font-weight:800;font-size:26px;line-height:1;margin:14px 0 12px;color:var(--signal)}
+.board ol{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:13px;line-height:1.3}
+.board li{display:grid;grid-template-columns:24px 1fr;gap:6px}
+.board li span{font:500 10px var(--f-mono);color:var(--band-muted);padding-top:2px}
+.board-foot{margin-top:auto;font:500 10px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--band-muted);border-top:1px solid #2a332e;padding-top:10px}
+
+/* ---------- Setup ---------- */
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.spec{background:var(--bg);padding:22px 20px}
+.spec .mono{color:var(--green)}
+.spec p{margin:8px 0 0;font-size:15px}
+.map{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:40px}
+.city{border:2px solid var(--ink);border-radius:8px;padding:22px}
+.city h3{font-variation-settings:"wdth" 120;font-weight:800;font-size:30px}
+.city .set{color:var(--muted);margin:4px 0 16px}
+.city ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.city li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--rule);padding-top:8px}
+.city li b{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;color:var(--green)}
+footer{background:var(--band);color:var(--band-muted);padding-block:36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--band-ink);font-weight:500}
+
+@media (max-width:980px){
+  .map{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hooks{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .hooks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .map,.specs{grid-template-columns:1fr}
+  .film img:nth-child(n+5){display:none}
+  .stat b{font-size:36px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.status{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid var(--rule);color:var(--muted)}
+.phone-sq{width:min(420px,100%);margin:6px auto;aspect-ratio:1}
+.phone-wide{width:min(600px,100%);margin:6px auto;aspect-ratio:16/9}
+.desc{margin:10px 0 0;font-size:14px;color:var(--muted)}
+.desc b{color:var(--ink);font-weight:600}
+.city .note{margin-top:14px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar mono"><span><b>Gighopp</b> · Presentación de material</span><span>Semana 5 · 2 – 8 nov 2026</span></div>
+    <h1>Windows Pros<br><em>Semana 5</em></h1>
+    <p class="hero-lede">Seis piezas nuevas de <strong>venta directa</strong> para Dallas, con la <strong>promoción 2x1</strong> y la opción de empezar a pagar después de 18 meses. Corren en un conjunto nuevo, “Dallas venta directa 5”.</p>
+    <div class="stats">
+      <div class="stat"><b>6</b><span class="mono">piezas</span></div>
+      <div class="stat"><b>4</b><span class="mono">anuncios publicados</span></div>
+      <div class="stat"><b>2</b><span class="mono">salen esta semana</span></div>
+      <div class="stat"><b>1</b><span class="mono">conjunto nuevo</span></div>
+    </div>
+    <div class="film" aria-hidden="true"><img src="a/p01.jpg" alt=""><img src="a/p05.jpg" alt=""><img src="a/p02.jpg" alt=""><img src="a/p04.jpg" alt=""><img src="a/p03.jpg" alt=""><img src="a/p06.jpg" alt=""></div>
+  </div>
+</header>
+
+<main>
+<section class="techos" id="venta-directa">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Venta directa · 2x1</span><h2>Por cada ventana, otra de regalo</h2></div>
+      <p>Seis piezas para la promoción <strong>2x1</strong>: por cada ventana que pagas, te regalamos otra, con <strong>$0 de enganche</strong>, APR desde 0% sujeto a aprobación, <strong>garantía de 25 años por escrito</strong> y la opción de <strong>empezar a pagar después de 18 meses</strong>. Los dos estáticos de Navidad se publican en los próximos días.</p>
+    </div>
+    <article class="piece" id="p01">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p01.jpg" data-blob="a/p01.mp4" aria-label="Video “Instalación de ventanas 3D”"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P01</span><span class="fmt">Video 3D · 9:16 · 40 s</span></div>
+    <h3>Video “Instalación de ventanas 3D”</h3>
+    <div class="where"><span class="chip">Dallas</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>🪟 ¡Renueva tus ventanas con nuestra promoción 2X1!</p><p>Por cada ventana que pagues, te regalamos una. Y lo mejor: reemplázalas hoy y empieza a pagar después de 18 meses. 🙌</p><p>✅ $0 de enganche.<br>✅ Financiamiento disponible.<br>✅ Pagos mensuales bajos.<br>✅ APR desde 0%, sujeto a aprobación.<br>✅ Garantía de 25 años, por escrito.</p><p>📍 Atendemos Dallas y sus alrededores.</p><p>👇 Haz clic aquí abajo y completa el formulario para agendar tu cita y aprovechar la promoción.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><p class="desc"><b>Reduce tu factura de energía</b><br>Instalación profesional con pagos accesibles.</p></div>
+  </div>
+</article><article class="piece" id="p02">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p02.jpg" data-blob="a/p02.mp4" aria-label="Video “Caricatura ventanas viejas”"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P02</span><span class="fmt">Video animado · 9:16 · 34 s</span></div>
+    <h3>Video “Caricatura ventanas viejas”</h3>
+    <div class="where"><span class="chip">Dallas</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>🪟 ¡Renueva tus ventanas con nuestra promoción 2X1!</p><p>Por cada ventana que pagues, te regalamos una. Y lo mejor: reemplázalas hoy y empieza a pagar después de 18 meses. 🙌</p><p>✅ $0 de enganche.<br>✅ Financiamiento disponible.<br>✅ Pagos mensuales bajos.<br>✅ APR desde 0%, sujeto a aprobación.<br>✅ Garantía de 25 años, por escrito.</p><p>📍 Atendemos Dallas y sus alrededores.</p><p>👇 Haz clic aquí abajo y completa el formulario para agendar tu cita y aprovechar la promoción.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><p class="desc"><b>Reduce tu factura de energía</b><br>Instalación profesional con pagos accesibles.</p></div>
+  </div>
+</article><article class="piece" id="p03">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p03.jpg" data-blob="a/p03.mp4" aria-label="Video “Santa Mexicano” 2x1"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P03</span><span class="fmt">Video · 9:16 · 31 s</span></div>
+    <h3>Video “Santa Mexicano” 2x1</h3>
+    <div class="where"><span class="chip">Dallas</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>🪟 ¡Por cada ventana que compres, te regalamos la otra!</p><p>Renueva tus ventanas con nuestra promoción 2X1 y estrénalas hoy mismo. 🙌</p><p>✅ $0 de enganche.<br>✅ Financiamiento disponible.<br>✅ Pagos mensuales bajos.<br>✅ APR desde 0%, sujeto a aprobación.<br>✅ Garantía de 25 años, por escrito.</p><p>📍 Atendemos Dallas y sus alrededores.</p><p>👇 Haz clic aquí abajo y completa el formulario para agendar tu cita y aprovechar la promoción.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><p class="desc"><b>Reduce tu factura de energía</b><br>Ventanas 2X1: por cada una que compres, te regalamos otra.</p></div>
+  </div>
+</article><article class="piece" id="p04">
+  <div class="piece-visual"><img class="flat" src="a/p04.jpg" alt="Imagen “Misma casa, otras ventanas”"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P04</span><span class="fmt">Imagen · 4:5</span></div>
+    <h3>Imagen “Misma casa, otras ventanas”</h3>
+    <div class="where"><span class="chip">Dallas</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>🪟 ¡Renueva tus ventanas con nuestra promoción 2X1!</p><p>Por cada ventana que pagues, te regalamos una. Y lo mejor: reemplázalas hoy y empieza a pagar después de 18 meses. 🙌</p><p>✅ $0 de enganche.<br>✅ Financiamiento disponible.<br>✅ Pagos mensuales bajos.<br>✅ APR desde 0%, sujeto a aprobación.<br>✅ Garantía de 25 años, por escrito.</p><p>📍 Atendemos Dallas y sus alrededores.</p><p>👇 Haz clic aquí abajo y completa el formulario para agendar tu cita y aprovechar la promoción.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><p class="desc"><b>Reduce tu factura de energía</b><br>Instalación profesional con pagos accesibles.</p></div>
+  </div>
+</article><article class="piece" id="p05">
+  <div class="piece-visual"><img class="flat" src="a/p05.jpg" alt="Estático de Navidad “Santa trae el 2x1” · versión roja"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P05</span><span class="fmt">Imagen · 4:5</span></div>
+    <h3>Estático de Navidad “Santa trae el 2x1” · versión roja</h3>
+    <div class="where"><span class="chip">Dallas</span><span class="status">Sale en los próximos días</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>🪟 ¡Renueva tus ventanas con nuestra promoción 2X1!</p><p>Por cada ventana que pagues, te regalamos una. Y lo mejor: reemplázalas hoy y empieza a pagar después de 18 meses. 🙌</p><p>✅ $0 de enganche.<br>✅ Financiamiento disponible.<br>✅ Pagos mensuales bajos.<br>✅ APR desde 0%, sujeto a aprobación.<br>✅ Garantía de 25 años, por escrito.</p><p>📍 Atendemos Dallas y sus alrededores.</p><p>👇 Haz clic aquí abajo y completa el formulario para agendar tu cita y aprovechar la promoción.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><p class="desc"><b>Reduce tu factura de energía</b><br>Instalación profesional con pagos accesibles.</p></div>
+  </div>
+</article><article class="piece" id="p06">
+  <div class="piece-visual"><img class="flat" src="a/p06.jpg" alt="Estático de Navidad “Santa trae el 2x1” · versión azul"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P06</span><span class="fmt">Imagen · 4:5</span></div>
+    <h3>Estático de Navidad “Santa trae el 2x1” · versión azul</h3>
+    <div class="where"><span class="chip">Dallas</span><span class="status">Sale en los próximos días</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>🪟 ¡Renueva tus ventanas con nuestra promoción 2X1!</p><p>Por cada ventana que pagues, te regalamos una. Y lo mejor: reemplázalas hoy y empieza a pagar después de 18 meses. 🙌</p><p>✅ $0 de enganche.<br>✅ Financiamiento disponible.<br>✅ Pagos mensuales bajos.<br>✅ APR desde 0%, sujeto a aprobación.<br>✅ Garantía de 25 años, por escrito.</p><p>📍 Atendemos Dallas y sus alrededores.</p><p>👇 Haz clic aquí abajo y completa el formulario para agendar tu cita y aprovechar la promoción.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><p class="desc"><b>Reduce tu factura de energía</b><br>Instalación profesional con pagos accesibles.</p></div>
+  </div>
+</article>
+  </div>
+</section>
+
+<section id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Dónde corre cada pieza</span><h2>Montaje en Meta</h2></div>
+      <p>Todos los anuncios llevan al formulario instantáneo y cada contacto entra directo al CRM.</p>
+    </div>
+    <div class="map" style="grid-template-columns:minmax(0,560px)">
+      <div class="city"><h3>Dallas</h3><p class="set mono">“Dallas venta directa 5” · nuevo</p><ul>
+        <li><b>P01</b>Instalación 3D</li><li><b>P02</b>Caricatura ventanas viejas</li><li><b>P03</b>Santa Mexicano</li><li><b>P04</b>Misma casa, otras ventanas</li>
+        <li><b>P05</b>Navidad roja · próximamente</li><li><b>P06</b>Navidad azul · próximamente</li></ul>
+        <p class="note">$40 al día, optimizado por calidad del lead hacia citas agendadas. Formulario “Dallas venta directa”.</p></div>
+    </div>
+    <div class="specs" style="margin-top:40px">
+      <div class="spec"><span class="mono">Destino</span><p>Formulario instantáneo. Botón al formulario, nunca al teléfono.</p></div>
+      <div class="spec"><span class="mono">Medición</span><p>Las citas y ventas del CRM vuelven a Meta, para que aprenda qué contactos sí compran.</p></div>
+      <div class="spec"><span class="mono">Textos</span><p>Texto, título y descripción que explican la oferta, con los ángulos que ya venían funcionando.</p></div>
+      <div class="spec"><span class="mono">Formato</span><p>Formato original, sin recortes automáticos ni mejoras de Meta.</p></div>
+      <div class="spec"><span class="mono">Ubicaciones</span><p>Facebook, Instagram y Audience Network. Sin Threads ni Messenger.</p></div>
+      <div class="spec"><span class="mono">Zona</span><p>Dallas y 35 millas a la redonda.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap mono"><span><b>Gighopp</b> para Windows Pros</span><span>Semana 5 · 2 – 8 nov 2026</span></div></footer>
+
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones (iOS/WhatsApp) don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+
+<script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
+<script>
+(function(){
+  document.querySelectorAll('video[data-blob]').forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
