@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}video,.vp{-webkit-touch-callout:none;user-select:none}
+.vp{position:relative;width:100%;height:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid #111;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:#fff}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.55);color:#fff;font:600 11px system-ui;cursor:pointer}
+</style>
+<title>Santorini Blooms · Semana 1</title>
+<meta name="description" content="Los 3 anuncios nuevos de Santorini Blooms Med Spa que salieron esta semana en Meta: Endolifting con $500 OFF y evaluación gratis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a med-spa treatment card. Whitewashed walls, Aegean blue, a single gold accent for the offer. */
+:root{
+  --bg:#f6f4ef;          /* whitewash */
+  --paper:#fffdf9;
+  --ink:#14233a;         /* deep Aegean */
+  --muted:#5d6878;
+  --rule:#dcd8cf;
+  --blue:#2457a6;        /* Aegean blue */
+  --gold:#c8a15a;        /* offer gold */
+  --band:#0f1d33;
+  --band-ink:#f3efe7;
+  --band-muted:#a3adbd;
+  --chip:#ebe7de;
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1420;--paper:#121b2a;--ink:#ece8df;--muted:#9aa5b5;--rule:#253247;--blue:#86aef0;--gold:#d8b46e;
+  --band:#08101c;--band-ink:#ece8df;--band-muted:#94a0b2;--chip:#1b2639;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1420;--paper:#121b2a;--ink:#ece8df;--muted:#9aa5b5;--rule:#253247;--blue:#86aef0;--gold:#d8b46e;
+  --band:#08101c;--band-ink:#ece8df;--band-muted:#94a0b2;--chip:#1b2639;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;font-weight:400}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* Hero */
+.hero{background:var(--band);color:var(--band-ink);padding-block:28px 0;overflow:hidden}
+.hero-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--band-muted)}
+.hero-bar b{color:var(--band-ink);font-weight:500}
+.hero h1{font-size:clamp(48px,9vw,124px);line-height:.92;letter-spacing:-.02em;margin-top:44px;font-variation-settings:"opsz" 144;font-weight:300}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:400}
+.hero-lede{max-width:58ch;color:var(--band-muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--band-ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#24324a;border-block:1px solid #24324a;margin-top:40px}
+.stat{background:var(--band);padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-size:46px;font-weight:400;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted)}
+.film{display:flex;gap:8px;margin-top:32px;justify-content:center}
+.film img{flex:0 1 220px;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:110px 110px 0 0}
+
+/* Sections */
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;border-bottom:1px solid var(--ink);padding-bottom:20px;margin-bottom:36px}
+.sec-head .mono{color:var(--blue)}
+.sec-head h2{font-size:clamp(36px,5.4vw,64px);line-height:1;letter-spacing:-.01em;margin-top:10px;font-weight:300}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+
+/* Pieces */
+.piece{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:48px;padding-block:44px;border-bottom:1px solid var(--rule)}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.code{font-family:var(--f-display);font-style:italic;font-size:54px;line-height:.8;color:var(--gold)}
+.fmt{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.status{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:3px;margin-left:auto;white-space:nowrap;background:var(--blue);color:#fff}
+.piece h3{font-size:30px;line-height:1.1;margin:18px 0 12px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 12px var(--f-mono);letter-spacing:.04em;background:var(--chip);padding:5px 10px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:7px;vertical-align:1px}
+.copy,.hl{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px}
+.copy h4,.hl h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.hl ol{margin:0;padding-left:20px;font-size:15px}
+.hl li{margin:3px 0}
+.cards{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:15px}
+.cards li{display:grid;grid-template-columns:28px 1fr;gap:8px}
+.cards li span{font:500 11px var(--f-mono);color:var(--muted);padding-top:3px}
+.cards li b{font-weight:600}
+.phone{position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink)}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.phone-lg{width:min(320px,100%);margin:6px auto}
+.flat{border-radius:8px;border:1px solid var(--rule);width:min(440px,100%);margin:0 auto;display:block}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.track img{flex:0 0 74%;max-width:74%;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:start;border-radius:8px;border:1px solid var(--rule)}
+.track-hint{font:500 11px var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+
+/* Offer band */
+.offer{background:var(--paper);border-block:1px solid var(--rule);padding-block:56px}
+.offer .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.offer div b{display:block;font-family:var(--f-display);font-size:clamp(34px,4.5vw,54px);line-height:1;color:var(--blue);font-weight:400}
+.offer div p{margin:10px 0 0;color:var(--muted);max-width:32ch}
+
+/* Setup */
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.spec{background:var(--bg);padding:22px 20px}
+.spec .mono{color:var(--blue)}
+.spec p{margin:8px 0 0;font-size:15px}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px;counter-reset:s}
+.flow div{border-top:2px solid var(--ink);padding-top:14px}
+.flow div::before{counter-increment:s;content:"0" counter(s);font:500 12px var(--f-mono);color:var(--gold);letter-spacing:.08em}
+.flow h3{font-size:22px;margin:8px 0 6px}
+.flow p{margin:0;color:var(--muted);font-size:14px}
+footer{background:var(--band);color:var(--band-muted);padding-block:36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--band-ink);font-weight:500}
+
+@media (max-width:980px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .specs,.offer .wrap,.flow{grid-template-columns:1fr}
+  .film img:nth-child(n+4){display:none}
+  .stat b{font-size:38px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar mono"><span><b>Gighopp</b> · Lo que salió esta semana</span><span>9 nov 2026</span></div>
+    <h1>Santorini<br><em>Blooms</em></h1>
+    <p class="hero-lede">Esta semana salieron <strong>3 anuncios nuevos</strong> en Meta para <strong>Endolifting con $500 OFF + evaluación gratis</strong> en Houston. Corren en un <strong>conjunto nuevo de prueba</strong>, separado del de la influencer, que sigue corriendo igual. Así medimos qué material nuevo trae más conversaciones sin tocar lo que ya funciona.</p>
+    <div class="stats">
+      <div class="stat"><b>3</b><span class="mono">anuncios nuevos</span></div>
+      <div class="stat"><b>1</b><span class="mono">video vocera</span></div>
+      <div class="stat"><b>2</b><span class="mono">imagen y carrusel</span></div>
+      <div class="stat"><b>$8</b><span class="mono">al día · conjunto de prueba</span></div>
+    </div>
+    <div class="film" aria-hidden="true"><img src="a/vocera.jpg" alt=""><img src="a/estatica.jpg" alt=""><img src="a/c1.jpg" alt=""><img src="a/c2.jpg" alt=""><img src="a/c3.jpg" alt=""></div>
+  </div>
+</header>
+<main>
+<div class="offer"><div class="wrap">
+  <div><b>$500 OFF</b><p>En el tratamiento de Endolifting. Cupón válido solo este mes.</p></div>
+  <div><b>Evaluación gratis</b><p>De rostro, cuello y línea mandibular, antes de recomendar nada.</p></div>
+  <div><b>WhatsApp</b><p>Todos los anuncios llevan a una conversación directa con el spa.</p></div>
+</div></div>
+
+<section id="semana"><div class="wrap">
+  <div class="sec-head"><div><span class="mono">Publicados · 9 nov</span><h2>3 anuncios nuevos</h2></div><p>Los textos se escribieron a partir de lo que <strong>ya ha funcionado en la cuenta</strong>: el gancho del anuncio ganador, más la oferta del mes. Cada anuncio rota <strong>5 textos, 5 títulos y 5 descripciones</strong>, y Meta muestra más la combinación que mejor responde.</p></div>
+
+  <article class="piece" id="n01">
+    <div class="piece-visual"><div class="phone phone-lg"><video controls playsinline preload="none" poster="a/vocera.jpg" data-blob="a/vocera.mp4" aria-label="Vocera Endolifting"></video></div></div>
+    <div class="piece-info">
+      <div class="piece-head"><span class="code">N01</span><span class="fmt">Video vocera · 9:16 · 43 s</span><span class="status">Publicado</span></div>
+      <h3>Vocera · Endolifting $500 OFF</h3>
+      <div class="where"><span class="chip">Cypress · Houston · Katy</span><span class="chip">Español</span><span class="chip">Conjunto nuevo</span></div>
+      <div class="copy"><h4>Qué es</h4><p>Una vocera explica el Endolifting de frente a cámara: qué es, para quién es y la oferta del mes. Formato cercano, como una recomendación, que genera confianza antes del primer mensaje.</p></div>
+      <div class="copy"><h4>Texto principal (1 de 5)</h4><p>¿Quieres mejorar el contorno de tu perfil y mandíbula sin cirugía tradicional? 👇</p><p>Este mes en Santorini Blooms Med Spa tienes:</p><p>✅ $500 OFF en tu Endolifting<br>✅ Evaluación GRATIS de rostro, cuello y línea mandibular<br>✅ Sin pasar por el quirófano</p><p>Te evaluamos primero y te decimos si eres candidata.</p><p>📍 Houston · Cupón válido solo este mes.</p><p>👇 Toca el botón y escríbenos por WhatsApp.</p></div>
+      <div class="hl"><h4>Títulos</h4><ol><li>Endolifting con $500 OFF - Houston</li><li>⚠️ ¿Te vas a perder esto?</li><li>Evaluación GRATIS + $500 OFF</li><li>Perfil definido sin quirófano</li><li>Solo este mes en Santorini Blooms</li></ol></div>
+    </div>
+  </article>
+
+  <article class="piece" id="n02">
+    <div class="piece-visual"><img class="flat" src="a/estatica.jpg" alt="Imagen · Define tu perfil" loading="lazy"></div>
+    <div class="piece-info">
+      <div class="piece-head"><span class="code">N02</span><span class="fmt">Imagen · 4:5</span><span class="status">Publicado</span></div>
+      <h3>Define tu perfil · $500 OFF</h3>
+      <div class="where"><span class="chip">Cypress · Houston · Katy</span><span class="chip">Español</span><span class="chip">Conjunto nuevo</span></div>
+      <div class="copy"><h4>Qué es</h4><p>Imagen directa con el resultado que busca la clienta, un perfil y una mandíbula más definidos, y la oferta a la vista. Se entiende en un segundo mientras la persona hace scroll.</p></div>
+      <div class="copy"><h4>Texto principal (2 de 5)</h4><p>⚠️ ¿Te vas a perder esto? ⚠️</p><p>Solo este mes: $500 OFF en Endolifting en Santorini Blooms Med Spa.</p><p>El tratamiento sin cirugía tradicional para definir perfil, mandíbula y cuello.</p><p>🎁 Además, tu evaluación es GRATIS.</p><p>Cuando termine el mes, el cupón se va.</p><p>👇 Escríbenos por WhatsApp hoy y separa tu evaluación en Houston.</p></div>
+      <div class="hl"><h4>Descripciones</h4><ol><li>Perfil, mandíbula y cuello con Endolifting en Houston.</li><li>$500 OFF en tu Endolifting. Cupón válido solo este mes.</li><li>Evaluación GRATIS de rostro, cuello y línea mandibular.</li><li>Sin cirugía tradicional. Te decimos si eres candidata.</li><li>Escríbenos por WhatsApp y agenda tu evaluación gratis.</li></ol></div>
+    </div>
+  </article>
+
+  <article class="piece" id="n03">
+    <div class="piece-visual"><div class="track" tabindex="0" aria-label="Carrusel · Mandíbula"><img src="a/c1.jpg" alt="Carrusel — tarjeta 1 de 3" loading="lazy"><img src="a/c2.jpg" alt="Carrusel — tarjeta 2 de 3" loading="lazy"><img src="a/c3.jpg" alt="Carrusel — tarjeta 3 de 3" loading="lazy"></div><div class="track-hint">Desliza · 3 tarjetas</div></div>
+    <div class="piece-info">
+      <div class="piece-head"><span class="code">N03</span><span class="fmt">Carrusel · 3 tarjetas · 4:5</span><span class="status">Publicado</span></div>
+      <h3>Carrusel · Mandíbula $500 OFF</h3>
+      <div class="where"><span class="chip">Cypress · Houston · Katy</span><span class="chip">Español</span><span class="chip">Conjunto nuevo</span></div>
+      <div class="copy"><h4>Qué es</h4><p>Una historia en tres pasos: el resultado, la evaluación gratis y el cupón. Cada tarjeta lleva su propio título, y el botón de WhatsApp está en todas.</p></div>
+      <div class="hl"><h4>Tarjetas</h4><ul class="cards"><li><span>01</span><div><b>Perfil definido sin quirófano</b><br>Endolifting en Houston.</div></li><li><span>02</span><div><b>Evaluación GRATIS</b><br>Rostro, cuello y línea mandibular.</div></li><li><span>03</span><div><b>$500 OFF solo este mes</b><br>Escríbenos por WhatsApp y agenda.</div></li></ul></div>
+      <div class="copy"><h4>Texto principal</h4><p>¿Quieres mejorar el contorno de tu perfil y mandíbula sin cirugía tradicional? 👇</p><p>Este mes en Santorini Blooms Med Spa tienes:</p><p>✅ $500 OFF en tu Endolifting<br>✅ Evaluación GRATIS de rostro, cuello y línea mandibular<br>✅ Sin pasar por el quirófano</p><p>📍 Houston · Cupón válido solo este mes.</p><p>👇 Toca el botón y escríbenos por WhatsApp.</p></div>
+    </div>
+  </article>
+</div></section>
+
+<section id="montaje" style="background:var(--paper);border-top:1px solid var(--rule)"><div class="wrap">
+  <div class="sec-head"><div><span class="mono">Cómo corre</span><h2>Montaje en Meta</h2></div><p>Los 3 anuncios corren en un conjunto nuevo, <strong>Adset 2 · Contenido Noviembre</strong>. El conjunto de la influencer sigue corriendo igual, sin cambios.</p></div>
+  <div class="specs">
+    <div class="spec"><span class="mono">Presupuesto</span><p>$8 al día, solo para este conjunto de prueba.</p></div>
+    <div class="spec"><span class="mono">Objetivo</span><p>Máximo número de conversaciones por WhatsApp, igual que el conjunto de la influencer, para comparar en igualdad de condiciones.</p></div>
+    <div class="spec"><span class="mono">Destino</span><p>WhatsApp del spa. Al tocar el botón se abre la conversación con un saludo de bienvenida sobre el Endolifting y la evaluación gratis.</p></div>
+    <div class="spec"><span class="mono">Zona</span><p>Cypress, Houston y Katy.</p></div>
+    <div class="spec"><span class="mono">Creativos</span><p>Las imágenes y el video salen tal cual se diseñaron: sin recortes ni cambios automáticos de Meta.</p></div>
+    <div class="spec"><span class="mono">Medición</span><p>Cada lead y cada cita agendada en Gighopp System se reporta a Meta, para saber qué anuncio trae clientas de verdad.</p></div>
+  </div>
+  <div class="flow">
+    <div><h3>Ve el anuncio</h3><p>En Facebook o Instagram, en la zona de Houston.</p></div>
+    <div><h3>Escribe por WhatsApp</h3><p>Un toque y la conversación ya está abierta.</p></div>
+    <div><h3>Evaluación gratis</h3><p>El spa revisa si es candidata y agenda.</p></div>
+    <div><h3>Tratamiento</h3><p>Endolifting con $500 OFF este mes.</p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap mono"><span><b>Gighopp</b> para Santorini Blooms Med Spa</span><span>9 nov 2026</span></div></footer>
+<script>
+(function(){
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>{w.classList.add('playing');vids.forEach(o=>{if(o!==v)o.pause()})});
+    v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
