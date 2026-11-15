@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}video,.vp{-webkit-touch-callout:none;user-select:none}
+
+.vp{position:relative;width:100%;height:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid #111;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:#fff}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.55);color:#fff;font:600 11px system-ui;cursor:pointer}
+</style>
+<title>FG Insulation · Material de invierno</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Material creado y publicado en Meta para FG Insulation TX, semana del 9 al 15 de noviembre de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a job sheet like the RJ page, recolored to FG's orange (from the logo and the creatives). */
+:root{
+  --bg:#f1efec;
+  --paper:#f9f8f6;
+  --ink:#1a1714;
+  --muted:#665f57;
+  --rule:#d8d2ca;
+  --accent:#b85d00;      /* text-safe orange */
+  --signal:#ff9200;      /* FG orange */
+  --band:#1a1714;
+  --band-ink:#f1efec;
+  --band-muted:#a39a90;
+  --chip:#e8e2da;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131110;--paper:#1a1816;--ink:#ece8e3;--muted:#a59d94;--rule:#332e29;--accent:#ffab40;--signal:#ff9200;
+  --band:#0b0a09;--band-ink:#ece8e3;--band-muted:#968d83;--chip:#26221e;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131110;--paper:#1a1816;--ink:#ece8e3;--muted:#a59d94;--rule:#332e29;--accent:#ffab40;--signal:#ff9200;
+  --band:#0b0a09;--band-ink:#ece8e3;--band-muted:#968d83;--chip:#26221e;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+.hero{background:var(--band);color:var(--band-ink);padding-block:28px 0;overflow:hidden}
+.hero-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--band-muted);align-items:center}
+.hero-bar b{color:var(--band-ink);font-weight:500}
+.hero h1{font-variation-settings:"wdth" 125;font-weight:850;font-size:clamp(44px,9vw,124px);line-height:.88;letter-spacing:-.02em;margin-top:44px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero-lede{max-width:58ch;color:var(--band-muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--band-ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#332e29;border-block:1px solid #332e29;margin-top:40px}
+.stat{background:var(--band);padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:44px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted)}
+.film{display:flex;gap:8px;margin-top:32px;transform:translateX(-3%);width:106%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:6px 6px 0 0;filter:saturate(.95)}
+
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:36px}
+.sec-head .mono{color:var(--accent)}
+.sec-head h2{font-variation-settings:"wdth" 118;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:.95;letter-spacing:-.01em;margin-top:10px}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+
+.pieces{background:var(--paper);border-block:1px solid var(--rule)}
+.piece{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;padding-block:44px;border-bottom:1px solid var(--rule)}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.code{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;font-size:56px;line-height:.8;color:var(--signal)}
+.fmt{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.piece h3{font-variation-settings:"wdth" 100;font-weight:700;font-size:28px;line-height:1.1;margin:18px 0 12px}
+.why{color:var(--muted);margin:0 0 16px;font-size:15px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 12px var(--f-mono);letter-spacing:.04em;background:var(--chip);padding:5px 10px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:7px;vertical-align:1px}
+.chip.wa::before{background:#25d366}
+.copy{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px}
+.copy h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.screen{position:relative;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink);width:100%}
+.screen video{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;background:#000}
+.phone{position:relative;width:min(320px,100%);margin:6px auto;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink)}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.flat{border-radius:8px;border:1px solid var(--rule);width:100%;max-width:560px;margin:0 auto;display:block}
+
+/* winners */
+.wins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.win{border:2px solid var(--ink);border-radius:8px;padding:22px;background:var(--bg)}
+.win .mono{color:var(--accent)}
+.win h3{font-variation-settings:"wdth" 110;font-weight:800;font-size:24px;line-height:1.1;margin:8px 0 10px}
+.win blockquote{margin:0;border-left:3px solid var(--signal);padding-left:14px;font-size:15px;color:var(--ink)}
+.win p{margin:12px 0 0;color:var(--muted);font-size:15px}
+.lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
+.list{border-top:2px solid var(--ink);padding-top:14px}
+.list .mono{color:var(--accent)}
+.list ol{margin:10px 0 0;padding-left:22px;font-size:15px}
+.list li{margin:4px 0}
+.list li em{font-style:normal;font:500 10px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--signal);color:#1a1714;padding:2px 6px;border-radius:3px;margin-left:6px;vertical-align:2px}
+
+/* setup */
+.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.camp{border:2px solid var(--ink);border-radius:8px;padding:22px}
+.camp h3{font-variation-settings:"wdth" 120;font-weight:800;font-size:30px;line-height:1}
+.camp .set{color:var(--muted);margin:6px 0 16px}
+.camp ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.camp li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--rule);padding-top:8px}
+.camp li b{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;color:var(--accent)}
+.cities{margin-top:40px;border:1px solid var(--rule);border-radius:8px;padding:22px;background:var(--paper)}
+.cities .mono{color:var(--accent)}
+.cities p{margin:10px 0 0;font-size:16px;line-height:1.7}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:40px}
+.spec{background:var(--bg);padding:22px 20px}
+.spec .mono{color:var(--accent)}
+.spec p{margin:8px 0 0;font-size:15px}
+footer{background:var(--band);color:var(--band-muted);padding-block:36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--band-ink);font-weight:500}
+
+@media (max-width:980px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .map,.specs,.wins,.lists{grid-template-columns:1fr}
+  .film img:nth-child(n+4){display:none}
+  .stat b{font-size:36px}
+}
+</style>
+<style>
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}
+.track img{flex:0 0 72%;max-width:72%;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:start;border-radius:6px;border:1px solid var(--rule)}
+.track-hint{font:500 11px var(--f-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.flat{max-width:440px}
+.copyset{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.cp{border:2px solid var(--ink);border-radius:8px;padding:18px;background:var(--bg)}
+.cp .mono{color:var(--accent)}
+.cp h3{font-variation-settings:"wdth" 105;font-weight:800;font-size:19px;line-height:1.15;margin:8px 0 8px}
+.cp p{margin:0;color:var(--muted);font-size:14px}
+@media (max-width:980px){.copyset{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.copyset{grid-template-columns:1fr}.track img{flex-basis:84%;max-width:84%}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar mono"><span><b>Gighopp</b> · Presentación de material</span><span>Semana del 9 – 15 nov 2026</span></div>
+    <h1>FG Insulation<br><em>Material de invierno</em></h1>
+    <p class="hero-lede">Siete piezas nuevas para la <strong>inspección de ático sin costo</strong> en Houston y alrededores, creadas por Gighopp y publicadas esta semana en la <strong>campaña de formulario</strong>. El tema: el frío, la calefacción que se escapa y las señales de un ático que está fallando.</p>
+    <div class="stats">
+      <div class="stat"><b>7</b><span class="mono">piezas nuevas</span></div>
+      <div class="stat"><b>4</b><span class="mono">videos</span></div>
+      <div class="stat"><b>9</b><span class="mono">imágenes</span></div>
+      <div class="stat"><b>$40</b><span class="mono">al día</span></div>
+    </div>
+    <div class="film" aria-hidden="true">
+      <img src="a/ep1.jpg" alt=""><img src="a/abrigo.jpg" alt=""><img src="a/d3.jpg" alt=""><img src="a/c1.jpg" alt=""><img src="a/papel.jpg" alt=""><img src="a/quien.jpg" alt="">
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="pieces" id="piezas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Material nuevo</span><h2>Tu casa también necesita abrigo</h2></div>
+      <p>Cuatro videos animados, dos imágenes y un carrusel. Todos cierran igual: <strong>inspección de ático sin costo</strong> y el botón directo al formulario. Cada anuncio lleva <strong>5 textos, 5 títulos y 5 descripciones</strong>.</p>
+    </div>
+
+    <article class="piece" id="p01">
+      <div class="piece-visual"><div class="phone"><video playsinline preload="none" poster="a/ep1.jpg" data-blob="a/ep1.mp4" aria-label="Video Episodio 1: No puedo dormir"></video></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P01</span><span class="fmt">Video animado · 9:16 · 42 s</span></div>
+        <h3>Ep. 1 “No puedo dormir”</h3>
+        <p class="why">Primer episodio de una serie con personaje. Frío de noche, ruidos en el techo, comida mordida y la factura alta: todo viene del ático. Cierra con el técnico de FG haciendo la inspección.</p>
+        <div class="where"><span class="chip">Formulario</span></div>
+        <div class="copy"><h4>Texto principal</h4><p>¿Tu casa hace alguna de estas cosas? 👀</p><p>🥶 Sigue fría aunque prendas la calefacción<br>💸 La factura de luz no para de subir<br>🌡️ Hay un cuarto más frío o más caliente que los demás<br>🐭 Escuchas ruidos en el techo de noche</p><p>Si dijiste que sí a una, el problema casi siempre está en el ático: aislamiento viejo, aplastado o con huecos.</p><p>En FG Insulation te hacemos la inspección sin costo y te decimos cómo está. Sin compromiso.</p><p>👇 Haz clic y llena el formulario. Toma menos de 60 segundos.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p02">
+      <div class="piece-visual"><div class="phone"><video playsinline preload="none" poster="a/d3.jpg" data-blob="a/d3.mp4" aria-label="Video 3D ¿Tu casa sigue fría?"></video></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P02</span><span class="fmt">Video 3D · 9:16 · 21 s</span></div>
+        <h3>Video 3D “¿Tu casa sigue fría?”</h3>
+        <p class="why">Animación limpia en los colores de FG: el termostato al máximo, el calor que se escapa por el ático y el aislamiento nuevo que lo frena.</p>
+        <div class="where"><span class="chip">Formulario</span></div>
+        <div class="copy"><h4>Texto principal</h4><p>La calefacción que pagas se está escapando por el techo. 💸</p><p>El calor sube… y si el aislamiento del ático está viejo o tiene rendijas, se va directo para afuera.</p><p>Por eso tu casa sigue fría y la factura sigue subiendo.</p><p>Con spray foam insulation:<br>✅ Sellamos cada rendija<br>✅ El calor se queda adentro<br>✅ Bloqueas la entrada de plagas<br>✅ Hasta un 30% menos en tu factura de luz</p><p>👇 Llena el formulario y pide tu inspección de ático sin costo.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p03">
+      <div class="piece-visual"><div class="phone"><video playsinline preload="none" poster="a/termica.jpg" data-blob="a/termica.mp4" aria-label="Video Visión térmica"></video></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P03</span><span class="fmt">Video 3D · 9:16 · 23 s</span></div>
+        <h3>Video “Si pudieras ver el calor”</h3>
+        <p class="why">La casa vista con cámara térmica: se ve cómo el calor sube y se escapa por el techo cuando el aislamiento está viejo o con huecos.</p>
+        <div class="where"><span class="chip">Formulario</span></div>
+        <div class="copy"><h4>Texto principal</h4><p>La calefacción que pagas se está escapando por el techo. 💸</p><p>El calor sube… y si el aislamiento del ático está viejo o tiene rendijas, se va directo para afuera.</p><p>Por eso tu casa sigue fría y la factura sigue subiendo.</p><p>👇 Llena el formulario y pide tu inspección de ático sin costo.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p04">
+      <div class="piece-visual"><div class="phone"><video playsinline preload="none" poster="a/papel.jpg" data-blob="a/papel.mp4" aria-label="Video stop motion de papel"></video></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P04</span><span class="fmt">Video stop motion · 9:16 · 21 s</span></div>
+        <h3>Stop motion “Una rendija así de pequeña”</h3>
+        <p class="why">Estilo papel recortado: por una rendija diminuta se va el aire que ya pagaste y entran las plagas. El spray foam la sella.</p>
+        <div class="where"><span class="chip">Formulario</span></div>
+        <div class="copy"><h4>Texto principal</h4><p>Cada mes que esperas, el aislamiento viejo te sigue cobrando. 💸</p><p>El frío entra, la calefacción no descansa y la factura de luz no para de subir.</p><p>Con spray foam insulation:<br>✅ Tu casa mantiene la temperatura<br>✅ Menos corrientes de aire<br>✅ Bloqueas la entrada de plagas<br>✅ Hasta un 30% menos en tu factura de luz</p><p>La inspección es sin costo. Lo caro es seguir esperando.</p><p>👇 Haz clic y llena el formulario.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p05">
+      <div class="piece-visual"><div class="track" tabindex="0" aria-label="Carrusel ¿Tu ático está fallando?, 7 láminas"><img src="a/c1.jpg" alt="Lámina 1: ¿Tu ático está fallando?"><img src="a/c2.jpg" alt="Lámina 2: el A/C no descansa"><img src="a/c3.jpg" alt="Lámina 3: la factura sigue subiendo"><img src="a/c4.jpg" alt="Lámina 4: un cuarto más caliente"><img src="a/c5.jpg" alt="Lámina 5: ruidos en el ático"><img src="a/c6.jpg" alt="Lámina 6: aislamiento con huecos"><img src="a/c7.jpg" alt="Lámina 7: inspección sin costo"></div><div class="track-hint">Desliza · 7 láminas</div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P05</span><span class="fmt">Carrusel · 7 láminas · 4:5</span></div>
+        <h3>Carrusel “¿Tu ático está fallando?”</h3>
+        <p class="why">Cinco señales para revisar hoy: el A/C que no descansa, la factura que sube, un cuarto más caliente, ruidos en el ático y aislamiento con huecos. La última lámina cierra con la inspección sin costo.</p>
+        <div class="where"><span class="chip">Formulario</span></div>
+        <div class="copy"><h4>Texto principal</h4><p>¿Tu casa hace alguna de estas cosas? 👀</p><p>Si dijiste que sí a una, el problema casi siempre está en el ático: aislamiento viejo, aplastado o con huecos.</p><p>Desliza y revisa las 5 señales 👉</p><p>👇 Haz clic y llena el formulario. Toma menos de 60 segundos.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p06">
+      <div class="piece-visual"><img class="flat" src="a/quien.jpg" alt="Imagen: ¿Quién vive en tu ático?"></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P06</span><span class="fmt">Imagen · 4:5</span></div>
+        <h3>Imagen “¿Quién vive en tu ático?”</h3>
+        <p class="why">Una casa común con el ático visto por dentro: la curiosidad hace que la persona se pregunte qué hay arriba de su propia casa.</p>
+        <div class="where"><span class="chip">Formulario</span></div>
+        <div class="copy"><h4>Texto principal</h4><p>¿Tu casa hace alguna de estas cosas? 👀</p><p>🥶 Sigue fría aunque prendas la calefacción<br>🐭 Escuchas ruidos en el techo de noche</p><p>En FG Insulation te hacemos la inspección sin costo y te decimos cómo está. Sin compromiso.</p><p>👇 Haz clic y llena el formulario.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p07">
+      <div class="piece-visual"><img class="flat" src="a/abrigo.jpg" alt="Imagen: tu casa también necesita abrigo"></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P07</span><span class="fmt">Imagen · 4:5</span></div>
+        <h3>Imagen “Tu casa también necesita abrigo”</h3>
+        <p class="why">El mensaje de temporada: así como uno se abriga en invierno, la casa también. Muestra los tres servicios: spray foam, blown-in y retiro de aislamiento.</p>
+        <div class="where"><span class="chip">Formulario</span></div>
+        <div class="copy"><h4>Texto principal</h4><p>Cada mes que esperas, el aislamiento viejo te sigue cobrando. 💸</p><p>El frío entra, la calefacción no descansa y la factura de luz no para de subir.</p><p>La inspección es sin costo. Lo caro es seguir esperando.</p><p>👇 Haz clic y llena el formulario.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="textos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Los textos de los anuncios</span><h2>5 textos, 5 títulos, 5 descripciones</h2></div>
+      <p>Cada anuncio lleva los mismos cinco ángulos. Meta los va rotando y le muestra a cada persona el que más le conecta. Esta semana se sumaron textos de <strong>invierno</strong>: frío, calefacción y factura.</p>
+    </div>
+    <div class="copyset">
+      <div class="cp"><span class="mono">Texto 1 · Señales</span><h3>“¿Tu casa hace alguna de estas cosas? 👀”</h3><p>Las cuatro señales de un ático que falla y la inspección sin costo.</p></div>
+      <div class="cp"><span class="mono">Texto 2 · El calor se escapa</span><h3>“La calefacción que pagas se está escapando por el techo.”</h3><p>Por qué la casa sigue fría y cómo el spray foam lo frena.</p></div>
+      <div class="cp"><span class="mono">Texto 3 · Costo de esperar</span><h3>“Cada mes que esperas, el aislamiento viejo te sigue cobrando.”</h3><p>Lo caro no es revisar, es seguir esperando.</p></div>
+      <div class="cp"><span class="mono">Texto 4 · Houston</span><h3>“En Houston muchos hogares tienen el mismo problema todo el año.”</h3><p>Factura, A/C y roedores, con más de 100 trabajos reales.</p></div>
+      <div class="cp"><span class="mono">Texto 5 · Recomendación</span><h3>“Mi gente, he visto muchos trabajos… pero esto me sorprendió.”</h3><p>Voz cercana, en primera persona.</p></div>
+    </div>
+    <div class="lists">
+      <div class="list"><span class="mono">Los 5 títulos</span><ol><li>Más de 100 hogares en Houston ya lo hicieron</li><li>Inspección de ático sin costo</li><li>Hasta 30% menos en tu factura de luz</li><li>¿Tu casa sigue fría? Revisa tu ático</li><li>Tu casa también necesita abrigo</li></ol></div>
+      <div class="list"><span class="mono">Las 5 descripciones</span><ol><li>Servicio profesional de insulation: menos calor, menos aire perdido y más ahorro. Inspección gratis.</li><li>Inspección de ático sin costo en Houston y alrededores.</li><li>Spray foam, blown-in y remoción de aislamiento viejo.</li><li>Llena el formulario en menos de 60 segundos.</li><li>Técnicos certificados. Empresa local en Houston.</li></ol></div>
+    </div>
+  </div>
+</section>
+
+<section class="pieces" id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Dónde corre cada pieza</span><h2>Montaje en Meta</h2></div>
+      <p>Las siete piezas entraron en el conjunto de formulario de la campaña nueva, que ya viene corriendo en la zona de FG. Así aprovechan el historial y empiezan a recibir gasto desde el primer día.</p>
+    </div>
+    <div class="map">
+      <div class="camp"><h3>Formulario</h3><p class="set mono">Conjunto de creativos · $40 al día</p><ul>
+        <li><b>P01</b>Ep. 1 “No puedo dormir”</li><li><b>P02</b>Video 3D “¿Tu casa sigue fría?”</li><li><b>P03</b>Video “Si pudieras ver el calor”</li><li><b>P04</b>Stop motion “Una rendija así de pequeña”</li><li><b>P05</b>Carrusel “¿Tu ático está fallando?”</li><li><b>P06</b>Imagen “¿Quién vive en tu ático?”</li><li><b>P07</b>Imagen “Tu casa también necesita abrigo”</li></ul></div>
+      <div class="camp"><h3>Cómo funciona</h3><p class="set mono">Del anuncio al formulario</p><ul>
+        <li><b>1</b>La persona ve el anuncio en Facebook o Instagram.</li><li><b>2</b>Toca “Obtener cotización” y se abre el formulario sin salir de la app.</li><li><b>3</b>Deja sus datos en menos de 60 segundos.</li><li><b>4</b>El lead llega para agendar la inspección de ático sin costo.</li></ul></div>
+    </div>
+    <div class="cities"><span class="mono">Zona · 40 km alrededor de cada ciudad</span>
+      <p>Brookshire · Columbus · Conroe · Edna · El Campo · Ganado · Huntsville · Katy · Madisonville · New Caney · Schulenburg · Sealy · The Woodlands · Victoria</p></div>
+    <div class="specs">
+      <div class="spec"><span class="mono">Destino</span><p>El mismo formulario instantáneo de siempre. Botón al formulario, nunca al teléfono.</p></div>
+      <div class="spec"><span class="mono">Zona fija</span><p>Las mismas ciudades y exclusiones. Meta no puede salirse de la zona.</p></div>
+      <div class="spec"><span class="mono">Presupuesto</span><p>$40 al día en el conjunto de creativos de la campaña de formulario.</p></div>
+      <div class="spec"><span class="mono">Textos</span><p>5 textos, 5 títulos y 5 descripciones por anuncio.</p></div>
+      <div class="spec"><span class="mono">Ubicaciones</span><p>Facebook e Instagram. Sin Threads ni Audience Network.</p></div>
+      <div class="spec"><span class="mono">Medición</span><p>Píxel de FG conectado a cada anuncio y enlaces etiquetados con el nombre del anuncio.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap mono"><span><b>Gighopp</b> para FG Insulation TX</span><span>Semana del 9 – 15 nov 2026</span></div></footer>
+
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+<script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
+<script>
+(function(){
+  document.querySelectorAll('video[data-blob]').forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
