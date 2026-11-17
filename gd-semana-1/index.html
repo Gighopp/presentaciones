@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}video,.vp{-webkit-touch-callout:none;user-select:none}
+.vp{position:relative;width:100%;height:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid #111;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:#fff}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.55);color:#fff;font:600 11px system-ui;cursor:pointer}
+</style>
+<title>GD Garage Door · Semana 1</title>
+<meta name="description" content="Material lanzado en Meta para GD Garage Door Services, semana del 16 al 22 de noviembre de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a garage door service ticket. Steel panels, safety-yellow labels like the ones in GD's videos. */
+:root{
+  --bg:#edeeed;--paper:#f8f8f6;--ink:#17191b;--muted:#5e6469;--rule:#d0d3d5;
+  --green:#8a6a00;       /* label text on light */
+  --signal:#f5c518;      /* safety yellow */
+  --band:#17191b;--band-ink:#eeeeec;--band-muted:#9ca2a7;--chip:#e3e5e6;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111315;--paper:#181b1d;--ink:#e9eaeb;--muted:#9aa0a5;--rule:#2b2f33;--green:#f5c518;--signal:#f5c518;
+  --band:#0a0b0c;--band-ink:#e9eaeb;--band-muted:#8f959a;--chip:#22262a;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111315;--paper:#181b1d;--ink:#e9eaeb;--muted:#9aa0a5;--rule:#2b2f33;--green:#f5c518;--signal:#f5c518;
+  --band:#0a0b0c;--band-ink:#e9eaeb;--band-muted:#8f959a;--chip:#22262a;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.hero{background:var(--band);color:var(--band-ink);padding-block:28px 0;overflow:hidden;
+  background-image:repeating-linear-gradient(180deg,transparent 0 58px,rgba(255,255,255,.035) 58px 60px)}
+.hero-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--band-muted)}
+.hero-bar b{color:var(--band-ink);font-weight:500}
+.hero h1{font-variation-settings:"wdth" 125;font-weight:850;font-size:clamp(46px,9.5vw,132px);line-height:.88;letter-spacing:-.02em;margin-top:44px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero-lede{max-width:58ch;color:var(--band-muted);font-size:18px;margin:22px 0 0}
+.hero-lede strong{color:var(--band-ink);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#2b2f33;border-block:1px solid #2b2f33;margin-top:40px}
+.stat{background:var(--band);padding:18px 16px 16px}
+.stat b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:44px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted)}
+.film{display:flex;gap:8px;margin-top:32px;transform:translateX(-4%);width:108%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:6px 6px 0 0}
+section{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:36px}
+.sec-head .mono{color:var(--green)}
+.sec-head h2{font-variation-settings:"wdth" 118;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:.95;letter-spacing:-.01em;margin-top:10px}
+.sec-head p{margin:0;color:var(--muted);max-width:60ch}
+.sec-head p strong{color:var(--ink);font-weight:600}
+.pieces{background:var(--paper);border-block:1px solid var(--rule)}
+.piece{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;padding-block:44px;border-bottom:1px solid var(--rule)}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.code{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;font-size:56px;line-height:.8;color:var(--ink);background:var(--signal);color:#17191b;padding:6px 8px 4px;border-radius:4px}
+.fmt{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.piece h3{font-variation-settings:"wdth" 100;font-weight:700;font-size:28px;line-height:1.1;margin:18px 0 12px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 12px var(--f-mono);letter-spacing:.04em;background:var(--chip);padding:5px 10px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:7px;vertical-align:1px}
+.copy,.hl{border-left:2px solid var(--rule);padding-left:16px;margin-top:18px}
+.copy h4,.hl h4{font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.hl ul{margin:0;padding-left:18px;font-size:15px}
+.hl li{margin:2px 0}
+.flat{border-radius:6px;border:1px solid var(--rule);max-width:520px;width:100%;display:block;margin:0 auto}
+.phone{position:relative;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 0 6px var(--ink);max-width:100%}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.phone-lg{width:min(320px,100%);margin:6px auto;aspect-ratio:9/16}
+.note-pill{font:500 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid var(--rule);color:var(--muted)}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.spec{background:var(--bg);padding:22px 20px}
+.spec .mono{color:var(--green)}
+.spec p{margin:8px 0 0;font-size:15px}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px;counter-reset:f}
+.step{border:2px solid var(--ink);border-radius:8px;padding:20px;position:relative}
+.step::before{counter-increment:f;content:"0" counter(f);font:900 34px/1 var(--f-display);font-variation-settings:"wdth" 125;color:var(--green);display:block;margin-bottom:10px}
+.step h3{font-size:20px;font-variation-settings:"wdth" 105;font-weight:750}
+.step p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.list{border:2px solid var(--ink);border-radius:8px;padding:22px;max-width:640px;margin-top:40px}
+.list h3{font-variation-settings:"wdth" 120;font-weight:800;font-size:30px}
+.list .set{color:var(--muted);margin:4px 0 16px}
+.list ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.list li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--rule);padding-top:8px}
+.list li b{font-family:var(--f-display);font-variation-settings:"wdth" 125;font-weight:900;color:var(--green)}
+.list .note{margin-top:14px;font-size:13px;color:var(--muted)}
+footer{background:var(--band);color:var(--band-muted);padding-block:36px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--band-ink);font-weight:500}
+@media (max-width:980px){.stats,.specs,.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:24px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .specs,.flow{grid-template-columns:1fr}
+  .stat b{font-size:36px}
+  .code{font-size:44px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar mono"><span><b>Gighopp</b> · Presentación de material</span><span>Semana 1 · 16 – 22 nov 2026</span></div>
+    <h1>GD Garage Door<br><em>Semana 1</em></h1>
+    <p class="hero-lede">Arrancamos la primera campaña de GD en Houston: <strong>tres videos y dos imágenes</strong> con dos ofertas claras, la <strong>inspección GRATIS</strong> y <strong>$500 OFF en puertas nuevas</strong>. Cada anuncio lleva directo a una conversación por <strong>WhatsApp</strong>.</p>
+    <div class="stats">
+      <div class="stat"><b>5</b><span class="mono">piezas</span></div>
+      <div class="stat"><b>4</b><span class="mono">anuncios en Meta</span></div>
+      <div class="stat"><b>$25</b><span class="mono">al día</span></div>
+      <div class="stat"><b>WA</b><span class="mono">destino WhatsApp</span></div>
+    </div>
+    <div class="film" aria-hidden="true"><img src="a/p01.jpg" alt=""><img src="a/p04.jpg" alt=""><img src="a/p02.jpg" alt=""><img src="a/p03.jpg" alt=""></div>
+  </div>
+</header>
+
+<main>
+<section class="pieces" id="material">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Inspección gratis · $500 OFF</span><h2>El material de esta semana</h2></div>
+      <p>Tres videos que explican <strong>por qué falla una puerta de garage</strong> y por qué conviene revisarla a tiempo, y dos imágenes de <strong>antes y después</strong> con trabajos reales de GD. Cada anuncio prueba 5 textos, 5 títulos y 5 descripciones; aquí va el texto principal de cada uno.</p>
+    </div>
+
+<article class="piece" id="p01">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p01.jpg" data-blob="a/p01.mp4" aria-label="Video “Cómo funciona tu puerta”"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P01</span><span class="fmt">Video animado · 9:16 · 70 s</span></div>
+    <h3>Video “¿Sabes cómo funciona tu puerta de garaje?”</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">Inspección gratis</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>Arreglar tu puerta de garage no tiene por qué ser complicado. 👇</p><p>1️⃣ Nos escribes por WhatsApp<br>2️⃣ Agendamos tu inspección GRATIS en tu casa<br>3️⃣ El técnico revisa resortes, cables, motor y rieles<br>4️⃣ Te explica qué tiene y qué opciones tienes</p><p>Reparación, reemplazo o instalación nueva en Houston.</p><p>👇 Toca "Enviar mensaje" y agenda tu inspección.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><ul><li><b>Inspección GRATIS de tu puerta</b> — Inspección gratis de resortes, cables, motor y rieles.</li></ul></div>
+  </div>
+</article>
+
+<article class="piece" id="p02">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p02.jpg" data-blob="a/p02.mp4" aria-label="Video “Ruidos raros”"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P02</span><span class="fmt">Video UGC · 9:16 · 33 s</span></div>
+    <h3>Video “¿Tu puerta de garaje hace ruidos?”</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">Inspección gratis</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>¿Tu puerta de garage hace ruidos raros? 🔊 Te está diciendo algo.</p><p>Aprietas el control y suena a película de terror. Se despierta toda la casa.</p><p>Ese ruido casi siempre viene de rodillos o rieles gastados. Revisarlos a tiempo te puede ahorrar una reparación más cara.</p><p>En GD Garage Door Services:<br>✅ Inspección GRATIS en Houston<br>✅ Cambiamos las piezas gastadas<br>✅ Tu puerta vuelve a abrir sin escándalo</p><p>👇 Toca "Enviar mensaje" y escríbenos por WhatsApp para agendar tu inspección.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><ul><li><b>Tu puerta abriendo sin escándalo</b> — Reparamos resortes, cables, motor y rieles en Houston.</li></ul></div>
+  </div>
+</article>
+
+<article class="piece" id="p03">
+  <div class="piece-visual"><div class="phone phone-lg"><video controls controlslist="nodownload noremoteplayback" disablepictureinpicture oncontextmenu="return false" playsinline preload="none" poster="a/p03.jpg" data-blob="a/p03.mp4" aria-label="Video “¿Por qué falla tu puerta de garaje?”"></video></div></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P03</span><span class="fmt">Video · 9:16 · 54 s</span></div>
+    <h3>Video “¿Por qué falla tu puerta de garaje?”</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">Inspección gratis</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>Aprietas el control, escuchas el motor… y la puerta no sube. Con el carro adentro. 😬</p><p>Casi siempre es el resorte de torsión, el que carga el peso de la puerta. Cuando se rompe, al motor le falta fuerza para levantarla.</p><p>No la fuerces a mano. Deja que un técnico la revise.</p><p>✅ Inspección GRATIS de resortes, cables y motor<br>✅ Te explicamos qué opciones tienes<br>✅ Servicio en Houston y alrededores</p><p>👇 Escríbenos por WhatsApp y agenda tu inspección gratis.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><ul><li><b>Revisamos resortes, cables y motor</b> — El técnico va a tu casa y te explica qué opciones tienes.</li></ul></div>
+  </div>
+</article>
+
+<article class="piece" id="p04">
+  <div class="piece-visual"><img class="flat" src="a/p04.jpg" alt="Imagen antes y después con $500 OFF en puertas nuevas"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P04</span><span class="fmt">Imagen · 1:1 · español</span></div>
+    <h3>Imagen “Antes y después · $500 OFF”</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">$500 OFF</span></div>
+    <div class="copy"><h4>Texto principal</h4><p>🏠 $500 OFF en tu puerta de garage nueva.</p><p>Mira el antes y después: de un garage sin puerta a una puerta nueva, instalada por nuestro equipo en Houston.</p><p>Si tu puerta ya está vieja, golpeada o no la quieres seguir reparando, es momento de cambiarla.</p><p>✅ $500 de descuento en la instalación<br>✅ Inspección GRATIS en tu casa<br>✅ Te mostramos las opciones para tu garage</p><p>👇 Toca "Enviar mensaje" y escríbenos por WhatsApp.</p></div>
+    <div class="hl"><h4>Título y descripción</h4><ul><li><b>$500 OFF en tu puerta nueva</b> — $500 OFF en la instalación de tu puerta de garage nueva.</li></ul></div>
+  </div>
+</article>
+
+<article class="piece" id="p05">
+  <div class="piece-visual"><img class="flat" src="a/p05.jpg" alt="Imagen antes y después en inglés"></div>
+  <div class="piece-info">
+    <div class="piece-head"><span class="code">P05</span><span class="fmt">Imagen · 1:1 · inglés</span><span class="note-pill">En espera</span></div>
+    <h3>Imagen “Before &amp; After” · versión en inglés</h3>
+    <div class="where"><span class="chip">Houston</span><span class="chip">Público en inglés</span></div>
+    <div class="copy"><h4>Estado</h4><p>Es la misma pieza de antes y después, preparada para el público que habla inglés. Sale al aire en cuanto confirmemos la cifra del descuento que va en el sello verde.</p></div>
+  </div>
+</article>
+  </div>
+</section>
+
+<section id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="mono">Cómo está montado</span><h2>De anuncio a cita</h2></div>
+      <p>Todo el material corre en <strong>un solo conjunto</strong> para que Meta aprenda rápido qué pieza trae más conversaciones, y cada paso del cliente vuelve a Meta desde el CRM.</p>
+    </div>
+    <div class="flow">
+      <div class="step"><h3>Ve el anuncio</h3><p>Video o imagen con la inspección gratis o los $500 OFF.</p></div>
+      <div class="step"><h3>Escribe por WhatsApp</h3><p>Con un toque abre WhatsApp con el mensaje listo para agendar.</p></div>
+      <div class="step"><h3>Agenda su inspección</h3><p>El asistente de WhatsApp le busca día y hora y pide la dirección.</p></div>
+      <div class="step"><h3>Meta aprende</h3><p>Lead, cita agendada y venta vuelven a Meta para buscar más clientes así.</p></div>
+    </div>
+    <div class="list"><h3>Houston</h3><p class="set mono">“Adset 1 Nov” · nuevo</p><ul>
+      <li><b>P01</b>Cómo funciona tu puerta</li><li><b>P02</b>Ruidos raros</li><li><b>P03</b>Por qué falla tu puerta</li><li><b>P04</b>Antes y después · $500 OFF</li></ul>
+      <p class="note">$25 al día. P05 entra al mismo conjunto cuando esté lista.</p></div>
+    <div class="specs" style="margin-top:40px">
+      <div class="spec"><span class="mono">Destino</span><p>Conversación por WhatsApp, sin formularios ni llamadas.</p></div>
+      <div class="spec"><span class="mono">Medición</span><p>Leads, citas y ventas del CRM vuelven a Meta.</p></div>
+      <div class="spec"><span class="mono">Textos</span><p>5 textos, 5 títulos y 5 descripciones por anuncio, directos a la oferta.</p></div>
+      <div class="spec"><span class="mono">Formato</span><p>Formato original, sin recortes automáticos.</p></div>
+      <div class="spec"><span class="mono">Plan</span><p>Unas 3 piezas nuevas al mes para seguir probando.</p></div>
+      <div class="spec"><span class="mono">Zona</span><p>Houston y alrededores.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap mono"><span><b>Gighopp</b> para GD Garage Door Services</span><span>Semana 1 · 16 – 22 nov 2026</span></div></footer>
+
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones (iOS/WhatsApp) don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+
+<script>document.addEventListener('contextmenu',e=>{if(e.target.closest('video'))e.preventDefault()});</script>
+<script>
+(function(){
+  document.querySelectorAll('video[data-blob]').forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';
+    w.append(b,bar,m);
+    b.onclick=()=>{v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
