@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FG Insulation · Material de WhatsApp</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Material nuevo creado y montado en Meta por Gighopp para FG Insulation TX: 4 videos, un carrusel y una imagen que llevan a WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700&display=swap">
+<style>
+/* Gighopp brand system 2027: Pantone 1365 C orange, 7401 C cream, black.
+   Display = Impact (Anton as the web fallback), body = Roboto. */
+:root{
+  --orange:#FDB549;
+  --orange-2:#F3A42C;
+  --cream:#F6DFA9;
+  --cream-2:#FBF1D6;
+  --paper:#FCFAF4;
+  --ink:#0B0B0B;
+  --ink-2:#3A352C;
+  --muted:#5E564A;
+  --rule:#E6D9B8;
+  --f-display:Impact,"Anton","Haettenschweiler","Arial Narrow Bold",sans-serif;
+  --f-body:"Roboto",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-transform:uppercase;margin:0;text-wrap:balance}
+.track-label{font:500 11px/1.2 var(--f-body);letter-spacing:.34em;text-transform:uppercase}
+
+/* Brand marks, drawn as masks so they can take any brand color */
+.logo{display:inline-block;background:currentColor;-webkit-mask:url(b/logo.png) center/contain no-repeat;mask:url(b/logo.png) center/contain no-repeat;aspect-ratio:778/179}
+.gmark{display:inline-block;background:currentColor;-webkit-mask:url(b/g.png) center/contain no-repeat;mask:url(b/g.png) center/contain no-repeat;aspect-ratio:314/272}
+
+/* Torn cream tape, as in the brand's quote labels */
+.tape{display:inline-block;background:var(--cream);color:var(--ink);font-family:var(--f-display);text-transform:uppercase;line-height:1;padding:.42em .7em .36em;
+  clip-path:polygon(0 6%,3% 0,22% 4%,40% 0,63% 5%,84% 0,100% 4%,99% 52%,100% 96%,78% 100%,55% 95%,33% 100%,12% 96%,0 100%,1% 48%);box-shadow:0 2px 0 rgba(0,0,0,.08)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(rgba(253,181,73,.62),rgba(253,181,73,.62)),var(--orange) url(b/paper.jpg) center/cover;color:var(--ink);padding-top:26px}
+.hero::before{display:none;content:"";position:absolute;inset:-20% -30% -20% 20%;pointer-events:none;
+  background:repeating-radial-gradient(circle at 92% 50%,rgba(246,223,169,.0) 0 58px,rgba(246,223,169,.38) 58px 116px);opacity:.9}
+.hero .wrap{position:relative}
+.hero-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.hero-bar .logo{width:150px;color:var(--ink)}
+.hero h1{font-size:clamp(58px,12.5vw,176px);line-height:.9;letter-spacing:.005em;margin-top:64px}
+.hero h1 span{display:block}
+.hero h1 .big{font-size:clamp(50px,15vw,214px);line-height:.88;color:var(--ink);white-space:nowrap}
+.hero h1 .sub{font-size:clamp(28px,5.4vw,78px);line-height:.95;margin-top:.14em;color:#fff}
+.hero .tape{font-size:clamp(20px,3.2vw,38px);transform:rotate(-1.6deg);margin-top:22px}
+.hero-lede{max-width:56ch;font-size:18px;margin:30px 0 0;color:var(--ink-2)}
+.hero-lede strong{color:var(--ink);font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:40px}
+.stat{background:var(--ink);color:var(--cream);padding:18px 18px 16px;border-radius:4px}
+.stat b{display:block;font-family:var(--f-display);font-weight:400;font-size:52px;line-height:.95;color:var(--orange);font-variant-numeric:tabular-nums}
+.stat span{color:var(--cream)}
+.film{display:flex;gap:8px;margin-top:34px;transform:translateX(-3%);width:106%}
+.film img{flex:1 1 0;min-width:0;aspect-ratio:4/5;object-fit:cover;border-radius:6px 6px 0 0;border:3px solid var(--ink);border-bottom:0}
+
+/* ---------- Sections ---------- */
+section{padding-block:76px}
+.sec-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:20px 48px;align-items:end;border-bottom:3px solid var(--ink);padding-bottom:22px;margin-bottom:38px}
+.sec-head .track-label{color:var(--ink-2)}
+.sec-head h2{font-size:clamp(42px,6.4vw,84px);line-height:.92;margin-top:12px}
+.sec-head h2 em{font-style:normal;display:inline-block;background:var(--orange);padding:.06em .14em .02em;margin-top:.1em;line-height:.9}
+.sec-head p{margin:0;color:var(--muted);max-width:58ch}
+.sec-head p strong{color:var(--ink);font-weight:700}
+
+/* pieces */
+.pieces{background:var(--paper);overflow:hidden}
+.piece{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:44px;padding-block:48px;border-bottom:1px solid var(--rule);position:relative}
+.piece:last-of-type{border-bottom:0}
+.piece:nth-of-type(even) .piece-visual{order:2}
+.piece-visual{min-width:0;display:flex;flex-direction:column;justify-content:center;position:relative}
+.piece-visual::before{content:"";position:absolute;left:50%;top:50%;width:min(520px,110%);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:repeating-radial-gradient(circle,var(--cream) 0 34px,var(--cream-2) 34px 68px);z-index:0}
+.piece-visual>*{position:relative;z-index:1}
+.piece-info{min-width:0}
+.piece-head{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.code{font-family:var(--f-display);font-size:30px;line-height:1;background:var(--orange);color:var(--ink);padding:.16em .34em .1em;border-radius:3px}
+.fmt{color:var(--muted)}
+.piece h3{font-size:clamp(32px,3.6vw,46px);line-height:.92;margin:20px 0 14px}
+.why{color:var(--ink-2);margin:0 0 16px;font-size:16px}
+.where{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 12px var(--f-body);letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:6px 11px;border-radius:999px}
+.chip::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#25d366;margin-right:7px;vertical-align:0}
+.chip.plain::before{background:var(--orange)}
+.copy{border-left:4px solid var(--orange);padding-left:16px;margin-top:18px}
+.copy h4{margin:0 0 8px;color:var(--muted)}
+.copy p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.phone{position:relative;width:min(300px,100%);margin:6px auto;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 0 0 7px var(--ink),14px 16px 0 7px var(--orange)}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.flat{display:block;width:100%;max-width:420px;margin:0 auto;border-radius:6px;box-shadow:0 0 0 6px var(--ink),14px 16px 0 6px var(--orange)}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 6px 14px;scrollbar-width:thin}
+.track img{flex:0 0 72%;max-width:72%;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:start;border-radius:6px;border:4px solid var(--ink)}
+.track-hint{margin-top:6px;color:var(--muted);text-align:center}
+
+/* copy section */
+.textos{background:var(--cream);position:relative;overflow:hidden}
+.textos .ghost{position:absolute;left:-8vw;bottom:-60px;width:min(48vw,560px);color:var(--orange);opacity:.35;pointer-events:none}
+.textos .wrap{position:relative}
+.copyset{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.cp{background:var(--paper);border:3px solid var(--ink);border-radius:6px;padding:18px}
+.cp .track-label{color:var(--muted);letter-spacing:.24em}
+.cp h3{font-size:24px;line-height:.95;margin:10px 0 10px}
+.cp p{margin:0;color:var(--ink-2);font-size:14px}
+.lists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:34px}
+.list{border-top:3px solid var(--ink);padding-top:14px}
+.list ol{margin:12px 0 0;padding-left:24px;font-size:16px}
+.list li{margin:6px 0}
+.list li::marker{font-family:var(--f-display);color:var(--ink)}
+
+/* setup */
+.montaje{background:var(--ink);color:var(--cream)}
+.montaje .sec-head{border-color:var(--orange)}
+.montaje .sec-head .track-label{color:var(--orange)}
+.montaje .sec-head h2 em{color:var(--ink)}
+.montaje .sec-head p{color:#CFC3A6}
+.montaje .sec-head p strong{color:var(--cream)}
+.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.camp{border:2px solid #3a362e;border-radius:6px;padding:24px;background:#141310}
+.camp h3{font-size:38px;line-height:.9;color:var(--orange)}
+.camp .set{color:#B9AE93;margin:10px 0 18px}
+.camp ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.camp li{display:grid;grid-template-columns:48px 1fr;gap:10px;align-items:baseline;border-top:1px solid #2f2b24;padding-top:9px}
+.camp li b{font-family:var(--f-display);font-weight:400;font-size:20px;color:var(--orange)}
+.zone{margin-top:22px;border-radius:6px;padding:24px;background:var(--orange) url(b/paper.jpg) center/cover;color:var(--ink)}
+.zone .track-label{color:var(--ink-2)}
+.zone p{margin:12px 0 0;font-family:var(--f-display);text-transform:uppercase;font-size:clamp(24px,3.4vw,40px);line-height:1}
+.zone small{display:block;margin-top:10px;font:400 15px var(--f-body);color:var(--ink-2)}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2f2b24;border:1px solid #2f2b24;margin-top:22px}
+.spec{background:var(--ink);padding:22px 20px}
+.spec .track-label{color:var(--orange);letter-spacing:.24em}
+.spec p{margin:8px 0 0;font-size:15px;color:#E6DAC0}
+
+footer{background:var(--orange) url(b/paper.jpg) center/cover;color:var(--ink);padding-block:34px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .logo{width:132px}
+
+/* video player without download */
+video,.vp{-webkit-touch-callout:none;user-select:none}
+.vp{position:relative;width:100%;height:100%}
+.vp video{pointer-events:none}
+.vp .vbtn{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vp .vbtn span{width:70px;height:70px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px var(--ink)}
+.vp .vbtn span::before{content:"";margin-left:6px;border-left:22px solid var(--ink);border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vp.playing .vbtn span{opacity:0}
+.vp .vbar{position:absolute;left:12px;right:56px;bottom:14px;height:5px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer}
+.vp .vbar i{display:block;height:100%;width:0;border-radius:3px;background:var(--orange)}
+.vp .vmute{position:absolute;right:10px;bottom:4px;width:38px;height:26px;border:0;border-radius:13px;background:rgba(0,0,0,.6);color:#fff;font:600 11px system-ui;cursor:pointer}
+
+@media (max-width:980px){
+  .copyset{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .specs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .hero h1{margin-top:44px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat b{font-size:42px}
+  .film img:nth-child(n+4){display:none}
+  .sec-head{grid-template-columns:1fr}
+  .piece{grid-template-columns:1fr;gap:34px}
+  .piece:nth-of-type(even) .piece-visual{order:0}
+  .map,.specs,.lists,.copyset{grid-template-columns:1fr}
+  .track img{flex-basis:84%;max-width:84%}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-bar"><span class="logo" role="img" aria-label="Gighopp"></span><span class="track-label">Presentación de material · 16 – 22 nov 2026</span></div>
+    <h1><span class="big">FG Insulation</span><span class="sub">Material de WhatsApp</span></h1>
+    <span class="tape">Inspección de ático sin costo</span>
+    <p class="hero-lede">Seis piezas nuevas creadas por Gighopp para FG Insulation TX: <strong>cuatro videos, un carrusel y una imagen</strong>. Todas cierran con <strong>“Escríbenos por WhatsApp”</strong>, y al tocar el botón la persona entra directo a un chat con FG para pedir su inspección.</p>
+    <div class="stats">
+      <div class="stat"><b>6</b><span class="track-label">piezas nuevas</span></div>
+      <div class="stat"><b>4</b><span class="track-label">videos</span></div>
+      <div class="stat"><b>7</b><span class="track-label">imágenes</span></div>
+      <div class="stat"><b>$35</b><span class="track-label">al día</span></div>
+    </div>
+    <div class="film" aria-hidden="true">
+      <img src="t/thumb_plastilina.jpg" alt=""><img src="t/thumb_atico.jpg" alt=""><img src="t/thumb_senales.jpg" alt=""><img src="a/c1.jpg" alt=""><img src="t/thumb_cuanto.jpg" alt=""><img src="a/est.jpg" alt="">
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="pieces" id="piezas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="track-label">Material nuevo</span><h2>Lo que hay <em>en tu ático</em></h2></div>
+      <p>Cuatro videos, un carrusel y una imagen sobre lo que pasa arriba: el aislamiento sucio, las plagas y el calor que se escapa en invierno. Cada anuncio lleva <strong>5 textos, 5 títulos y 5 descripciones</strong>, y el botón abre <strong>WhatsApp</strong>, nunca el teléfono.</p>
+    </div>
+
+    <article class="piece" id="p01">
+      <div class="piece-visual"><div class="phone"><video playsinline preload="none" poster="t/thumb_plastilina.jpg" data-blob="a/plastilina.mp4" aria-label="Video Lo que encontramos en un ático"></video></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P01</span><span class="fmt track-label">Video animado · 9:16 · 58 s</span></div>
+        <h3>“Lo que encontramos en un ático”</h3>
+        <p class="why">Animación estilo plastilina. El técnico de FG sube a un ático en Houston y encuentra aislamiento sucio y una rata muerta. Luego se ve lo que eso causa en la casa: el calor que se escapa, la familia con frío y el polvo que llega al aire. Cierra con el spray foam y la inspección sin costo.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+        <div class="copy"><h4 class="track-label">Texto principal</h4><p>Si tienes ratas… no es mala suerte. Es esto 👇</p><p>Tu casa está perdiendo aire…<br>y eso mismo está dejando entrar plagas.</p><p>El problema no está afuera.<br>Está en tu techo, tus paredes y tus grietas.</p><p>⚠️ Y mientras no lo soluciones… van a volver.</p><p>💬 Escríbenos y te ayudamos a cerrarle la entrada</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p02">
+      <div class="piece-visual"><div class="phone"><video playsinline preload="none" poster="t/thumb_atico.jpg" data-blob="a/atico.mp4" aria-label="Video Antes y después del ático"></video></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P02</span><span class="fmt track-label">Video real · 9:16 · 59 s</span></div>
+        <h3>“¿Hace cuánto nadie revisa tu ático?”</h3>
+        <p class="why">Imágenes reales de áticos: aislamiento con excremento de roedores y el calor que se va por el techo. Después, así queda el ático con el material viejo retirado y el aislamiento nuevo, y el equipo trabajando en la casa.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+        <div class="copy"><h4 class="track-label">Texto principal</h4><p>Muchas compañías ponen aislamiento nuevo encima del viejo… y se van. 😬</p><p>Lo sucio, la humedad y lo que dejan las plagas se queda ahí abajo, donde no lo ves.</p><p>En FG Insulation trabajamos diferente:<br>✅ Revisamos tu ático antes de tocar nada<br>✅ Te explicamos lo que encontramos<br>✅ Te damos tu cotización antes de empezar</p><p>Empresa local en Houston, con más de 100 trabajos reales.</p><p>👇 Mándanos un WhatsApp y pide tu inspección gratis.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p03">
+      <div class="piece-visual"><div class="phone"><video playsinline preload="none" poster="t/thumb_senales.jpg" data-blob="a/senales.mp4" aria-label="Video 3 señales de que tu ático está fallando"></video></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P03</span><span class="fmt track-label">Video isométrico · 9:16 · 61 s</span></div>
+        <h3>“3 señales de que tu ático está fallando”</h3>
+        <p class="why">Ilustración 3D isométrica. ¿Pagas más de calefacción y tu casa sigue fría? Todos culpan al calentador, pero el calor se escapa por el ático. Las tres señales: cuartos más fríos, ruidos de noche y aislamiento aplastado.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+        <div class="copy"><h4 class="track-label">Texto principal</h4><p>La calefacción que pagas se está escapando por el techo. 💸</p><p>El calor sube… y si el aislamiento del ático está viejo o tiene rendijas, se va directo para afuera.</p><p>Por eso tu casa sigue fría y la factura sigue subiendo.</p><p>Con spray foam insulation:<br>✅ Sellamos cada rendija<br>✅ El calor se queda adentro<br>✅ Bloqueas la entrada de plagas<br>✅ Hasta un 30% menos en tu factura de luz</p><p>👇 Escríbenos por WhatsApp y pide tu inspección de ático sin costo.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p04">
+      <div class="piece-visual"><div class="phone"><video playsinline preload="none" poster="t/thumb_cuanto.jpg" data-blob="a/cuanto.mp4" aria-label="Video ¿Cuánto cuesta aislar tu casa?"></video></div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P04</span><span class="fmt track-label">Video 3D · 9:16 · 40 s</span></div>
+        <h3>“¿Cuánto cuesta aislar tu casa?”</h3>
+        <p class="why">Responde la pregunta que todos hacen. El precio depende del tamaño del ático, de si hay que sacar el aislamiento viejo y del material: open cell, closed cell o blown-in. Nadie te da un precio real sin subir a ver, por eso la inspección es sin costo, y hay financiamiento.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+        <div class="copy"><h4 class="track-label">Texto principal</h4><p>Muchas compañías ponen aislamiento nuevo encima del viejo… y se van. 😬</p><p>Lo sucio, la humedad y lo que dejan las plagas se queda ahí abajo, donde no lo ves.</p><p>En FG Insulation trabajamos diferente:<br>✅ Revisamos tu ático antes de tocar nada<br>✅ Te explicamos lo que encontramos<br>✅ Te damos tu cotización antes de empezar</p><p>👇 Mándanos un WhatsApp y pide tu inspección gratis.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p05">
+      <div class="piece-visual"><div class="track" tabindex="0" aria-label="Carrusel ¿Tu casa sigue fría?, 6 láminas"><img src="a/c1.jpg" alt="Lámina 1: ¿Tu casa sigue fría?"><img src="a/c2.jpg" alt="Lámina 2: El problema está arriba"><img src="a/c3.jpg" alt="Lámina 3: Cuartos más fríos"><img src="a/c4.jpg" alt="Lámina 4: Ruidos de noche"><img src="a/c5.jpg" alt="Lámina 5: Aislamiento aplastado"><img src="a/c6.jpg" alt="Lámina 6: Inspección de ático sin costo, escríbenos por WhatsApp"></div><div class="track-hint track-label">Desliza · 6 láminas</div></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P05</span><span class="fmt track-label">Carrusel · 4:5 · 6 láminas</span></div>
+        <h3>Carrusel “¿Tu casa sigue fría?”</h3>
+        <p class="why">Una señal por lámina, en 3D limpio con los colores de FG: la casa fría, el problema está arriba, cuartos más fríos, ruidos de noche y aislamiento aplastado. La última invita a la inspección sin costo con el botón de WhatsApp.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+        <div class="copy"><h4 class="track-label">Texto principal</h4><p>La calefacción que pagas se está escapando por el techo. 💸</p><p>El calor sube… y si el aislamiento del ático está viejo o tiene rendijas, se va directo para afuera.</p><p>Por eso tu casa sigue fría y la factura sigue subiendo.</p><p>👇 Escríbenos por WhatsApp y pide tu inspección de ático sin costo.</p></div>
+      </div>
+    </article>
+
+    <article class="piece" id="p06">
+      <div class="piece-visual"><img class="flat" src="a/est.jpg" alt="Imagen: Aislamiento nuevo para tu ático, antes y después, inspección de ático sin costo en Houston"></div>
+      <div class="piece-info">
+        <div class="piece-head"><span class="code">P06</span><span class="fmt track-label">Imagen · 4:5</span></div>
+        <h3>Imagen “Aislamiento nuevo para tu ático”</h3>
+        <p class="why">Antes y después de un ático real, lado a lado: lo viejo y sucio contra lo limpio y nuevo. Abajo, la oferta en grande: inspección de ático sin costo en Houston.</p>
+        <div class="where"><span class="chip">WhatsApp</span></div>
+        <div class="copy"><h4 class="track-label">Texto principal</h4><p>Muchas compañías ponen aislamiento nuevo encima del viejo… y se van. 😬</p><p>Lo sucio, la humedad y lo que dejan las plagas se queda ahí abajo, donde no lo ves.</p><p>Empresa local en Houston, con más de 100 trabajos reales.</p><p>👇 Mándanos un WhatsApp y pide tu inspección gratis.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="textos" id="textos">
+  <span class="gmark ghost" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="track-label">Los textos</span><h2>5 textos · 5 títulos <em>5 descripciones</em></h2></div>
+      <p>Salen de los textos que <strong>ya le han funcionado a FG</strong>, ajustados para WhatsApp y para invierno. Meta los combina en cada anuncio y le muestra a cada persona la versión que mejor le funciona.</p>
+    </div>
+    <div class="copyset">
+      <div class="cp"><span class="track-label">Texto 1 · Contraste</span><h3>“Muchas compañías ponen aislamiento nuevo encima del viejo…”</h3><p>Lo que hace FG distinto: revisar antes de tocar nada y cotizar antes de empezar.</p></div>
+      <div class="cp"><span class="track-label">Texto 2 · Ratas</span><h3>“Si tienes ratas… no es mala suerte.”</h3><p>Las plagas entran por la misma rendija por donde se escapa el aire.</p></div>
+      <div class="cp"><span class="track-label">Texto 3 · La causa</span><h3>“No tienes un problema de ratas…”</h3><p>…tienes un problema de aislamiento. El correcto bloquea la entrada desde el origen.</p></div>
+      <div class="cp"><span class="track-label">Texto 4 · Por dónde entran</span><h3>“Las ratas no entran por casualidad 🐀”</h3><p>Áticos sin sellar, paredes sin aislamiento y grietas que no se ven.</p></div>
+      <div class="cp"><span class="track-label">Texto 5 · Invierno</span><h3>“La calefacción que pagas se escapa por el techo.”</h3><p>La casa sigue fría y la factura sube. El spray foam sella cada rendija.</p></div>
+    </div>
+    <div class="lists">
+      <div class="list"><span class="track-label">Títulos</span><ol>
+        <li>Más de 100 hogares en Houston ya lo hicieron</li>
+        <li>Inspección de ático sin costo</li>
+        <li>¿Tu casa sigue fría? Revisa tu ático</li>
+        <li>Elimina la entrada de ratas con buen insulation — Agenda</li>
+        <li>Agenda tu revisión de insulation GRATIS</li></ol></div>
+      <div class="list"><span class="track-label">Descripciones</span><ol>
+        <li>Inspección de ático sin costo en Houston y alrededores.</li>
+        <li>Inspección gratis + cotización sin compromiso.</li>
+        <li>Spray foam, blown-in y remoción de aislamiento viejo.</li>
+        <li>Técnicos certificados. Empresa local en Houston.</li>
+        <li>Escríbenos por WhatsApp y te respondemos.</li></ol></div>
+    </div>
+  </div>
+</section>
+
+<section class="montaje" id="montaje">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="track-label">Dónde corre cada pieza</span><h2>Montaje <em>en Meta</em></h2></div>
+      <p>Las seis piezas van en el conjunto <strong>WhatsApp Noviembre 21</strong>, dentro de la campaña de mensajes de FG, con la misma zona que ya le trae citas a la cuenta.</p>
+    </div>
+    <div class="map">
+      <div class="camp"><h3>WhatsApp Noviembre 21</h3><p class="set track-label">Campaña de mensajes · $35 al día</p><ul>
+        <li><b>P01</b>Video “Lo que encontramos en un ático”</li><li><b>P02</b>Video “¿Hace cuánto nadie revisa tu ático?”</li><li><b>P03</b>Video “3 señales de que tu ático está fallando”</li><li><b>P04</b>Video “¿Cuánto cuesta aislar tu casa?”</li><li><b>P05</b>Carrusel “¿Tu casa sigue fría?”</li><li><b>P06</b>Imagen “Aislamiento nuevo para tu ático”</li></ul></div>
+      <div class="camp"><h3>Cómo funciona</h3><p class="set track-label">Del anuncio al chat</p><ul>
+        <li><b>1</b>La persona ve el anuncio en Facebook o Instagram.</li>
+        <li><b>2</b>Toca “Enviar mensaje” y se abre WhatsApp con el mensaje ya escrito: “Hola, vi su anuncio y quiero una cotización gratuita para el aislamiento de mi…”.</li>
+        <li><b>3</b>FG la recibe con su mensaje de bienvenida.</li>
+        <li><b>4</b>El equipo le responde y agenda la inspección de ático sin costo.</li></ul></div>
+    </div>
+    <div class="zone"><span class="track-label">Zona</span>
+      <p>Katy 25 mi · Pearland 12 mi · Noroeste de Houston 13 mi</p>
+      <small>Solo personas que viven o estuvieron hace poco en la zona. Meta no puede mostrarlo fuera de ella.</small></div>
+    <div class="specs">
+      <div class="spec"><span class="track-label">Destino</span><p>WhatsApp de FG. El botón nunca lleva al teléfono.</p></div>
+      <div class="spec"><span class="track-label">Bienvenida</span><p>La misma plantilla de cotización que ya usa la cuenta, en todos los anuncios.</p></div>
+      <div class="spec"><span class="track-label">Presupuesto</span><p>$35 al día en el conjunto WhatsApp Noviembre 21.</p></div>
+      <div class="spec"><span class="track-label">Textos</span><p>5 textos, 5 títulos y 5 descripciones por anuncio.</p></div>
+      <div class="spec"><span class="track-label">Videos</span><p>En su formato original 9:16, sin recortes.</p></div>
+      <div class="spec"><span class="track-label">Medición</span><p>CRM conectado a cada anuncio como eventos offline, y enlaces etiquetados con el nombre del anuncio.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span class="logo" role="img" aria-label="Gighopp"></span><span class="track-label">Para FG Insulation TX · 16 – 22 nov 2026</span></div></footer>
+
+<script>
+(function(){
+  /* Load each video as a blob from the page's own files, so phones don't depend on range requests. */
+  const vids=[...document.querySelectorAll('video[data-blob]')];
+  const load=v=>{
+    if(v.dataset.state)return; v.dataset.state='loading';
+    fetch(v.dataset.blob).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob()})
+      .then(b=>{v.src=URL.createObjectURL(b.type?b:new Blob([b],{type:'video/mp4'}));v.dataset.state='ready';v.load()})
+      .catch(()=>{v.src=v.dataset.blob;v.dataset.state='direct'});
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target)}}),{rootMargin:'800px 0px'});
+    vids.forEach(v=>io.observe(v));
+  } else vids.forEach(load);
+  vids.forEach(v=>v.addEventListener('play',()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+
+  /* Custom controls: play, progress, mute. No download option. */
+  vids.forEach(v=>{
+    v.removeAttribute('controls');v.setAttribute('disablepictureinpicture','');v.setAttribute('controlslist','nodownload noremoteplayback noplaybackrate');
+    const w=document.createElement('div');w.className='vp';v.parentNode.insertBefore(w,v);w.appendChild(v);
+    const b=document.createElement('button');b.className='vbtn';b.setAttribute('aria-label','Reproducir o pausar');b.innerHTML='<span></span>';
+    const bar=document.createElement('div');bar.className='vbar';bar.innerHTML='<i></i>';
+    const m=document.createElement('button');m.className='vmute';m.textContent='🔊';m.setAttribute('aria-label','Silenciar');
+    w.append(b,bar,m);
+    b.onclick=()=>{load(v);v.paused?v.play():v.pause()};
+    v.addEventListener('play',()=>w.classList.add('playing'));v.addEventListener('pause',()=>w.classList.remove('playing'));v.addEventListener('ended',()=>w.classList.remove('playing'));
+    v.addEventListener('timeupdate',()=>{if(v.duration)bar.firstChild.style.width=(v.currentTime/v.duration*100)+'%'});
+    bar.onclick=e=>{const r=bar.getBoundingClientRect();if(v.duration)v.currentTime=(e.clientX-r.left)/r.width*v.duration};
+    m.onclick=()=>{v.muted=!v.muted;m.textContent=v.muted?'🔇':'🔊'};
+  });
+  document.addEventListener('contextmenu',e=>{if(e.target.closest('.vp,video'))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
