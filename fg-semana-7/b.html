@@ -178,13 +178,9 @@ video,.vp{-webkit-touch-callout:none;user-select:none}
 }
 </style>
 <style>
-/* Version B: cream hero with soft, blurred expanding waves (brand page 14) */
-.hero{background:var(--cream)}
-.hero::before{display:block;content:"";position:absolute;inset:-30% -10% -30% -40%;pointer-events:none;
-  background:repeating-radial-gradient(circle at 8% 52%,rgba(255,255,255,0) 0 46px,rgba(255,255,255,1) 70px,rgba(255,255,255,0) 96px 128px);
-  -webkit-mask:radial-gradient(circle at 8% 52%,transparent 0 120px,#000 260px,#000 52%,transparent 78%);
-          mask:radial-gradient(circle at 8% 52%,transparent 0 120px,#000 260px,#000 52%,transparent 78%);
-  filter:blur(7px);opacity:1}
+/* Version B: cream hero with the expanding waves taken from the brand manual (page 14) */
+.hero{background:rgb(248,226,169) url(b/ondas.jpg) right center/auto 100% no-repeat}
+.hero::before{display:none}
 .hero h1 .sub{display:table;color:var(--ink);background:var(--orange);padding:.12em .3em .06em;margin-top:.16em;
   clip-path:polygon(0 8%,4% 0,30% 5%,55% 0,80% 6%,100% 2%,99% 50%,100% 94%,74% 100%,46% 95%,20% 100%,0 96%,1% 50%)}
 .hero .tape{background:var(--ink);color:var(--cream);display:table}
