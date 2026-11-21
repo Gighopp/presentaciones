@@ -46,7 +46,7 @@ h1,h2,h3{font-family:var(--f-display);font-weight:400;text-transform:uppercase;m
 
 /* ---------- Hero ---------- */
 .hero{position:relative;overflow:hidden;background:linear-gradient(rgba(253,181,73,.62),rgba(253,181,73,.62)),var(--orange) url(b/paper.jpg) center/cover;color:var(--ink);padding-top:26px}
-.hero::before{content:"";position:absolute;inset:-20% -30% -20% 20%;pointer-events:none;
+.hero::before{display:none;content:"";position:absolute;inset:-20% -30% -20% 20%;pointer-events:none;
   background:repeating-radial-gradient(circle at 92% 50%,rgba(246,223,169,.0) 0 58px,rgba(246,223,169,.38) 58px 116px);opacity:.9}
 .hero .wrap{position:relative}
 .hero-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
@@ -143,7 +143,8 @@ section{padding-block:76px}
 
 footer{background:var(--orange) url(b/paper.jpg) center/cover;color:var(--ink);padding-block:34px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-footer .logo{width:132px}
+footer .logo{width:132px;display:block}
+footer .tagline{display:block;margin-top:10px;font-weight:700;letter-spacing:.28em;font-size:10.5px}
 
 /* video player without download */
 video,.vp{-webkit-touch-callout:none;user-select:none}
@@ -332,7 +333,7 @@ video,.vp{-webkit-touch-callout:none;user-select:none}
 </section>
 </main>
 
-<footer><div class="wrap"><span class="logo" role="img" aria-label="Gighopp"></span><span class="track-label">Para FG Insulation TX · 16 – 22 nov 2026</span></div></footer>
+<footer><div class="wrap"><div class="sign"><span class="logo" role="img" aria-label="Gighopp"></span><span class="track-label tagline">Agencia de marketing · Creatividad e ingeniería</span></div><span class="track-label">Para FG Insulation TX · 16 – 22 nov 2026</span></div></footer>
 
 <script>
 (function(){
